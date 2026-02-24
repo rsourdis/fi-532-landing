@@ -1,58 +1,131 @@
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
+import AnimateInView from "./AnimateInView";
 
 const testimonials = [
   {
     name: "Sarah M.",
-    text: "Finally an app that makes budgeting with my partner simple. We can both see where our money is going and plan together.",
+    role: "Married, 2 kids",
+    text: "Finally an app that makes budgeting with my partner simple. We can both see where our money is going and plan together. The 50/30/20 view is a game-changer.",
     rating: 5,
+    accent: "#14b8a6",
+    initial: "S",
+    bg: "rgb(20 184 166 / 0.12)",
   },
   {
     name: "James K.",
-    text: "The recurring bills tracker is a lifesaver. I set it up once and now I never miss a payment. Clean UI too.",
+    role: "Freelancer",
+    text: "The recurring bills tracker is a lifesaver. I set it up once and now I never miss a payment. Clean UI, fast, and it actually helps me save more every month.",
     rating: 5,
+    accent: "#facc15",
+    initial: "J",
+    bg: "rgb(250 204 21 / 0.12)",
   },
   {
     name: "Maria L.",
-    text: "I love the needs/wants/savings breakdown. It changed how I think about my spending every month.",
+    role: "Homeowner",
+    text: "I love the needs/wants/savings breakdown. It completely changed how I think about spending. I've saved more in 3 months with FI-532 than in the past year.",
     rating: 5,
+    accent: "#10b981",
+    initial: "M",
+    bg: "rgb(16 185 129 / 0.12)",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="py-20 md:py-28 bg-white/40">
+    <section className="py-24 md:py-32 bg-stone-150 overflow-hidden">
       <div className="mx-auto max-w-6xl px-6">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-sm font-semibold text-teal-600 uppercase tracking-wide mb-3">
-            What People Say
-          </p>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-stone-900 tracking-tight">
-            Loved by households everywhere
-          </h2>
-        </div>
-
-        {/* Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {testimonials.map((t) => (
+        <AnimateInView type="up" delay={0}>
+          <div className="text-center max-w-2xl mx-auto mb-16">
             <div
-              key={t.name}
-              className="bg-white border border-stone-200/70 rounded-2xl p-7"
+              className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-6"
+              style={{
+                borderColor: "rgb(20 184 166 / 0.3)",
+                backgroundColor: "rgb(20 184 166 / 0.07)",
+              }}
             >
-              <div className="flex gap-0.5 mb-4">
-                {Array.from({ length: t.rating }).map((_, i) => (
+              <div className="flex gap-0.5">
+                {[1, 2, 3, 4, 5].map((i) => (
                   <Star
                     key={i}
-                    size={14}
-                    className="text-citrus-400 fill-citrus-400"
+                    size={10}
+                    style={{ color: "#facc15", fill: "#facc15" }}
                   />
                 ))}
               </div>
-              <p className="text-sm text-stone-600 leading-relaxed mb-5">
-                &ldquo;{t.text}&rdquo;
-              </p>
-              <p className="text-sm font-semibold text-stone-900">{t.name}</p>
+              <span
+                className="text-xs font-semibold uppercase tracking-widest"
+                style={{ color: "#0d9488" }}
+              >
+                Real users
+              </span>
             </div>
+            <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-stone-900 tracking-tight leading-tight">
+              Households saving more.{" "}
+              <span style={{ color: "#14b8a6" }}>Every month.</span>
+            </h2>
+          </div>
+        </AnimateInView>
+
+        {/* Testimonial cards */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials.map((t, i) => (
+            <AnimateInView key={t.name} type="up" delay={i * 100}>
+              <div
+                className="relative rounded-2xl p-8 border h-full flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                style={{
+                  backgroundColor: "white",
+                  borderColor: "rgb(231 229 228 / 0.7)",
+                }}
+              >
+                {/* Quote icon */}
+                <div
+                  className="absolute top-6 right-6 opacity-15"
+                  style={{ color: t.accent }}
+                >
+                  <Quote size={36} fill="currentColor" />
+                </div>
+
+                {/* Stars */}
+                <div className="flex gap-0.5 mb-5">
+                  {Array.from({ length: t.rating }).map((_, j) => (
+                    <Star
+                      key={j}
+                      size={14}
+                      style={{ color: "#facc15", fill: "#facc15" }}
+                    />
+                  ))}
+                </div>
+
+                {/* Quote text */}
+                <p className="text-stone-700 leading-relaxed text-[15px] flex-1 mb-6">
+                  &ldquo;{t.text}&rdquo;
+                </p>
+
+                {/* Author */}
+                <div className="flex items-center gap-3">
+                  <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center font-display font-bold text-sm"
+                    style={{ backgroundColor: t.bg, color: t.accent }}
+                  >
+                    {t.initial}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-sm text-stone-900">
+                      {t.name}
+                    </div>
+                    <div className="text-xs text-stone-400">{t.role}</div>
+                  </div>
+                </div>
+
+                {/* Accent bar bottom */}
+                <div
+                  className="absolute bottom-0 left-8 right-8 h-[2px] rounded-t-full"
+                  style={{ backgroundColor: t.accent, opacity: 0.3 }}
+                />
+              </div>
+            </AnimateInView>
           ))}
         </div>
       </div>

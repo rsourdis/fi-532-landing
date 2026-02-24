@@ -6,83 +6,141 @@ import {
   PieChart,
   Bell,
 } from "lucide-react";
+import AnimateInView from "./AnimateInView";
 
 const features = [
   {
     icon: PieChart,
-    title: "Monthly Budget Dashboard",
+    title: "Budget Dashboard",
     description:
-      "See your needs, wants, and savings at a glance with clear visual breakdowns. Navigate months and adjust your budget rule anytime.",
+      "Your 50/30/20 breakdown visualized. Navigate months, compare periods, and adjust your budget rule at any time.",
+    color: "#14b8a6",
+    bg: "rgb(20 184 166 / 0.08)",
+    border: "rgb(20 184 166 / 0.2)",
+    iconBg: "rgb(20 184 166 / 0.15)",
   },
   {
     icon: CreditCard,
     title: "Transaction Tracking",
     description:
-      "Log income, expenses, and transfers with category support. Filter by type, date, or category to stay on top of every dollar.",
+      "Log every dollar — income, expenses, transfers. Filter by category, date, or type instantly.",
+    color: "#facc15",
+    bg: "rgb(250 204 21 / 0.06)",
+    border: "rgb(250 204 21 / 0.2)",
+    iconBg: "rgb(250 204 21 / 0.12)",
   },
   {
     icon: CalendarClock,
-    title: "Recurring Bills & Subscriptions",
+    title: "Recurring Bills",
     description:
-      "Never miss a payment. Track due dates, mark bills as paid, and auto-create transactions from your recurring templates.",
+      "Never miss a payment. Track due dates, mark bills paid, and auto-generate transactions from templates.",
+    color: "#10b981",
+    bg: "rgb(16 185 129 / 0.06)",
+    border: "rgb(16 185 129 / 0.2)",
+    iconBg: "rgb(16 185 129 / 0.12)",
   },
   {
     icon: Users,
     title: "Household Collaboration",
     description:
-      "Invite members, split expenses, and settle up balances. Everyone stays aligned with shared real-time visibility.",
+      "Invite family members, split expenses, and settle up balances. Real-time shared visibility for the whole household.",
+    color: "#2dd4bf",
+    bg: "rgb(45 212 191 / 0.06)",
+    border: "rgb(45 212 191 / 0.2)",
+    iconBg: "rgb(45 212 191 / 0.12)",
   },
   {
     icon: BarChart3,
     title: "AI Financial Reports",
     description:
-      "Get chat-style insights about your spending patterns. Understand where your money goes with intelligent summaries.",
+      "Chat-style insights about your spending patterns. Understand your money in plain language, powered by AI.",
+    color: "#14b8a6",
+    bg: "rgb(20 184 166 / 0.08)",
+    border: "rgb(20 184 166 / 0.2)",
+    iconBg: "rgb(20 184 166 / 0.15)",
   },
   {
     icon: Bell,
     title: "Smart Reminders",
     description:
-      "Set up bill reminders so you never miss a due date. Test notifications to make sure everything is working perfectly.",
+      "Automated bill reminders so nothing slips through the cracks. Test notifications to confirm everything works.",
+    color: "#facc15",
+    bg: "rgb(250 204 21 / 0.06)",
+    border: "rgb(250 204 21 / 0.2)",
+    iconBg: "rgb(250 204 21 / 0.12)",
   },
 ];
 
 export default function Features() {
   return (
-    <section id="features" className="py-20 md:py-28">
+    <section id="features" className="py-24 md:py-32 bg-stone-150">
       <div className="mx-auto max-w-6xl px-6">
-        {/* Section header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-sm font-semibold text-teal-600 uppercase tracking-wide mb-3">
-            Features
-          </p>
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-stone-900 tracking-tight mb-4">
-            Everything you need to manage
-            <br className="hidden sm:block" /> household money
-          </h2>
-          <p className="text-stone-500 text-lg leading-relaxed">
-            From daily expense tracking to smart AI reports, FI-532 gives you
-            the tools to stay in control without the complexity.
-          </p>
-        </div>
+        {/* Header */}
+        <AnimateInView type="up" delay={0}>
+          <div className="max-w-2xl mb-16">
+            <div
+              className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-6"
+              style={{
+                borderColor: "rgb(20 184 166 / 0.3)",
+                backgroundColor: "rgb(20 184 166 / 0.07)",
+              }}
+            >
+              <span
+                className="text-xs font-semibold uppercase tracking-widest"
+                style={{ color: "#0d9488" }}
+              >
+                Features
+              </span>
+            </div>
+            <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-stone-900 tracking-tight leading-tight mb-4">
+              Everything you need.{" "}
+              <span style={{ color: "#14b8a6" }}>Nothing you don&apos;t.</span>
+            </h2>
+            <p className="text-lg text-stone-500 leading-relaxed">
+              A full suite of budgeting tools designed around how real households
+              think about money — simple, collaborative, and always in sync.
+            </p>
+          </div>
+        </AnimateInView>
 
         {/* Feature grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="group relative bg-white/60 backdrop-blur-sm border border-stone-200/70 rounded-2xl p-7 hover:shadow-lg hover:shadow-teal-500/5 hover:border-teal-200/60 transition-all duration-300"
-            >
-              <div className="w-11 h-11 rounded-xl bg-teal-50 border border-teal-100 flex items-center justify-center mb-5 group-hover:bg-teal-100 transition-colors">
-                <feature.icon size={20} className="text-teal-600" />
-              </div>
-              <h3 className="font-display font-bold text-lg text-stone-900 mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-sm text-stone-500 leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {features.map((f, i) => {
+            const Icon = f.icon;
+            return (
+              <AnimateInView key={f.title} type="up" delay={i * 70}>
+                <div
+                  className="group relative rounded-2xl p-7 border h-full flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-default"
+                  style={{
+                    backgroundColor: f.bg,
+                    borderColor: f.border,
+                  }}
+                >
+                  {/* Icon */}
+                  <div
+                    className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
+                    style={{ backgroundColor: f.iconBg }}
+                  >
+                    <Icon size={20} style={{ color: f.color }} />
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="font-display font-bold text-lg text-stone-900 mb-2">
+                    {f.title}
+                  </h3>
+                  <p className="text-sm text-stone-500 leading-relaxed flex-1">
+                    {f.description}
+                  </p>
+
+                  {/* Expanding bottom accent */}
+                  <div
+                    className="mt-5 h-px w-10 rounded-full transition-all duration-500 group-hover:w-full"
+                    style={{ backgroundColor: f.color, opacity: 0.5 }}
+                  />
+                </div>
+              </AnimateInView>
+            );
+          })}
         </div>
       </div>
     </section>
