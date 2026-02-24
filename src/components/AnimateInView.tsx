@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, ReactNode, CSSProperties } from "react";
+import { useEffect, useRef, useState, ReactNode, CSSProperties, ElementType } from "react";
 
 type AnimType = "up" | "down" | "left" | "right" | "fade" | "scale";
 
@@ -20,7 +20,7 @@ interface Props {
   delay?: number;
   duration?: number;
   threshold?: number;
-  as?: keyof JSX.IntrinsicElements;
+  as?: ElementType;
 }
 
 export default function AnimateInView({
