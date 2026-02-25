@@ -1,8 +1,13 @@
+"use client";
+
 import AppStoreBadge from "./AppStoreBadge";
 import AnimateInView from "./AnimateInView";
 import { ArrowRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function CTA() {
+  const { t } = useLanguage();
+
   return (
     <section id="download" className="py-24 md:py-32 overflow-hidden" style={{ backgroundColor: "#0c0a09" }}>
       <div className="mx-auto max-w-6xl px-6">
@@ -51,7 +56,7 @@ export default function CTA() {
                   className="text-xs font-semibold uppercase tracking-widest"
                   style={{ color: "#5eead4" }}
                 >
-                  Free to download
+                  {t.cta.badge}
                 </span>
               </div>
             </AnimateInView>
@@ -64,9 +69,9 @@ export default function CTA() {
                   color: "#fafaf9",
                 }}
               >
-                Take control of your
+                {t.cta.headingNormal}
                 <br />
-                <span style={{ color: "#14b8a6" }}>household finances.</span>
+                <span style={{ color: "#14b8a6" }}>{t.cta.headingColored}</span>
               </h2>
             </AnimateInView>
 
@@ -75,15 +80,14 @@ export default function CTA() {
                 className="text-lg max-w-lg mx-auto mb-4 leading-relaxed"
                 style={{ color: "#78716c" }}
               >
-                Start with the free plan today. Set up your 50/30/20 budget,
-                track every dollar, and upgrade when you&apos;re ready.
+                {t.cta.description}
               </p>
             </AnimateInView>
 
             <AnimateInView type="up" delay={220}>
               {/* Trust line */}
               <div className="flex items-center justify-center gap-6 mb-10 text-sm" style={{ color: "#44403c" }}>
-                {["No credit card", "Free forever plan", "iOS App Store"].map((item, i) => (
+                {t.cta.trustItems.map((item, i) => (
                   <span key={item} className="flex items-center gap-1.5">
                     {i > 0 && <span className="w-1 h-1 rounded-full" style={{ backgroundColor: "#44403c" }} />}
                     {item}
@@ -100,7 +104,7 @@ export default function CTA() {
                   className="inline-flex items-center gap-2 text-sm font-medium transition-colors"
                   style={{ color: "#57534e" }}
                 >
-                  Learn how it works
+                  {t.cta.learnHow}
                   <ArrowRight size={14} />
                 </a>
               </div>

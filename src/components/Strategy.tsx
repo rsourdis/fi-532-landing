@@ -1,14 +1,13 @@
+"use client";
+
 import AnimateInView from "./AnimateInView";
 import { Home, Smile, TrendingUp } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const pillars = [
+// Visual/icon config only — text comes from translations
+const PILLAR_STYLES = [
   {
     pct: "50",
-    label: "Needs",
-    tagline: "Cover what keeps life running.",
-    description:
-      "Essential expenses you can't skip — housing, utilities, groceries, transport, healthcare. Half your income, protected and tracked.",
-    examples: ["Rent / mortgage", "Groceries", "Utilities", "Transportation"],
     icon: Home,
     color: "#14b8a6",
     lightColor: "rgb(20 184 166 / 0.12)",
@@ -18,11 +17,6 @@ const pillars = [
   },
   {
     pct: "30",
-    label: "Wants",
-    tagline: "Enjoy life without the guilt.",
-    description:
-      "The things that make life enjoyable — dining out, subscriptions, hobbies, shopping. Spend freely within the 30%, never beyond.",
-    examples: ["Dining & cafes", "Streaming services", "Hobbies", "Shopping"],
     icon: Smile,
     color: "#facc15",
     lightColor: "rgb(250 204 21 / 0.10)",
@@ -32,11 +26,6 @@ const pillars = [
   },
   {
     pct: "20",
-    label: "Savings",
-    tagline: "Build the future you deserve.",
-    description:
-      "Your financial future, funded automatically. Emergency funds, investments, debt payoff — every dollar here works harder than those you spend.",
-    examples: ["Emergency fund", "Investments", "Debt payoff", "Retirement"],
     icon: TrendingUp,
     color: "#10b981",
     lightColor: "rgb(16 185 129 / 0.10)",
@@ -47,6 +36,8 @@ const pillars = [
 ];
 
 export default function Strategy() {
+  const { t } = useLanguage();
+
   return (
     <section id="strategy" className="py-24 md:py-32 bg-stone-150 overflow-hidden">
       <div className="mx-auto max-w-6xl px-6">
@@ -61,17 +52,16 @@ export default function Strategy() {
               }}
             >
               <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0d9488" }}>
-                The Method
+                {t.strategy.sectionLabel}
               </span>
             </div>
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-stone-900 tracking-tight leading-tight mb-4">
-              The 50/30/20 rule.{" "}
+              {t.strategy.headingPart1}{" "}
               <br className="hidden sm:block" />
-              <span style={{ color: "#14b8a6" }}>The simplest path to financial freedom.</span>
+              <span style={{ color: "#14b8a6" }}>{t.strategy.headingColored}</span>
             </h2>
             <p className="text-lg text-stone-500 leading-relaxed">
-              Proven by financial experts worldwide. Used by millions. And now automated
-              for your household by FI-532.
+              {t.strategy.description}
             </p>
           </div>
         </AnimateInView>
@@ -94,19 +84,20 @@ export default function Strategy() {
               />
             </div>
             <div className="flex mt-3 text-xs font-semibold" style={{ color: "#78716c" }}>
-              <span style={{ width: "50%", paddingLeft: "4px" }}>50% Needs</span>
-              <span style={{ width: "30%", textAlign: "center" }}>30% Wants</span>
-              <span style={{ width: "20%", textAlign: "right", paddingRight: "4px" }}>20% Savings</span>
+              <span style={{ width: "50%", paddingLeft: "4px" }}>50% {t.strategy.barNeeds}</span>
+              <span style={{ width: "30%", textAlign: "center" }}>30% {t.strategy.barWants}</span>
+              <span style={{ width: "20%", textAlign: "right", paddingRight: "4px" }}>20% {t.strategy.barSavings}</span>
             </div>
           </div>
         </AnimateInView>
 
         {/* Three pillars */}
         <div className="grid md:grid-cols-3 gap-6">
-          {pillars.map((p, i) => {
+          {PILLAR_STYLES.map((p, i) => {
             const Icon = p.icon;
+            const text = t.strategy.pillars[i];
             return (
-              <AnimateInView key={p.label} type="up" delay={i * 100}>
+              <AnimateInView key={p.pct} type="up" delay={i * 100}>
                 <div
                   className="relative rounded-3xl p-8 border h-full flex flex-col overflow-hidden group transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                   style={{
@@ -145,19 +136,19 @@ export default function Strategy() {
                   {/* Label + tagline */}
                   <div className="mb-4">
                     <h3 className="font-display font-extrabold text-2xl text-stone-900 mb-1">
-                      {p.label}
+                      {text.label}
                     </h3>
-                    <p className="font-medium text-stone-600 text-sm">{p.tagline}</p>
+                    <p className="font-medium text-stone-600 text-sm">{text.tagline}</p>
                   </div>
 
                   {/* Description */}
                   <p className="text-sm text-stone-500 leading-relaxed mb-6 flex-1">
-                    {p.description}
+                    {text.description}
                   </p>
 
                   {/* Example list */}
                   <div className="space-y-2">
-                    {p.examples.map((ex) => (
+                    {text.examples.map((ex) => (
                       <div key={ex} className="flex items-center gap-2.5">
                         <div
                           className="w-1.5 h-1.5 rounded-full shrink-0"
@@ -189,9 +180,9 @@ export default function Strategy() {
             }}
           >
             <p className="text-base md:text-lg font-medium text-stone-700 leading-relaxed max-w-2xl mx-auto">
-              FI-532 tracks every transaction, categorizes your spending, and shows your{" "}
-              <strong className="text-stone-900">50/30/20 breakdown in real time</strong> — so you always know
-              where you stand, without spreadsheets or manual math.
+              {t.strategy.calloutBefore}
+              <strong className="text-stone-900">{t.strategy.calloutStrong}</strong>
+              {t.strategy.calloutAfter}
             </p>
           </div>
         </AnimateInView>

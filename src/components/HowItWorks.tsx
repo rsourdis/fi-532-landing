@@ -1,42 +1,20 @@
+"use client";
+
 import { UserPlus, Home, Banknote, TrendingUp } from "lucide-react";
 import AnimateInView from "./AnimateInView";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const steps = [
-  {
-    icon: UserPlus,
-    number: "01",
-    title: "Create Your Account",
-    description:
-      "Sign up securely with email. Your data is protected with enterprise-grade authentication through Clerk.",
-    color: "#14b8a6",
-  },
-  {
-    icon: Home,
-    number: "02",
-    title: "Set Up Your Household",
-    description:
-      "Configure your currency, timezone, and budget rule. Choose your 50/30/20 split — or customize it to match your goals.",
-    color: "#facc15",
-  },
-  {
-    icon: Banknote,
-    number: "03",
-    title: "Track Everything",
-    description:
-      "Log transactions, set up recurring bills, and categorize your spending. Your dashboard updates in real time.",
-    color: "#10b981",
-  },
-  {
-    icon: TrendingUp,
-    number: "04",
-    title: "Stay in Control",
-    description:
-      "Review monthly insights, get AI-powered reports, export your data, and collaborate with household members.",
-    color: "#2dd4bf",
-  },
+// Visual/icon config only — text comes from translations
+const STEP_STYLES = [
+  { icon: UserPlus,   number: "01", color: "#14b8a6" },
+  { icon: Home,       number: "02", color: "#facc15" },
+  { icon: Banknote,   number: "03", color: "#10b981" },
+  { icon: TrendingUp, number: "04", color: "#2dd4bf" },
 ];
 
 export default function HowItWorks() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="how-it-works"
@@ -58,19 +36,18 @@ export default function HowItWorks() {
                 className="text-xs font-semibold uppercase tracking-widest"
                 style={{ color: "#2dd4bf" }}
               >
-                How It Works
+                {t.howItWorks.sectionLabel}
               </span>
             </div>
             <h2
               className="font-display font-extrabold text-4xl sm:text-5xl tracking-tight leading-tight mb-4"
               style={{ color: "#fafaf9" }}
             >
-              Up and running{" "}
-              <span style={{ color: "#14b8a6" }}>in minutes.</span>
+              {t.howItWorks.headingNormal}{" "}
+              <span style={{ color: "#14b8a6" }}>{t.howItWorks.headingColored}</span>
             </h2>
             <p className="text-lg leading-relaxed" style={{ color: "#78716c" }}>
-              No spreadsheets. No complicated setup. Just a clean workspace
-              that works the way you think about money.
+              {t.howItWorks.description}
             </p>
           </div>
         </AnimateInView>
@@ -86,8 +63,9 @@ export default function HowItWorks() {
             }}
           />
 
-          {steps.map((step, i) => {
+          {STEP_STYLES.map((step, i) => {
             const Icon = step.icon;
+            const stepText = t.howItWorks.steps[i];
             return (
               <AnimateInView key={step.number} type="up" delay={i * 100}>
                 <div className="relative group">
@@ -128,10 +106,10 @@ export default function HowItWorks() {
                     className="font-display font-bold text-lg mb-3"
                     style={{ color: "#e7e5e4" }}
                   >
-                    {step.title}
+                    {stepText.title}
                   </h3>
                   <p className="text-sm leading-relaxed" style={{ color: "#57534e" }}>
-                    {step.description}
+                    {stepText.description}
                   </p>
                 </div>
               </AnimateInView>

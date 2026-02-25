@@ -1,37 +1,19 @@
+"use client";
+
 import { Star, Quote } from "lucide-react";
 import AnimateInView from "./AnimateInView";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const testimonials = [
-  {
-    name: "Sarah M.",
-    role: "Married, 2 kids",
-    text: "Finally an app that makes budgeting with my partner simple. We can both see where our money is going and plan together. The 50/30/20 view is a game-changer.",
-    rating: 5,
-    accent: "#14b8a6",
-    initial: "S",
-    bg: "rgb(20 184 166 / 0.12)",
-  },
-  {
-    name: "James K.",
-    role: "Freelancer",
-    text: "The recurring bills tracker is a lifesaver. I set it up once and now I never miss a payment. Clean UI, fast, and it actually helps me save more every month.",
-    rating: 5,
-    accent: "#facc15",
-    initial: "J",
-    bg: "rgb(250 204 21 / 0.12)",
-  },
-  {
-    name: "Maria L.",
-    role: "Homeowner",
-    text: "I love the needs/wants/savings breakdown. It completely changed how I think about spending. I've saved more in 3 months with FI-532 than in the past year.",
-    rating: 5,
-    accent: "#10b981",
-    initial: "M",
-    bg: "rgb(16 185 129 / 0.12)",
-  },
+// Visual/name config only — role and quote text come from translations
+const TESTIMONIAL_STYLES = [
+  { name: "Sarah M.", rating: 5, accent: "#14b8a6", initial: "S", bg: "rgb(20 184 166 / 0.12)" },
+  { name: "James K.", rating: 5, accent: "#facc15", initial: "J", bg: "rgb(250 204 21 / 0.12)" },
+  { name: "Maria L.", rating: 5, accent: "#10b981", initial: "M", bg: "rgb(16 185 129 / 0.12)" },
 ];
 
 export default function Testimonials() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 md:py-32 bg-stone-150 overflow-hidden">
       <div className="mx-auto max-w-6xl px-6">
@@ -58,20 +40,22 @@ export default function Testimonials() {
                 className="text-xs font-semibold uppercase tracking-widest"
                 style={{ color: "#0d9488" }}
               >
-                Real users
+                {t.testimonials.sectionLabel}
               </span>
             </div>
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-stone-900 tracking-tight leading-tight">
-              Households saving more.{" "}
-              <span style={{ color: "#14b8a6" }}>Every month.</span>
+              {t.testimonials.headingNormal}{" "}
+              <span style={{ color: "#14b8a6" }}>{t.testimonials.headingColored}</span>
             </h2>
           </div>
         </AnimateInView>
 
         {/* Testimonial cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
-            <AnimateInView key={t.name} type="up" delay={i * 100}>
+          {TESTIMONIAL_STYLES.map((ts, i) => {
+            const item = t.testimonials.items[i];
+            return (
+            <AnimateInView key={ts.name} type="up" delay={i * 100}>
               <div
                 className="relative rounded-2xl p-8 border h-full flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 style={{
@@ -82,14 +66,14 @@ export default function Testimonials() {
                 {/* Quote icon */}
                 <div
                   className="absolute top-6 right-6 opacity-15"
-                  style={{ color: t.accent }}
+                  style={{ color: ts.accent }}
                 >
                   <Quote size={36} fill="currentColor" />
                 </div>
 
                 {/* Stars */}
                 <div className="flex gap-0.5 mb-5">
-                  {Array.from({ length: t.rating }).map((_, j) => (
+                  {Array.from({ length: ts.rating }).map((_, j) => (
                     <Star
                       key={j}
                       size={14}
@@ -100,33 +84,34 @@ export default function Testimonials() {
 
                 {/* Quote text */}
                 <p className="text-stone-700 leading-relaxed text-[15px] flex-1 mb-6">
-                  &ldquo;{t.text}&rdquo;
+                  &ldquo;{item.text}&rdquo;
                 </p>
 
                 {/* Author */}
                 <div className="flex items-center gap-3">
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center font-display font-bold text-sm"
-                    style={{ backgroundColor: t.bg, color: t.accent }}
+                    style={{ backgroundColor: ts.bg, color: ts.accent }}
                   >
-                    {t.initial}
+                    {ts.initial}
                   </div>
                   <div>
                     <div className="font-semibold text-sm text-stone-900">
-                      {t.name}
+                      {ts.name}
                     </div>
-                    <div className="text-xs text-stone-400">{t.role}</div>
+                    <div className="text-xs text-stone-400">{item.role}</div>
                   </div>
                 </div>
 
                 {/* Accent bar bottom */}
                 <div
                   className="absolute bottom-0 left-8 right-8 h-[2px] rounded-t-full"
-                  style={{ backgroundColor: t.accent, opacity: 0.3 }}
+                  style={{ backgroundColor: ts.accent, opacity: 0.3 }}
                 />
               </div>
             </AnimateInView>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

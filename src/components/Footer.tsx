@@ -1,4 +1,10 @@
+"use client";
+
+import { useLanguage } from "@/contexts/LanguageContext";
+
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer
       className="border-t py-14"
@@ -27,44 +33,18 @@ export default function Footer() {
 
           {/* Links */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm" style={{ color: "#57534e" }}>
-            <a
-              href="#strategy"
-              className="transition-colors hover:text-teal-400"
-            >
-              Strategy
-            </a>
-            <a
-              href="#features"
-              className="transition-colors hover:text-teal-400"
-            >
-              Features
-            </a>
-            <a
-              href="#pricing"
-              className="transition-colors hover:text-teal-400"
-            >
-              Pricing
-            </a>
-            <a
-              href="mailto:info@fi-532.app"
-              className="transition-colors hover:text-teal-400"
-            >
-              Contact
-            </a>
-            <a href="/privacy" className="transition-colors hover:text-teal-400">
-              Privacy
-            </a>
-            <a href="/terms" className="transition-colors hover:text-teal-400">
-              Terms
-            </a>
-            <a href="/eula" className="transition-colors hover:text-teal-400">
-              EULA
-            </a>
+            <a href="#strategy" className="transition-colors hover:text-teal-400">{t.footer.strategy}</a>
+            <a href="#features" className="transition-colors hover:text-teal-400">{t.footer.features}</a>
+            <a href="#pricing" className="transition-colors hover:text-teal-400">{t.footer.pricing}</a>
+            <a href="mailto:info@fi-532.app" className="transition-colors hover:text-teal-400">{t.footer.contact}</a>
+            <a href="/privacy" className="transition-colors hover:text-teal-400">{t.footer.privacy}</a>
+            <a href="/terms" className="transition-colors hover:text-teal-400">{t.footer.terms}</a>
+            <a href="/eula" className="transition-colors hover:text-teal-400">{t.footer.eula}</a>
           </div>
 
           {/* Copyright */}
           <p className="text-xs" style={{ color: "#44403c" }}>
-            &copy; {new Date().getFullYear()} FI-532. All rights reserved.
+            {t.footer.copyright(new Date().getFullYear())}
           </p>
         </div>
       </div>

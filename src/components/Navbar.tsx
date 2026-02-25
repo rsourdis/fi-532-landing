@@ -2,15 +2,18 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { label: "Strategy", href: "#strategy" },
-  { label: "Features", href: "#features" },
-  { label: "Pricing", href: "#pricing" },
-];
+import LanguageSelector from "./LanguageSelector";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { t } = useLanguage();
+
+  const navLinks = [
+    { label: t.nav.strategy, href: "#strategy" },
+    { label: t.nav.features, href: "#features" },
+    { label: t.nav.pricing, href: "#pricing" },
+  ];
 
   return (
     <header
@@ -54,16 +57,19 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA button */}
-        <a
-          href="#download"
-          className="hidden md:inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200"
-          style={{ backgroundColor: "#14b8a6", color: "white" }}
-          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#0d9488")}
-          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#14b8a6")}
-        >
-          Download App
-        </a>
+        {/* Right side: Language selector + CTA */}
+        <div className="hidden md:flex items-center gap-3">
+          <LanguageSelector />
+          <a
+            href="#download"
+            className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200"
+            style={{ backgroundColor: "#14b8a6", color: "white" }}
+            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#0d9488")}
+            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#14b8a6")}
+          >
+            {t.nav.downloadApp}
+          </a>
+        </div>
 
         {/* Mobile toggle */}
         <button
@@ -98,6 +104,9 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
+            <li className="pt-1">
+              <LanguageSelector />
+            </li>
             <li>
               <a
                 href="#download"
@@ -105,7 +114,7 @@ export default function Navbar() {
                 className="inline-flex items-center justify-center w-full rounded-full px-5 py-2.5 text-sm font-semibold"
                 style={{ backgroundColor: "#14b8a6", color: "white" }}
               >
-                Download App
+                {t.nav.downloadApp}
               </a>
             </li>
           </ul>

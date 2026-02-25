@@ -2,42 +2,21 @@
 
 import Image, { StaticImageData } from "next/image";
 import AnimateInView from "./AnimateInView";
-import HomeScreen from "@/assets/app-screens/Home.png";
-import TransactionsScreen from "@/assets/app-screens/Transactions.png";
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const RecurringScreen: StaticImageData = require("@/assets/app-screens/Recurring- Subscriptions.png");
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getAsset } from "@/lib/i18n/assets";
 
-const screens = [
-  {
-    image: TransactionsScreen,
-    alt: "FI-532 Transactions screen",
-    title: "Every transaction, accounted for",
-    desc: "Log income, expenses, and transfers instantly. Filter by date, category, or type. Your spending story told clearly.",
-    color: "#facc15",
-    rotate: "-3deg",
-    yOffset: "20px",
-  },
-  {
-    image: HomeScreen,
-    alt: "FI-532 Home dashboard",
-    title: "Your 50/30/20 dashboard",
-    desc: "See your needs, wants, and savings at a glance. Watch the budget meter move as you spend — in real time.",
-    color: "#14b8a6",
-    rotate: "0deg",
-    yOffset: "0px",
-  },
-  {
-    image: RecurringScreen,
-    alt: "FI-532 Recurring bills & subscriptions",
-    title: "Never miss a bill again",
-    desc: "All recurring expenses in one place — rent, subscriptions, utilities. Mark as paid, auto-create transactions.",
-    color: "#10b981",
-    rotate: "3deg",
-    yOffset: "20px",
-  },
-];
+// Visual/layout config only — text and images come from translations + asset resolver
+const SCREEN_STYLES = [
+  { color: "#facc15", rotate: "-3deg", yOffset: "20px" },
+  { color: "#14b8a6", rotate: "0deg",  yOffset: "0px"  },
+  { color: "#10b981", rotate: "3deg",  yOffset: "20px" },
+] as const;
+
+const ASSET_KEYS = ["transactions", "home", "recurring"] as const;
 
 export default function AppShowcase() {
+  const { t, locale } = useLanguage();
+
   return (
     <section className="py-24 md:py-32 overflow-hidden" style={{ backgroundColor: "#0c0a09" }}>
       <div className="mx-auto max-w-6xl px-6">
@@ -52,67 +31,72 @@ export default function AppShowcase() {
               }}
             >
               <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#2dd4bf" }}>
-                The App
+                {t.appShowcase.sectionLabel}
               </span>
             </div>
             <h2
               className="font-display font-extrabold text-4xl sm:text-5xl tracking-tight leading-tight mb-4"
               style={{ color: "#fafaf9" }}
             >
-              Every dollar.{" "}
-              <span style={{ color: "#14b8a6" }}>Every decision.</span>
+              {t.appShowcase.headingLine1}{" "}
+              <span style={{ color: "#14b8a6" }}>{t.appShowcase.headingColored}</span>
               <br />
-              In one place.
+              {t.appShowcase.headingLine3}
             </h2>
             <p className="text-lg leading-relaxed" style={{ color: "#78716c" }}>
-              FI-532 brings your entire financial picture into a single,
-              beautifully designed workspace.
+              {t.appShowcase.description}
             </p>
           </div>
         </AnimateInView>
 
         {/* Phone screens — staggered layout */}
         <div className="flex flex-col md:flex-row items-end justify-center gap-6 md:gap-4 lg:gap-8 mb-16">
-          {screens.map((screen, i) => (
-            <AnimateInView
-              key={screen.alt}
-              type={i === 0 ? "left" : i === 2 ? "right" : "up"}
-              delay={i * 120}
-              className={i === 1 ? "z-10 md:-mx-2" : ""}
-            >
-              <PhoneCard
-                image={screen.image}
-                alt={screen.alt}
-                color={screen.color}
-                rotate={screen.rotate}
-                yOffset={screen.yOffset}
-                featured={i === 1}
-              />
-            </AnimateInView>
-          ))}
+          {SCREEN_STYLES.map((style, i) => {
+            const screen = t.appShowcase.screens[i];
+            return (
+              <AnimateInView
+                key={i}
+                type={i === 0 ? "left" : i === 2 ? "right" : "up"}
+                delay={i * 120}
+                className={i === 1 ? "z-10 md:-mx-2" : ""}
+              >
+                <PhoneCard
+                  image={getAsset(ASSET_KEYS[i], locale)}
+                  alt={screen.alt}
+                  color={style.color}
+                  rotate={style.rotate}
+                  yOffset={style.yOffset}
+                  featured={i === 1}
+                />
+              </AnimateInView>
+            );
+          })}
         </div>
 
         {/* Captions row */}
         <div className="grid md:grid-cols-3 gap-6">
-          {screens.map((screen, i) => (
-            <AnimateInView key={screen.title} type="up" delay={200 + i * 80}>
-              <div className="text-center px-2">
-                <div
-                  className="w-2 h-2 rounded-full mx-auto mb-4"
-                  style={{ backgroundColor: screen.color }}
-                />
-                <h3
-                  className="font-display font-bold text-base mb-2"
-                  style={{ color: "#e7e5e4" }}
-                >
-                  {screen.title}
-                </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "#57534e" }}>
-                  {screen.desc}
-                </p>
-              </div>
-            </AnimateInView>
-          ))}
+          {SCREEN_STYLES.map((style, i) => {
+            const screen = t.appShowcase.screens[i];
+            return (
+              <AnimateInView key={i} type="up" delay={200 + i * 80}>
+                <div className="text-center px-2">
+                  <div
+                    className="w-2 h-2 rounded-full mx-auto mb-4"
+                    style={{ backgroundColor: style.color }}
+                  />
+                  <h3
+                    className="font-display font-bold text-base mb-2"
+                    style={{ color: "#e7e5e4" }}
+                  >
+                    {screen.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#57534e" }}>
+                    {screen.desc}
+                  </p>
+                </div>
+              </AnimateInView>
+            );
+          })}
         </div>
       </div>
     </section>

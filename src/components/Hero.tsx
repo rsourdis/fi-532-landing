@@ -4,8 +4,11 @@ import Image from "next/image";
 import { Star, ArrowDown } from "lucide-react";
 import AppStoreBadge from "./AppStoreBadge";
 import HomeScreen from "@/assets/app-screens/Home.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-20 overflow-hidden bg-stone-950">
       {/* ── Ambient gradient orbs ── */}
@@ -67,7 +70,7 @@ export default function Hero() {
                 style={{ backgroundColor: "#2dd4bf" }}
               />
               <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#5eead4" }}>
-                Available on iOS
+                {t.hero.available}
               </span>
             </div>
 
@@ -76,13 +79,13 @@ export default function Hero() {
               className="font-display font-extrabold leading-[0.92] tracking-tight text-white mb-6 animate-fade-in-up"
               style={{ fontSize: "clamp(2.6rem, 6vw, 5rem)", animationDelay: "80ms" }}
             >
-              The 50/30/20
+              {t.hero.headlinePrefix}
               <br />
               <span className="text-gradient-teal">
-                budget rule,
+                {t.hero.headlineColored}
               </span>
               <br />
-              automated.
+              {t.hero.headlineSuffix}
             </h1>
 
             {/* Sub-copy */}
@@ -90,8 +93,7 @@ export default function Hero() {
               className="text-lg leading-relaxed mb-8 max-w-md animate-fade-in-up"
               style={{ color: "#a8a29e", animationDelay: "160ms" }}
             >
-              FI-532 applies the world&apos;s most effective budgeting strategy automatically.
-              See exactly where your money goes — and how much you&apos;re saving — every single month.
+              {t.hero.subCopy}
             </p>
 
             {/* 50 / 30 / 20 stat strip */}
@@ -108,7 +110,7 @@ export default function Hero() {
                   50%
                 </div>
                 <div className="text-[10px] uppercase tracking-widest mt-0.5" style={{ color: "#57534e" }}>
-                  Needs
+                  {t.hero.statNeeds}
                 </div>
               </div>
               <div className="w-px h-10 self-center" style={{ backgroundColor: "rgb(255 255 255 / 0.08)" }} />
@@ -117,7 +119,7 @@ export default function Hero() {
                   30%
                 </div>
                 <div className="text-[10px] uppercase tracking-widest mt-0.5" style={{ color: "#57534e" }}>
-                  Wants
+                  {t.hero.statWants}
                 </div>
               </div>
               <div className="w-px h-10 self-center" style={{ backgroundColor: "rgb(255 255 255 / 0.08)" }} />
@@ -126,7 +128,7 @@ export default function Hero() {
                   20%
                 </div>
                 <div className="text-[10px] uppercase tracking-widest mt-0.5" style={{ color: "#57534e" }}>
-                  Savings
+                  {t.hero.statSavings}
                 </div>
               </div>
               <div className="flex-1 hidden sm:block">
@@ -137,9 +139,9 @@ export default function Hero() {
                   <div className="h-full rounded-r-full" style={{ width: "20%", backgroundColor: "#10b981" }} />
                 </div>
                 <div className="flex justify-between mt-1.5 text-[9px]" style={{ color: "#44403c" }}>
-                  <span>Needs</span>
-                  <span>Wants</span>
-                  <span>Savings</span>
+                  <span>{t.hero.statNeeds}</span>
+                  <span>{t.hero.statWants}</span>
+                  <span>{t.hero.statSavings}</span>
                 </div>
               </div>
             </div>
@@ -157,14 +159,14 @@ export default function Hero() {
                 ))}
               </div>
               <span className="text-sm" style={{ color: "#78716c" }}>
-                Trusted by families taking control of their finances
+                {t.hero.socialProof}
               </span>
             </div>
           </div>
 
           {/* Right column — iPhone mockup */}
           <div className="flex justify-center lg:justify-end animate-fade-in-up" style={{ animationDelay: "200ms" }}>
-            <PhoneFrame />
+            <PhoneFrame phoneAlt={t.hero.phoneAlt} badgeNeeds={t.hero.badgeNeeds} badgeSavings={t.hero.badgeSavings} />
           </div>
         </div>
 
@@ -176,7 +178,7 @@ export default function Hero() {
             style={{ color: "#44403c" }}
           >
             <span className="text-[10px] uppercase tracking-widest group-hover:text-teal-400 transition-colors">
-              How it works
+              {t.hero.scrollCue}
             </span>
             <ArrowDown size={14} className="animate-bounce" style={{ color: "inherit" }} />
           </a>
@@ -186,7 +188,15 @@ export default function Hero() {
   );
 }
 
-function PhoneFrame() {
+function PhoneFrame({
+  phoneAlt,
+  badgeNeeds,
+  badgeSavings,
+}: {
+  phoneAlt: string;
+  badgeNeeds: string;
+  badgeSavings: string;
+}) {
   return (
     <div className="relative animate-float">
       {/* Glow behind phone */}
@@ -225,7 +235,7 @@ function PhoneFrame() {
         <div className="rounded-[2.5rem] overflow-hidden">
           <Image
             src={HomeScreen}
-            alt="FI-532 app — Monthly budget dashboard"
+            alt={phoneAlt}
             className="w-full h-auto block"
             priority
           />
@@ -241,7 +251,7 @@ function PhoneFrame() {
           backdropFilter: "blur(12px)",
         }}
       >
-        <div className="text-[10px] uppercase tracking-wide mb-0.5" style={{ color: "#5eead4" }}>Needs</div>
+        <div className="text-[10px] uppercase tracking-wide mb-0.5" style={{ color: "#5eead4" }}>{badgeNeeds}</div>
         <div className="font-display font-bold text-sm text-white">50%</div>
       </div>
 
@@ -255,7 +265,7 @@ function PhoneFrame() {
           backdropFilter: "blur(12px)",
         }}
       >
-        <div className="text-[10px] uppercase tracking-wide mb-0.5" style={{ color: "#34d399" }}>Savings</div>
+        <div className="text-[10px] uppercase tracking-wide mb-0.5" style={{ color: "#34d399" }}>{badgeSavings}</div>
         <div className="font-display font-bold text-sm text-white">20%</div>
       </div>
     </div>
