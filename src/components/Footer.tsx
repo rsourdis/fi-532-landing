@@ -9,8 +9,8 @@ export default function Footer() {
     <footer
       className="border-t py-14"
       style={{
-        backgroundColor: "#0c0a09",
-        borderColor: "rgb(255 255 255 / 0.06)",
+        backgroundColor: "#fafaf9",
+        borderColor: "rgb(0 0 0 / 0.07)",
       }}
     >
       <div className="mx-auto max-w-6xl px-6">
@@ -25,7 +25,7 @@ export default function Footer() {
             </div>
             <span
               className="font-display font-bold text-base tracking-tight"
-              style={{ color: "#e7e5e4" }}
+              style={{ color: "#1c1917" }}
             >
               FI-532
             </span>

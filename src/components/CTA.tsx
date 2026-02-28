@@ -9,29 +9,34 @@ export default function CTA() {
   const { t } = useLanguage();
 
   return (
-    <section id="download" className="py-24 md:py-32 overflow-hidden" style={{ backgroundColor: "#0c0a09" }}>
+    <section id="download" className="py-24 md:py-32 overflow-hidden bg-stone-100">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="relative rounded-3xl overflow-hidden px-8 py-20 md:px-16 md:py-28 text-center">
+        <div className="relative rounded-3xl overflow-hidden px-8 py-20 md:px-16 md:py-28 text-center border"
+          style={{
+            backgroundColor: "#fafaf9",
+            borderColor: "rgb(0 0 0 / 0.06)",
+          }}
+        >
           {/* Background mesh */}
           <div
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(ellipse 80% 60% at 50% 0%, rgb(20 184 166 / 0.18) 0%, transparent 70%)",
+                "radial-gradient(ellipse 80% 60% at 50% 0%, rgb(20 184 166 / 0.08) 0%, transparent 70%)",
             }}
           />
           <div
             className="absolute bottom-0 left-0 right-0 h-px"
             style={{
               background:
-                "linear-gradient(90deg, transparent, rgb(20 184 166 / 0.4) 50%, transparent)",
+                "linear-gradient(90deg, transparent, rgb(20 184 166 / 0.25) 50%, transparent)",
             }}
           />
 
           {/* Decorative orbs */}
           <div
             className="absolute -top-20 -left-20 w-64 h-64 rounded-full blur-3xl animate-pulse-glow"
-            style={{ backgroundColor: "rgb(20 184 166 / 0.12)" }}
+            style={{ backgroundColor: "rgb(20 184 166 / 0.08)" }}
           />
           <div
             className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full blur-3xl animate-pulse-glow"
@@ -44,17 +49,17 @@ export default function CTA() {
               <div
                 className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-8"
                 style={{
-                  borderColor: "rgb(20 184 166 / 0.35)",
-                  backgroundColor: "rgb(20 184 166 / 0.10)",
+                  borderColor: "rgb(20 184 166 / 0.30)",
+                  backgroundColor: "rgb(20 184 166 / 0.07)",
                 }}
               >
                 <span
                   className="w-1.5 h-1.5 rounded-full animate-pulse"
-                  style={{ backgroundColor: "#2dd4bf" }}
+                  style={{ backgroundColor: "#14b8a6" }}
                 />
                 <span
                   className="text-xs font-semibold uppercase tracking-widest"
-                  style={{ color: "#5eead4" }}
+                  style={{ color: "#0d9488" }}
                 >
                   {t.cta.badge}
                 </span>
@@ -66,7 +71,7 @@ export default function CTA() {
                 className="font-display font-extrabold tracking-tight leading-tight mb-5"
                 style={{
                   fontSize: "clamp(2.2rem, 5vw, 4rem)",
-                  color: "#fafaf9",
+                  color: "#1c1917",
                 }}
               >
                 {t.cta.headingNormal}
@@ -78,7 +83,7 @@ export default function CTA() {
             <AnimateInView type="up" delay={160}>
               <p
                 className="text-lg max-w-lg mx-auto mb-4 leading-relaxed"
-                style={{ color: "#78716c" }}
+                style={{ color: "#57534e" }}
               >
                 {t.cta.description}
               </p>
@@ -86,10 +91,10 @@ export default function CTA() {
 
             <AnimateInView type="up" delay={220}>
               {/* Trust line */}
-              <div className="flex items-center justify-center gap-6 mb-10 text-sm" style={{ color: "#44403c" }}>
+              <div className="flex items-center justify-center gap-6 mb-10 text-sm" style={{ color: "#a8a29e" }}>
                 {t.cta.trustItems.map((item, i) => (
                   <span key={item} className="flex items-center gap-1.5">
-                    {i > 0 && <span className="w-1 h-1 rounded-full" style={{ backgroundColor: "#44403c" }} />}
+                    {i > 0 && <span className="w-1 h-1 rounded-full" style={{ backgroundColor: "#d6d3d1" }} />}
                     {item}
                   </span>
                 ))}
@@ -102,7 +107,7 @@ export default function CTA() {
                 <a
                   href="#strategy"
                   className="inline-flex items-center gap-2 text-sm font-medium transition-colors"
-                  style={{ color: "#57534e" }}
+                  style={{ color: "#78716c" }}
                 >
                   {t.cta.learnHow}
                   <ArrowRight size={14} />

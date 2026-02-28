@@ -19,8 +19,8 @@ export default function Navbar() {
     <header
       className="fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl"
       style={{
-        backgroundColor: "rgb(12 10 9 / 0.85)",
-        borderColor: "rgb(255 255 255 / 0.07)",
+        backgroundColor: "rgb(250 250 249 / 0.90)",
+        borderColor: "rgb(0 0 0 / 0.07)",
       }}
     >
       <nav className="mx-auto max-w-6xl px-6 flex items-center justify-between h-16">
@@ -34,7 +34,7 @@ export default function Navbar() {
           </div>
           <span
             className="font-display font-bold text-lg tracking-tight"
-            style={{ color: "#e7e5e4" }}
+            style={{ color: "#1c1917" }}
           >
             FI-532
           </span>
@@ -48,7 +48,7 @@ export default function Navbar() {
                 href={link.href}
                 className="text-sm font-medium transition-colors"
                 style={{ color: "#78716c" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#e7e5e4")}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#1c1917")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#78716c")}
               >
                 {link.label}
@@ -87,8 +87,8 @@ export default function Navbar() {
         <div
           className="md:hidden border-b backdrop-blur-xl px-6 pb-6 pt-2"
           style={{
-            backgroundColor: "rgb(12 10 9 / 0.96)",
-            borderColor: "rgb(255 255 255 / 0.07)",
+            backgroundColor: "rgb(250 250 249 / 0.97)",
+            borderColor: "rgb(0 0 0 / 0.07)",
           }}
         >
           <ul className="flex flex-col gap-4">
