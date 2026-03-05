@@ -144,6 +144,7 @@ export interface Translations {
     features: string;
     pricing: string;
     contact: string;
+    support: string;
     privacy: string;
     terms: string;
     eula: string;

@@ -246,6 +246,7 @@ export const es: Translations = {
     features: "Funciones",
     pricing: "Precios",
     contact: "Contacto",
+    support: "Soporte",
     privacy: "Privacidad",
     terms: "Términos",
     eula: "EULA",
