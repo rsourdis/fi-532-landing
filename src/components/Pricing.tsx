@@ -26,20 +26,20 @@ export default function Pricing() {
             <div
               className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-6"
               style={{
-                borderColor: "rgb(20 184 166 / 0.3)",
-                backgroundColor: "rgb(20 184 166 / 0.07)",
+                borderColor: "rgb(40 192 142 / 0.3)",
+                backgroundColor: "rgb(40 192 142 / 0.07)",
               }}
             >
               <span
                 className="text-xs font-semibold uppercase tracking-widest"
-                style={{ color: "#0d9488" }}
+                style={{ color: "#0a6f4d" }}
               >
                 {t.pricing.sectionLabel}
               </span>
             </div>
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-stone-900 tracking-tight leading-tight mb-4">
               {t.pricing.headingNormal}{" "}
-              <span style={{ color: "#14b8a6" }}>
+              <span style={{ color: "#28c08e" }}>
                 {t.pricing.headingColored}
               </span>
             </h2>
@@ -129,9 +129,9 @@ export default function Pricing() {
                   <li key={f} className="flex items-start gap-3">
                     <div
                       className="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5"
-                      style={{ backgroundColor: "rgb(20 184 166 / 0.1)" }}
+                      style={{ backgroundColor: "rgb(40 192 142 / 0.1)" }}
                     >
-                      <Check size={10} style={{ color: "#14b8a6" }} />
+                      <Check size={10} style={{ color: "#28c08e" }} />
                     </div>
                     <span className="text-sm text-stone-600">{f}</span>
                   </li>
@@ -156,8 +156,8 @@ export default function Pricing() {
             <div
               className="relative rounded-2xl p-8 h-full flex flex-col shadow-2xl"
               style={{
-                backgroundColor: "#0c0a09",
-                boxShadow: "0 20px 60px -12px rgb(20 184 166 / 0.2)",
+                backgroundColor: "#1b1b1b",
+                boxShadow: "0 20px 60px -12px rgb(40 192 142 / 0.2)",
               }}
             >
               {/* Most Popular badge */}
@@ -174,7 +174,7 @@ export default function Pricing() {
               {/* Teal corner glow */}
               <div
                 className="absolute top-0 right-0 w-48 h-48 rounded-2xl blur-3xl pointer-events-none"
-                style={{ backgroundColor: "rgb(20 184 166 / 0.08)" }}
+                style={{ backgroundColor: "rgb(40 192 142 / 0.08)" }}
               />
 
               {/* Price block */}
@@ -189,7 +189,7 @@ export default function Pricing() {
                     <div className="flex items-end gap-3 mb-1">
                       <span
                         className="font-display font-extrabold text-5xl leading-none"
-                        style={{ color: "#14b8a6" }}
+                        style={{ color: "#28c08e" }}
                       >
                         ${ANNUAL_PRICE}
                       </span>
@@ -217,7 +217,7 @@ export default function Pricing() {
                     >
                       <span
                         className="text-xs font-bold"
-                        style={{ color: "#34d399" }}
+                        style={{ color: "#40c79a" }}
                       >
                         {t.pricing.proPlan.saveVsMonthly(((MONTHLY_PRICE * 12) - ANNUAL_PRICE).toFixed(2))}
                       </span>
@@ -244,7 +244,7 @@ export default function Pricing() {
                     <div className="flex items-baseline gap-2 mb-2">
                       <span
                         className="font-display font-extrabold text-5xl"
-                        style={{ color: "#14b8a6" }}
+                        style={{ color: "#28c08e" }}
                       >
                         ${MONTHLY_PRICE}
                       </span>
@@ -274,9 +274,9 @@ export default function Pricing() {
                   <li key={f} className="flex items-start gap-3">
                     <div
                       className="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5"
-                      style={{ backgroundColor: "rgb(20 184 166 / 0.15)" }}
+                      style={{ backgroundColor: "rgb(40 192 142 / 0.15)" }}
                     >
-                      <Check size={10} style={{ color: "#14b8a6" }} />
+                      <Check size={10} style={{ color: "#28c08e" }} />
                     </div>
                     <span className="text-sm" style={{ color: "#a8a29e" }}>
                       {f}
@@ -289,12 +289,12 @@ export default function Pricing() {
               <div
                 className="flex items-center gap-2 rounded-xl px-4 py-3 mb-6"
                 style={{
-                  backgroundColor: "rgb(20 184 166 / 0.08)",
-                  border: "1px solid rgb(20 184 166 / 0.15)",
+                  backgroundColor: "rgb(40 192 142 / 0.08)",
+                  border: "1px solid rgb(40 192 142 / 0.15)",
                 }}
               >
-                <Zap size={14} style={{ color: "#14b8a6" }} />
-                <span className="text-xs" style={{ color: "#5eead4" }}>
+                <Zap size={14} style={{ color: "#28c08e" }} />
+                <span className="text-xs" style={{ color: "#70d5b3" }}>
                   {isAnnual
                     ? t.pricing.proPlan.valueAnnual(ANNUAL_MONTHLY_EQUIV)
                     : t.pricing.proPlan.valueMonthly}
@@ -304,7 +304,7 @@ export default function Pricing() {
               <a
                 href="#download"
                 className="relative block text-center rounded-xl px-6 py-3.5 text-sm font-semibold transition-all duration-200 hover:opacity-90 active:opacity-80"
-                style={{ backgroundColor: "#14b8a6", color: "white" }}
+                style={{ backgroundColor: "#28c08e", color: "white" }}
               >
                 {isAnnual ? t.pricing.proPlan.ctaAnnual : t.pricing.proPlan.ctaMonthly}
               </a>

@@ -13,11 +13,11 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 // Visual/icon config only — text comes from translations
 const FEATURE_STYLES = [
-  { icon: PieChart,      color: "#14b8a6", bg: "rgb(20 184 166 / 0.08)", border: "rgb(20 184 166 / 0.2)",  iconBg: "rgb(20 184 166 / 0.15)" },
+  { icon: PieChart,      color: "#28c08e", bg: "rgb(40 192 142 / 0.08)", border: "rgb(40 192 142 / 0.2)",  iconBg: "rgb(40 192 142 / 0.15)" },
   { icon: CreditCard,    color: "#facc15", bg: "rgb(250 204 21 / 0.06)", border: "rgb(250 204 21 / 0.2)",  iconBg: "rgb(250 204 21 / 0.12)" },
   { icon: CalendarClock, color: "#10b981", bg: "rgb(16 185 129 / 0.06)", border: "rgb(16 185 129 / 0.2)",  iconBg: "rgb(16 185 129 / 0.12)" },
-  { icon: Users,         color: "#2dd4bf", bg: "rgb(45 212 191 / 0.06)", border: "rgb(45 212 191 / 0.2)",  iconBg: "rgb(45 212 191 / 0.12)" },
-  { icon: BarChart3,     color: "#14b8a6", bg: "rgb(20 184 166 / 0.08)", border: "rgb(20 184 166 / 0.2)",  iconBg: "rgb(20 184 166 / 0.15)" },
+  { icon: Users,         color: "#58cea7", bg: "rgb(88 206 167 / 0.06)", border: "rgb(88 206 167 / 0.2)",  iconBg: "rgb(88 206 167 / 0.12)" },
+  { icon: BarChart3,     color: "#28c08e", bg: "rgb(40 192 142 / 0.08)", border: "rgb(40 192 142 / 0.2)",  iconBg: "rgb(40 192 142 / 0.15)" },
   { icon: Bell,          color: "#facc15", bg: "rgb(250 204 21 / 0.06)", border: "rgb(250 204 21 / 0.2)",  iconBg: "rgb(250 204 21 / 0.12)" },
 ];
 
@@ -33,20 +33,20 @@ export default function Features() {
             <div
               className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-6"
               style={{
-                borderColor: "rgb(20 184 166 / 0.3)",
-                backgroundColor: "rgb(20 184 166 / 0.07)",
+                borderColor: "rgb(40 192 142 / 0.3)",
+                backgroundColor: "rgb(40 192 142 / 0.07)",
               }}
             >
               <span
                 className="text-xs font-semibold uppercase tracking-widest"
-                style={{ color: "#0d9488" }}
+                style={{ color: "#0a6f4d" }}
               >
                 {t.features.sectionLabel}
               </span>
             </div>
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-stone-900 tracking-tight leading-tight mb-4">
               {t.features.headingNormal}{" "}
-              <span style={{ color: "#14b8a6" }}>{t.features.headingColored}</span>
+              <span style={{ color: "#28c08e" }}>{t.features.headingColored}</span>
             </h2>
             <p className="text-lg text-stone-500 leading-relaxed">
               {t.features.description}

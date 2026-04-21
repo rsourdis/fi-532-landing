@@ -22,21 +22,21 @@ export default function CTA() {
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(ellipse 80% 60% at 50% 0%, rgb(20 184 166 / 0.08) 0%, transparent 70%)",
+                "radial-gradient(ellipse 80% 60% at 50% 0%, rgb(40 192 142 / 0.08) 0%, transparent 70%)",
             }}
           />
           <div
             className="absolute bottom-0 left-0 right-0 h-px"
             style={{
               background:
-                "linear-gradient(90deg, transparent, rgb(20 184 166 / 0.25) 50%, transparent)",
+                "linear-gradient(90deg, transparent, rgb(40 192 142 / 0.25) 50%, transparent)",
             }}
           />
 
           {/* Decorative orbs */}
           <div
             className="absolute -top-20 -left-20 w-64 h-64 rounded-full blur-3xl animate-pulse-glow"
-            style={{ backgroundColor: "rgb(20 184 166 / 0.08)" }}
+            style={{ backgroundColor: "rgb(40 192 142 / 0.08)" }}
           />
           <div
             className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full blur-3xl animate-pulse-glow"
@@ -49,17 +49,17 @@ export default function CTA() {
               <div
                 className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-8"
                 style={{
-                  borderColor: "rgb(20 184 166 / 0.30)",
-                  backgroundColor: "rgb(20 184 166 / 0.07)",
+                  borderColor: "rgb(40 192 142 / 0.30)",
+                  backgroundColor: "rgb(40 192 142 / 0.07)",
                 }}
               >
                 <span
                   className="w-1.5 h-1.5 rounded-full animate-pulse"
-                  style={{ backgroundColor: "#14b8a6" }}
+                  style={{ backgroundColor: "#28c08e" }}
                 />
                 <span
                   className="text-xs font-semibold uppercase tracking-widest"
-                  style={{ color: "#0d9488" }}
+                  style={{ color: "#0a6f4d" }}
                 >
                   {t.cta.badge}
                 </span>
@@ -76,7 +76,7 @@ export default function CTA() {
               >
                 {t.cta.headingNormal}
                 <br />
-                <span style={{ color: "#14b8a6" }}>{t.cta.headingColored}</span>
+                <span style={{ color: "#28c08e" }}>{t.cta.headingColored}</span>
               </h2>
             </AnimateInView>
 

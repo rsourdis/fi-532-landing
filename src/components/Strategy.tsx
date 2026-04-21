@@ -9,11 +9,11 @@ const PILLAR_STYLES = [
   {
     pct: "50",
     icon: Home,
-    color: "#14b8a6",
-    lightColor: "rgb(20 184 166 / 0.12)",
-    borderColor: "rgb(20 184 166 / 0.25)",
-    badgeColor: "rgb(20 184 166 / 0.15)",
-    labelColor: "#5eead4",
+    color: "#28c08e",
+    lightColor: "rgb(40 192 142 / 0.12)",
+    borderColor: "rgb(40 192 142 / 0.25)",
+    badgeColor: "rgb(40 192 142 / 0.15)",
+    labelColor: "#70d5b3",
   },
   {
     pct: "30",
@@ -31,7 +31,7 @@ const PILLAR_STYLES = [
     lightColor: "rgb(16 185 129 / 0.10)",
     borderColor: "rgb(16 185 129 / 0.25)",
     badgeColor: "rgb(16 185 129 / 0.12)",
-    labelColor: "#34d399",
+    labelColor: "#40c79a",
   },
 ];
 
@@ -47,18 +47,18 @@ export default function Strategy() {
             <div
               className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-6"
               style={{
-                borderColor: "rgb(20 184 166 / 0.3)",
-                backgroundColor: "rgb(20 184 166 / 0.08)",
+                borderColor: "rgb(40 192 142 / 0.3)",
+                backgroundColor: "rgb(40 192 142 / 0.08)",
               }}
             >
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0d9488" }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0a6f4d" }}>
                 {t.strategy.sectionLabel}
               </span>
             </div>
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-stone-900 tracking-tight leading-tight mb-4">
               {t.strategy.headingPart1}{" "}
               <br className="hidden sm:block" />
-              <span style={{ color: "#14b8a6" }}>{t.strategy.headingColored}</span>
+              <span style={{ color: "#28c08e" }}>{t.strategy.headingColored}</span>
             </h2>
             <p className="text-lg text-stone-500 leading-relaxed">
               {t.strategy.description}
@@ -72,7 +72,7 @@ export default function Strategy() {
             <div className="flex h-4 rounded-full overflow-hidden shadow-inner" style={{ backgroundColor: "rgb(0 0 0 / 0.06)" }}>
               <div
                 className="h-full rounded-l-full transition-all"
-                style={{ width: "50%", backgroundColor: "#14b8a6" }}
+                style={{ width: "50%", backgroundColor: "#28c08e" }}
               />
               <div
                 className="h-full"
@@ -175,8 +175,8 @@ export default function Strategy() {
           <div
             className="rounded-2xl p-6 md:p-8 text-center border"
             style={{
-              backgroundColor: "rgb(20 184 166 / 0.06)",
-              borderColor: "rgb(20 184 166 / 0.2)",
+              backgroundColor: "rgb(40 192 142 / 0.06)",
+              borderColor: "rgb(40 192 142 / 0.2)",
             }}
           >
             <p className="text-base md:text-lg font-medium text-stone-700 leading-relaxed max-w-2xl mx-auto">

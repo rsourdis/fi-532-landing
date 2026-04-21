@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import AppLogo from "./AppLogo";
 import LanguageSelector from "./LanguageSelector";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -25,20 +26,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto max-w-6xl px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5">
-          <div
-            className="w-8 h-8 rounded-lg flex items-center justify-center"
-            style={{ backgroundColor: "#14b8a6" }}
-          >
-            <span className="text-white font-display font-bold text-sm">FI</span>
-          </div>
-          <span
-            className="font-display font-bold text-lg tracking-tight"
-            style={{ color: "#1c1917" }}
-          >
-            FI-532
-          </span>
-        </a>
+        <AppLogo href="#" textClassName="text-lg" />
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-8">
@@ -63,9 +51,9 @@ export default function Navbar() {
           <a
             href="#download"
             className="inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200"
-            style={{ backgroundColor: "#14b8a6", color: "white" }}
-            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#0d9488")}
-            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#14b8a6")}
+            style={{ backgroundColor: "#28c08e", color: "white" }}
+            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#0a6f4d")}
+            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#28c08e")}
           >
             {t.nav.downloadApp}
           </a>
@@ -112,7 +100,7 @@ export default function Navbar() {
                 href="#download"
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex items-center justify-center w-full rounded-full px-5 py-2.5 text-sm font-semibold"
-                style={{ backgroundColor: "#14b8a6", color: "white" }}
+                style={{ backgroundColor: "#28c08e", color: "white" }}
               >
                 {t.nav.downloadApp}
               </a>

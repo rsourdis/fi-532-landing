@@ -6,7 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 // Visual/name config only — role and quote text come from translations
 const TESTIMONIAL_STYLES = [
-  { name: "Sarah M.", rating: 5, accent: "#14b8a6", initial: "S", bg: "rgb(20 184 166 / 0.12)" },
+  { name: "Sarah M.", rating: 5, accent: "#28c08e", initial: "S", bg: "rgb(40 192 142 / 0.12)" },
   { name: "James K.", rating: 5, accent: "#facc15", initial: "J", bg: "rgb(250 204 21 / 0.12)" },
   { name: "Maria L.", rating: 5, accent: "#10b981", initial: "M", bg: "rgb(16 185 129 / 0.12)" },
 ];
@@ -23,8 +23,8 @@ export default function Testimonials() {
             <div
               className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-6"
               style={{
-                borderColor: "rgb(20 184 166 / 0.3)",
-                backgroundColor: "rgb(20 184 166 / 0.07)",
+                borderColor: "rgb(40 192 142 / 0.3)",
+                backgroundColor: "rgb(40 192 142 / 0.07)",
               }}
             >
               <div className="flex gap-0.5">
@@ -38,14 +38,14 @@ export default function Testimonials() {
               </div>
               <span
                 className="text-xs font-semibold uppercase tracking-widest"
-                style={{ color: "#0d9488" }}
+                style={{ color: "#0a6f4d" }}
               >
                 {t.testimonials.sectionLabel}
               </span>
             </div>
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-stone-900 tracking-tight leading-tight">
               {t.testimonials.headingNormal}{" "}
-              <span style={{ color: "#14b8a6" }}>{t.testimonials.headingColored}</span>
+              <span style={{ color: "#28c08e" }}>{t.testimonials.headingColored}</span>
             </h2>
           </div>
         </AnimateInView>

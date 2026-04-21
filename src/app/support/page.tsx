@@ -75,7 +75,7 @@ export default function SupportPage() {
           <Link href="/" className="flex items-center gap-2">
             <div
               className="w-6 h-6 rounded-md flex items-center justify-center"
-              style={{ backgroundColor: "#14b8a6" }}
+              style={{ backgroundColor: "#28c08e" }}
             >
               <span className="text-white font-display font-bold text-[10px]">FI</span>
             </div>
@@ -113,7 +113,7 @@ export default function SupportPage() {
           <a
             href="mailto:info@fi-532.app"
             className="inline-flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-medium transition-opacity hover:opacity-80"
-            style={{ backgroundColor: "#14b8a6", color: "#fff" }}
+            style={{ backgroundColor: "#28c08e", color: "#fff" }}
           >
             <Mail size={16} />
             info@fi-532.app
@@ -150,7 +150,7 @@ export default function SupportPage() {
             <a
               href="mailto:info@fi-532.app"
               className="transition-colors"
-              style={{ color: "#0d9488" }}
+              style={{ color: "#0a6f4d" }}
             >
               info@fi-532.app
             </a>{" "}

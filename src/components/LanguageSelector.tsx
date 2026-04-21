@@ -23,8 +23,8 @@ export default function LanguageSelector() {
             style={
               isActive
                 ? {
-                    backgroundColor: "rgb(20 184 166 / 0.18)",
-                    color: "#14b8a6",
+                    backgroundColor: "rgb(40 192 142 / 0.18)",
+                    color: "#28c08e",
                   }
                 : {
                     backgroundColor: "transparent",

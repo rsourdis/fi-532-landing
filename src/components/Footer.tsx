@@ -1,5 +1,6 @@
 "use client";
 
+import AppLogo from "./AppLogo";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
@@ -16,20 +17,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
-          <div className="flex items-center gap-2.5">
-            <div
-              className="w-8 h-8 rounded-lg flex items-center justify-center"
-              style={{ backgroundColor: "#14b8a6" }}
-            >
-              <span className="text-white font-display font-bold text-sm">FI</span>
-            </div>
-            <span
-              className="font-display font-bold text-base tracking-tight"
-              style={{ color: "#1c1917" }}
-            >
-              FI-532
-            </span>
-          </div>
+          <AppLogo textClassName="text-base" />
 
           {/* Links */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm" style={{ color: "#57534e" }}>

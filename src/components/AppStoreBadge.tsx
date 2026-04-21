@@ -1,18 +1,23 @@
-import { Apple } from "lucide-react";
+"use client";
+
+import Image from "next/image";
+import badgeIosEn from "@/assets/en/badge-ios-en.svg";
+import badgeIosEs from "@/assets/es/badge-ios-es.svg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function AppStoreBadge() {
+  const { locale } = useLanguage();
+  const badge = locale === "es" ? badgeIosEs : badgeIosEn;
+  const alt =
+    locale === "es" ? "Consiguelo en el App Store" : "Download on the App Store";
+
   return (
     <a
-      href="#download"
-      className="inline-flex items-center gap-3 bg-stone-900 hover:bg-stone-800 text-white rounded-xl px-5 py-3 transition-colors group"
+      href="https://apps.apple.com/co/app/fi-532/id6758963976"
+      aria-label={alt}
+      className="inline-flex h-10 w-[120px] transition-opacity hover:opacity-85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-900"
     >
-      <Apple size={28} className="shrink-0" />
-      <div className="text-left">
-        <p className="text-[10px] uppercase tracking-wider text-stone-400 leading-none mb-0.5">
-          Download on the
-        </p>
-        <p className="text-base font-semibold leading-tight">App Store</p>
-      </div>
+      <Image src={badge} alt={alt} className="h-10 w-auto" priority />
     </a>
   );
 }

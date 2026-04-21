@@ -8,7 +8,7 @@ import { getAsset } from "@/lib/i18n/assets";
 // Visual/layout config only — text and images come from translations + asset resolver
 const SCREEN_STYLES = [
   { color: "#facc15", rotate: "-3deg", yOffset: "20px" },
-  { color: "#14b8a6", rotate: "0deg",  yOffset: "0px"  },
+  { color: "#28c08e", rotate: "0deg",  yOffset: "0px"  },
   { color: "#10b981", rotate: "3deg",  yOffset: "20px" },
 ] as const;
 
@@ -18,7 +18,7 @@ export default function AppShowcase() {
   const { t, locale } = useLanguage();
 
   return (
-    <section className="py-24 md:py-32 overflow-hidden" style={{ backgroundColor: "#0c0a09" }}>
+    <section className="py-24 md:py-32 overflow-hidden" style={{ backgroundColor: "#1b1b1b" }}>
       <div className="mx-auto max-w-6xl px-6">
         {/* Section header */}
         <AnimateInView type="up" delay={0}>
@@ -26,11 +26,11 @@ export default function AppShowcase() {
             <div
               className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-6"
               style={{
-                borderColor: "rgb(20 184 166 / 0.3)",
-                backgroundColor: "rgb(20 184 166 / 0.08)",
+                borderColor: "rgb(40 192 142 / 0.3)",
+                backgroundColor: "rgb(40 192 142 / 0.08)",
               }}
             >
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#2dd4bf" }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#58cea7" }}>
                 {t.appShowcase.sectionLabel}
               </span>
             </div>
@@ -39,7 +39,7 @@ export default function AppShowcase() {
               style={{ color: "#fafaf9" }}
             >
               {t.appShowcase.headingLine1}{" "}
-              <span style={{ color: "#14b8a6" }}>{t.appShowcase.headingColored}</span>
+              <span style={{ color: "#28c08e" }}>{t.appShowcase.headingColored}</span>
               <br />
               {t.appShowcase.headingLine3}
             </h2>
@@ -138,7 +138,7 @@ function PhoneCard({
       <div
         className="relative rounded-[2.8rem] border shadow-2xl"
         style={{
-          backgroundColor: "#0c0a09",
+          backgroundColor: "#1b1b1b",
           borderColor: "rgb(255 255 255 / 0.09)",
           padding: "9px",
           width,
@@ -152,7 +152,7 @@ function PhoneCard({
             top: "15px",
             width: "76px",
             height: "24px",
-            backgroundColor: "#0c0a09",
+            backgroundColor: "#1b1b1b",
           }}
         />
 

@@ -6,10 +6,10 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 // Visual/icon config only — text comes from translations
 const STEP_STYLES = [
-  { icon: UserPlus,   number: "01", color: "#14b8a6" },
+  { icon: UserPlus,   number: "01", color: "#28c08e" },
   { icon: Home,       number: "02", color: "#facc15" },
   { icon: Banknote,   number: "03", color: "#10b981" },
-  { icon: TrendingUp, number: "04", color: "#2dd4bf" },
+  { icon: TrendingUp, number: "04", color: "#58cea7" },
 ];
 
 export default function HowItWorks() {
@@ -28,13 +28,13 @@ export default function HowItWorks() {
             <div
               className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-6"
               style={{
-                borderColor: "rgb(20 184 166 / 0.3)",
-                backgroundColor: "rgb(20 184 166 / 0.08)",
+                borderColor: "rgb(40 192 142 / 0.3)",
+                backgroundColor: "rgb(40 192 142 / 0.08)",
               }}
             >
               <span
                 className="text-xs font-semibold uppercase tracking-widest"
-                style={{ color: "#2dd4bf" }}
+                style={{ color: "#58cea7" }}
               >
                 {t.howItWorks.sectionLabel}
               </span>
@@ -44,7 +44,7 @@ export default function HowItWorks() {
               style={{ color: "#fafaf9" }}
             >
               {t.howItWorks.headingNormal}{" "}
-              <span style={{ color: "#14b8a6" }}>{t.howItWorks.headingColored}</span>
+              <span style={{ color: "#28c08e" }}>{t.howItWorks.headingColored}</span>
             </h2>
             <p className="text-lg leading-relaxed" style={{ color: "#78716c" }}>
               {t.howItWorks.description}
@@ -59,7 +59,7 @@ export default function HowItWorks() {
             className="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-px"
             style={{
               background:
-                "linear-gradient(90deg, transparent, rgb(20 184 166 / 0.3) 15%, rgb(20 184 166 / 0.3) 85%, transparent)",
+                "linear-gradient(90deg, transparent, rgb(40 192 142 / 0.3) 15%, rgb(40 192 142 / 0.3) 85%, transparent)",
             }}
           />
 
