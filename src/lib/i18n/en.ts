@@ -14,11 +14,11 @@ export const en: Translations = {
     headlineColored: "budget rule,",
     headlineSuffix: "automated.",
     subCopy:
-      "FI-532 applies the world's most effective budgeting strategy automatically. See exactly where your money goes — and how much you're saving — every single month.",
+      "FI-532 applies the world's most effective budgeting strategy automatically — built for couples, families, and roommates. See exactly where your money goes, split shared costs, and watch your savings grow every month.",
     statNeeds: "Needs",
     statWants: "Wants",
     statSavings: "Savings",
-    socialProof: "Trusted by families taking control of their finances",
+    socialProof: "Built for couples, families & roommates managing money together",
     scrollCue: "How it works",
     badgeNeeds: "Needs",
     badgeSavings: "Savings",

@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — FI-532",
+  title: "Terms of Service",
   description:
     "Read the terms and conditions governing your use of the FI-532 app.",
+  alternates: { canonical: "/terms" },
 };
 
 const sections = [

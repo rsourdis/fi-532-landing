@@ -1,7 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
+import StructuredData from "@/components/StructuredData";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -10,28 +12,85 @@ const nunito = Nunito({
   display: "swap",
 });
 
+const TITLE = "FI-532 — Household Budget for Couples & Families";
+const DESCRIPTION =
+  "FI-532 is the household budgeting app for couples, families, and roommates. Automate the 50/30/20 rule, track shared expenses, manage recurring bills, split costs, and get AI-powered spending reports — in real time. Free on iOS.";
+
 export const metadata: Metadata = {
-  title: "FI-532 — Household Budgeting, Simplified",
-  description:
-    "Track spending, manage bills, plan budgets, and collaborate on household finances in one real-time workspace. Available on iOS.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: TITLE,
+    template: `%s — ${SITE_NAME}`,
+  },
+  description: DESCRIPTION,
+  applicationName: SITE_NAME,
+  category: "finance",
   keywords: [
-    "budgeting app",
-    "household finance",
+    "household budgeting app",
+    "budget app for couples",
+    "50/30/20 budget",
+    "shared expense tracker",
+    "split expenses app",
+    "family budget app",
     "expense tracker",
-    "bill management",
-    "shared finances",
-    "iOS app",
+    "bill reminder app",
+    "recurring bills tracker",
+    "couples finance app",
+    "roommate expense splitting",
+    "AI budget reports",
+    "iOS budgeting app",
   ],
+  authors: [{ name: "Roberto Sourdis" }],
+  creator: "Roberto Sourdis",
+  publisher: SITE_NAME,
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/",
+      "es-ES": "/",
+      "x-default": "/",
+    },
+  },
   openGraph: {
-    title: "FI-532 — Household Budgeting, Simplified",
-    description:
-      "Track spending, manage bills, plan budgets, and collaborate on household finances in one real-time workspace.",
     type: "website",
+    siteName: SITE_NAME,
+    url: SITE_URL,
+    title: TITLE,
+    description: DESCRIPTION,
+    locale: "en_US",
+    alternateLocale: ["es_ES"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  appleWebApp: {
+    capable: true,
+    title: SITE_NAME,
+    statusBarStyle: "default",
   },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
+    apple: "/apple-icon",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#28c08e",
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -42,6 +101,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${nunito.variable} antialiased`}>
+        <StructuredData />
         <Providers>{children}</Providers>
       </body>
     </html>

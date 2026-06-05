@@ -4,6 +4,7 @@ import Image from "next/image";
 import badgeIosEn from "@/assets/en/badge-ios-en.svg";
 import badgeIosEs from "@/assets/es/badge-ios-es.svg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { APP_STORE_URL } from "@/lib/site";
 
 export default function AppStoreBadge() {
   const { locale } = useLanguage();
@@ -13,7 +14,7 @@ export default function AppStoreBadge() {
 
   return (
     <a
-      href="https://apps.apple.com/co/app/fi-532/id6758963976"
+      href={APP_STORE_URL}
       aria-label={alt}
       className="inline-flex h-10 w-[120px] transition-opacity hover:opacity-85 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-900"
     >

@@ -3,9 +3,10 @@ import { ArrowLeft, Mail } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Support — FI-532",
+  title: "Support & FAQ",
   description:
-    "Get help with FI-532. Contact us at info@fi-532.app or browse our frequently asked questions.",
+    "Get help with FI-532. Contact us at info@fi-532.app or browse answers about the 50/30/20 rule, household members, subscriptions, security, and more.",
+  alternates: { canonical: "/support" },
 };
 
 const faqs = [
@@ -51,9 +52,23 @@ const faqs = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
+
 export default function SupportPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#fafaf9" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* Header */}
       <header
         className="border-b backdrop-blur-xl"

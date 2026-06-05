@@ -14,11 +14,11 @@ export const es: Translations = {
     headlineColored: "de presupuesto,",
     headlineSuffix: "automatizada.",
     subCopy:
-      "FI-532 aplica automáticamente la estrategia de presupuesto más efectiva del mundo. Mira exactamente a dónde va tu dinero — y cuánto estás ahorrando — cada mes.",
+      "FI-532 aplica automáticamente la estrategia de presupuesto más efectiva del mundo — hecha para parejas, familias y compañeros de piso. Mira a dónde va tu dinero, divide los gastos compartidos y haz crecer tus ahorros cada mes.",
     statNeeds: "Necesidades",
     statWants: "Deseos",
     statSavings: "Ahorros",
-    socialProof: "Con la confianza de familias que toman el control de sus finanzas",
+    socialProof: "Para parejas, familias y compañeros que gestionan el dinero juntos",
     scrollCue: "Cómo funciona",
     badgeNeeds: "Necesidades",
     badgeSavings: "Ahorros",

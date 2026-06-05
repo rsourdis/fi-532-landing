@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — FI-532",
+  title: "Privacy Policy",
   description:
     "Learn how FI-532 collects, uses, and protects your personal information.",
+  alternates: { canonical: "/privacy" },
 };
 
 const sections = [

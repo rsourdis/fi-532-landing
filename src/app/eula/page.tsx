@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import LegalPage from "@/components/LegalPage";
 
 export const metadata: Metadata = {
-  title: "End User License Agreement — FI-532",
+  title: "End User License Agreement",
   description:
     "Read the End User License Agreement for the FI-532 app.",
+  alternates: { canonical: "/eula" },
 };
 
 const sections = [
