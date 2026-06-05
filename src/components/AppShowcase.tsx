@@ -7,9 +7,9 @@ import { getAsset } from "@/lib/i18n/assets";
 
 // Visual/layout config only — text and images come from translations + asset resolver
 const SCREEN_STYLES = [
-  { color: "#facc15", rotate: "-3deg", yOffset: "20px" },
-  { color: "#28c08e", rotate: "0deg",  yOffset: "0px"  },
-  { color: "#10b981", rotate: "3deg",  yOffset: "20px" },
+  { color: "#111111", rotate: "-3deg", yOffset: "20px" },
+  { color: "#12c77a", rotate: "0deg",  yOffset: "0px"  },
+  { color: "#0fa866", rotate: "3deg",  yOffset: "20px" },
 ] as const;
 
 const ASSET_KEYS = ["transactions", "home", "recurring"] as const;
@@ -18,7 +18,7 @@ export default function AppShowcase() {
   const { t, locale } = useLanguage();
 
   return (
-    <section className="py-24 md:py-32 overflow-hidden" style={{ backgroundColor: "#1b1b1b" }}>
+    <section className="py-24 md:py-32 overflow-hidden" style={{ backgroundColor: "#111111" }}>
       <div className="mx-auto max-w-6xl px-6">
         {/* Section header */}
         <AnimateInView type="up" delay={0}>
@@ -26,24 +26,24 @@ export default function AppShowcase() {
             <div
               className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-6"
               style={{
-                borderColor: "rgb(40 192 142 / 0.3)",
-                backgroundColor: "rgb(40 192 142 / 0.08)",
+                borderColor: "rgb(18 199 122 / 0.3)",
+                backgroundColor: "rgb(18 199 122 / 0.08)",
               }}
             >
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#58cea7" }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#2ecf94" }}>
                 {t.appShowcase.sectionLabel}
               </span>
             </div>
             <h2
               className="font-display font-extrabold text-4xl sm:text-5xl tracking-tight leading-tight mb-4"
-              style={{ color: "#fafaf9" }}
+              style={{ color: "#fafafa" }}
             >
               {t.appShowcase.headingLine1}{" "}
-              <span style={{ color: "#28c08e" }}>{t.appShowcase.headingColored}</span>
+              <span style={{ color: "#12c77a" }}>{t.appShowcase.headingColored}</span>
               <br />
               {t.appShowcase.headingLine3}
             </h2>
-            <p className="text-lg leading-relaxed" style={{ color: "#78716c" }}>
+            <p className="text-lg leading-relaxed" style={{ color: "#757575" }}>
               {t.appShowcase.description}
             </p>
           </div>
@@ -86,11 +86,11 @@ export default function AppShowcase() {
                   />
                   <h3
                     className="font-display font-bold text-base mb-2"
-                    style={{ color: "#e7e5e4" }}
+                    style={{ color: "#e5e5e5" }}
                   >
                     {screen.title}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "#57534e" }}>
+                  <p className="text-sm leading-relaxed" style={{ color: "#5c5c5c" }}>
                     {screen.desc}
                   </p>
                 </div>
@@ -138,7 +138,7 @@ function PhoneCard({
       <div
         className="relative rounded-[2.8rem] border shadow-2xl"
         style={{
-          backgroundColor: "#1b1b1b",
+          backgroundColor: "#111111",
           borderColor: "rgb(255 255 255 / 0.09)",
           padding: "9px",
           width,
@@ -152,7 +152,7 @@ function PhoneCard({
             top: "15px",
             width: "76px",
             height: "24px",
-            backgroundColor: "#1b1b1b",
+            backgroundColor: "#111111",
           }}
         />
 

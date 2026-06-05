@@ -26,20 +26,20 @@ export default function Pricing() {
             <div
               className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-6"
               style={{
-                borderColor: "rgb(40 192 142 / 0.3)",
-                backgroundColor: "rgb(40 192 142 / 0.07)",
+                borderColor: "rgb(18 199 122 / 0.3)",
+                backgroundColor: "rgb(18 199 122 / 0.07)",
               }}
             >
               <span
                 className="text-xs font-semibold uppercase tracking-widest"
-                style={{ color: "#0a6f4d" }}
+                style={{ color: "#0c8a53" }}
               >
                 {t.pricing.sectionLabel}
               </span>
             </div>
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-stone-900 tracking-tight leading-tight mb-4">
               {t.pricing.headingNormal}{" "}
-              <span style={{ color: "#28c08e" }}>
+              <span style={{ color: "#12c77a" }}>
                 {t.pricing.headingColored}
               </span>
             </h2>
@@ -65,8 +65,8 @@ export default function Pricing() {
                 className="rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200"
                 style={
                   !isAnnual
-                    ? { backgroundColor: "white", color: "#1c1917", boxShadow: "0 1px 4px rgba(0,0,0,0.12)" }
-                    : { backgroundColor: "transparent", color: "#78716c" }
+                    ? { backgroundColor: "white", color: "#111111", boxShadow: "0 1px 4px rgba(0,0,0,0.12)" }
+                    : { backgroundColor: "transparent", color: "#757575" }
                 }
               >
                 {t.pricing.monthly}
@@ -78,8 +78,8 @@ export default function Pricing() {
                 className="rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200 flex items-center gap-2"
                 style={
                   isAnnual
-                    ? { backgroundColor: "white", color: "#1c1917", boxShadow: "0 1px 4px rgba(0,0,0,0.12)" }
-                    : { backgroundColor: "transparent", color: "#78716c" }
+                    ? { backgroundColor: "white", color: "#111111", boxShadow: "0 1px 4px rgba(0,0,0,0.12)" }
+                    : { backgroundColor: "transparent", color: "#757575" }
                 }
               >
                 {t.pricing.annual}
@@ -88,8 +88,8 @@ export default function Pricing() {
                   className="rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide transition-all duration-200"
                   style={
                     isAnnual
-                      ? { backgroundColor: "#10b981", color: "white" }
-                      : { backgroundColor: "rgb(16 185 129 / 0.15)", color: "#10b981" }
+                      ? { backgroundColor: "#0fa866", color: "white" }
+                      : { backgroundColor: "rgb(15 168 102 / 0.15)", color: "#0fa866" }
                   }
                 >
                   {t.pricing.saveDiscountBadge(DISCOUNT_PCT)}
@@ -129,9 +129,9 @@ export default function Pricing() {
                   <li key={f} className="flex items-start gap-3">
                     <div
                       className="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5"
-                      style={{ backgroundColor: "rgb(40 192 142 / 0.1)" }}
+                      style={{ backgroundColor: "rgb(18 199 122 / 0.1)" }}
                     >
-                      <Check size={10} style={{ color: "#28c08e" }} />
+                      <Check size={10} style={{ color: "#12c77a" }} />
                     </div>
                     <span className="text-sm text-stone-600">{f}</span>
                   </li>
@@ -143,7 +143,7 @@ export default function Pricing() {
                 className="block text-center rounded-xl border px-6 py-3.5 text-sm font-semibold transition-all duration-200 hover:bg-stone-50"
                 style={{
                   borderColor: "rgb(214 211 208 / 0.8)",
-                  color: "#44403c",
+                  color: "#3d3d3d",
                 }}
               >
                 {t.pricing.freePlan.cta}
@@ -156,17 +156,17 @@ export default function Pricing() {
             <div
               className="relative rounded-2xl p-8 h-full flex flex-col shadow-2xl"
               style={{
-                backgroundColor: "#1b1b1b",
-                boxShadow: "0 20px 60px -12px rgb(40 192 142 / 0.2)",
+                backgroundColor: "#111111",
+                boxShadow: "0 20px 60px -12px rgb(18 199 122 / 0.2)",
               }}
             >
               {/* Most Popular badge */}
               <div
                 className="absolute -top-3.5 left-8 inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 shadow-lg"
-                style={{ backgroundColor: "#facc15" }}
+                style={{ backgroundColor: "#111111" }}
               >
-                <Sparkles size={11} style={{ color: "#1c1917" }} />
-                <span className="text-xs font-bold uppercase tracking-wide" style={{ color: "#1c1917" }}>
+                <Sparkles size={11} style={{ color: "#111111" }} />
+                <span className="text-xs font-bold uppercase tracking-wide" style={{ color: "#111111" }}>
                   {t.pricing.mostPopular}
                 </span>
               </div>
@@ -174,12 +174,12 @@ export default function Pricing() {
               {/* Teal corner glow */}
               <div
                 className="absolute top-0 right-0 w-48 h-48 rounded-2xl blur-3xl pointer-events-none"
-                style={{ backgroundColor: "rgb(40 192 142 / 0.08)" }}
+                style={{ backgroundColor: "rgb(18 199 122 / 0.08)" }}
               />
 
               {/* Price block */}
               <div className="mb-6 relative">
-                <h3 className="font-display font-bold text-xl mb-4" style={{ color: "#fafaf9" }}>
+                <h3 className="font-display font-bold text-xl mb-4" style={{ color: "#fafafa" }}>
                   {t.pricing.proPlan.name}
                 </h3>
 
@@ -189,12 +189,12 @@ export default function Pricing() {
                     <div className="flex items-end gap-3 mb-1">
                       <span
                         className="font-display font-extrabold text-5xl leading-none"
-                        style={{ color: "#28c08e" }}
+                        style={{ color: "#12c77a" }}
                       >
                         ${ANNUAL_PRICE}
                       </span>
                       <div className="pb-1">
-                        <span className="text-sm block" style={{ color: "#57534e" }}>
+                        <span className="text-sm block" style={{ color: "#5c5c5c" }}>
                           {t.pricing.proPlan.perYear}
                         </span>
                       </div>
@@ -202,7 +202,7 @@ export default function Pricing() {
 
                     {/* Monthly equivalent + savings */}
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="text-sm font-medium" style={{ color: "#a8a29e" }}>
+                      <span className="text-sm font-medium" style={{ color: "#999999" }}>
                         {t.pricing.proPlan.billedAnnually(ANNUAL_MONTHLY_EQUIV)}
                       </span>
                     </div>
@@ -211,26 +211,26 @@ export default function Pricing() {
                     <div
                       className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5"
                       style={{
-                        backgroundColor: "rgb(16 185 129 / 0.12)",
-                        border: "1px solid rgb(16 185 129 / 0.25)",
+                        backgroundColor: "rgb(15 168 102 / 0.12)",
+                        border: "1px solid rgb(15 168 102 / 0.25)",
                       }}
                     >
                       <span
                         className="text-xs font-bold"
-                        style={{ color: "#40c79a" }}
+                        style={{ color: "#5dd7a8" }}
                       >
                         {t.pricing.proPlan.saveVsMonthly(((MONTHLY_PRICE * 12) - ANNUAL_PRICE).toFixed(2))}
                       </span>
                       <span
                         className="text-[10px] font-bold uppercase tracking-wide rounded px-1.5 py-0.5"
-                        style={{ backgroundColor: "#10b981", color: "white" }}
+                        style={{ backgroundColor: "#0fa866", color: "white" }}
                       >
                         {DISCOUNT_PCT}% OFF
                       </span>
                     </div>
 
                     {/* Crossed-out monthly price */}
-                    <p className="text-xs mt-2" style={{ color: "#44403c" }}>
+                    <p className="text-xs mt-2" style={{ color: "#3d3d3d" }}>
                       {t.pricing.proPlan.crossedOutPrefix}{" "}
                       <span className="line-through">
                         ${(MONTHLY_PRICE * 12).toFixed(2)}/yr
@@ -244,11 +244,11 @@ export default function Pricing() {
                     <div className="flex items-baseline gap-2 mb-2">
                       <span
                         className="font-display font-extrabold text-5xl"
-                        style={{ color: "#28c08e" }}
+                        style={{ color: "#12c77a" }}
                       >
                         ${MONTHLY_PRICE}
                       </span>
-                      <span className="text-sm" style={{ color: "#57534e" }}>
+                      <span className="text-sm" style={{ color: "#5c5c5c" }}>
                         {t.pricing.proPlan.perMonth}
                       </span>
                     </div>
@@ -256,14 +256,14 @@ export default function Pricing() {
                     <button
                       onClick={() => setBilling("annual")}
                       className="text-xs font-medium underline decoration-dotted underline-offset-2 transition-colors"
-                      style={{ color: "#10b981" }}
+                      style={{ color: "#0fa866" }}
                     >
                       {t.pricing.proPlan.switchToAnnual(DISCOUNT_PCT)}
                     </button>
                   </div>
                 )}
 
-                <p className="text-sm mt-3" style={{ color: "#78716c" }}>
+                <p className="text-sm mt-3" style={{ color: "#757575" }}>
                   {t.pricing.proPlan.description}
                 </p>
               </div>
@@ -274,11 +274,11 @@ export default function Pricing() {
                   <li key={f} className="flex items-start gap-3">
                     <div
                       className="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5"
-                      style={{ backgroundColor: "rgb(40 192 142 / 0.15)" }}
+                      style={{ backgroundColor: "rgb(18 199 122 / 0.15)" }}
                     >
-                      <Check size={10} style={{ color: "#28c08e" }} />
+                      <Check size={10} style={{ color: "#12c77a" }} />
                     </div>
-                    <span className="text-sm" style={{ color: "#a8a29e" }}>
+                    <span className="text-sm" style={{ color: "#999999" }}>
                       {f}
                     </span>
                   </li>
@@ -289,12 +289,12 @@ export default function Pricing() {
               <div
                 className="flex items-center gap-2 rounded-xl px-4 py-3 mb-6"
                 style={{
-                  backgroundColor: "rgb(40 192 142 / 0.08)",
-                  border: "1px solid rgb(40 192 142 / 0.15)",
+                  backgroundColor: "rgb(18 199 122 / 0.08)",
+                  border: "1px solid rgb(18 199 122 / 0.15)",
                 }}
               >
-                <Zap size={14} style={{ color: "#28c08e" }} />
-                <span className="text-xs" style={{ color: "#70d5b3" }}>
+                <Zap size={14} style={{ color: "#12c77a" }} />
+                <span className="text-xs" style={{ color: "#5dd7a8" }}>
                   {isAnnual
                     ? t.pricing.proPlan.valueAnnual(ANNUAL_MONTHLY_EQUIV)
                     : t.pricing.proPlan.valueMonthly}
@@ -304,7 +304,7 @@ export default function Pricing() {
               <a
                 href="#download"
                 className="relative block text-center rounded-xl px-6 py-3.5 text-sm font-semibold transition-all duration-200 hover:opacity-90 active:opacity-80"
-                style={{ backgroundColor: "#28c08e", color: "white" }}
+                style={{ backgroundColor: "#12c77a", color: "white" }}
               >
                 {isAnnual ? t.pricing.proPlan.ctaAnnual : t.pricing.proPlan.ctaMonthly}
               </a>

@@ -13,6 +13,11 @@ export interface ScreenTranslation {
   desc: string;
 }
 
+export interface ValuePropTranslation {
+  problem: string;
+  solution: string;
+}
+
 export interface FeatureItemTranslation {
   title: string;
   description: string;
@@ -37,6 +42,7 @@ export interface Translations {
   };
   hero: {
     available: string;
+    hook: string;
     headlinePrefix: string;
     headlineColored: string;
     headlineSuffix: string;
@@ -44,6 +50,7 @@ export interface Translations {
     statNeeds: string;
     statWants: string;
     statSavings: string;
+    ratingValue: string;
     socialProof: string;
     scrollCue: string;
     badgeNeeds: string;
@@ -62,6 +69,20 @@ export interface Translations {
     calloutBefore: string;
     calloutStrong: string;
     calloutAfter: string;
+  };
+  valueProps: {
+    sectionLabel: string;
+    headingNormal: string;
+    headingColored: string;
+    description: string;
+    problemTag: string;
+    solutionTag: string;
+    items: readonly [
+      ValuePropTranslation,
+      ValuePropTranslation,
+      ValuePropTranslation,
+    ];
+    ctaNote: string;
   };
   appShowcase: {
     sectionLabel: string;
@@ -94,6 +115,7 @@ export interface Translations {
   };
   testimonials: {
     sectionLabel: string;
+    ratingSummary: string;
     headingNormal: string;
     headingColored: string;
     items: readonly [TestimonialTranslation, TestimonialTranslation, TestimonialTranslation];

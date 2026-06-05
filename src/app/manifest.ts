@@ -9,8 +9,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "Automate the 50/30/20 budget rule and manage shared household finances with your partner, family, or roommates.",
     start_url: "/",
     display: "standalone",
-    background_color: "#fafaf9",
-    theme_color: "#28c08e",
+    background_color: "#fafafa",
+    theme_color: "#12c77a",
     icons: [
       {
         src: "/favicon.ico",

@@ -23,19 +23,19 @@ export default function LanguageSelector() {
             style={
               isActive
                 ? {
-                    backgroundColor: "rgb(40 192 142 / 0.18)",
-                    color: "#28c08e",
+                    backgroundColor: "rgb(18 199 122 / 0.18)",
+                    color: "#12c77a",
                   }
                 : {
                     backgroundColor: "transparent",
-                    color: "#57534e",
+                    color: "#5c5c5c",
                   }
             }
             onMouseEnter={(e) => {
-              if (!isActive) e.currentTarget.style.color = "#a8a29e";
+              if (!isActive) e.currentTarget.style.color = "#999999";
             }}
             onMouseLeave={(e) => {
-              if (!isActive) e.currentTarget.style.color = "#57534e";
+              if (!isActive) e.currentTarget.style.color = "#5c5c5c";
             }}
             aria-label={`Switch to ${lang === "en" ? "English" : "Spanish"}`}
             aria-pressed={isActive}

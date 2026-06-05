@@ -6,10 +6,10 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 // Visual/icon config only — text comes from translations
 const STEP_STYLES = [
-  { icon: UserPlus,   number: "01", color: "#28c08e" },
-  { icon: Home,       number: "02", color: "#facc15" },
-  { icon: Banknote,   number: "03", color: "#10b981" },
-  { icon: TrendingUp, number: "04", color: "#58cea7" },
+  { icon: UserPlus,   number: "01", color: "#12c77a" },
+  { icon: Home,       number: "02", color: "#e5e5e5" },
+  { icon: Banknote,   number: "03", color: "#0fa866" },
+  { icon: TrendingUp, number: "04", color: "#2ecf94" },
 ];
 
 export default function HowItWorks() {
@@ -19,7 +19,7 @@ export default function HowItWorks() {
     <section
       id="how-it-works"
       className="py-24 md:py-32 overflow-hidden"
-      style={{ backgroundColor: "#1c1917" }}
+      style={{ backgroundColor: "#111111" }}
     >
       <div className="mx-auto max-w-6xl px-6">
         {/* Section header */}
@@ -28,25 +28,25 @@ export default function HowItWorks() {
             <div
               className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-6"
               style={{
-                borderColor: "rgb(40 192 142 / 0.3)",
-                backgroundColor: "rgb(40 192 142 / 0.08)",
+                borderColor: "rgb(18 199 122 / 0.3)",
+                backgroundColor: "rgb(18 199 122 / 0.08)",
               }}
             >
               <span
                 className="text-xs font-semibold uppercase tracking-widest"
-                style={{ color: "#58cea7" }}
+                style={{ color: "#2ecf94" }}
               >
                 {t.howItWorks.sectionLabel}
               </span>
             </div>
             <h2
               className="font-display font-extrabold text-4xl sm:text-5xl tracking-tight leading-tight mb-4"
-              style={{ color: "#fafaf9" }}
+              style={{ color: "#fafafa" }}
             >
               {t.howItWorks.headingNormal}{" "}
-              <span style={{ color: "#28c08e" }}>{t.howItWorks.headingColored}</span>
+              <span style={{ color: "#12c77a" }}>{t.howItWorks.headingColored}</span>
             </h2>
-            <p className="text-lg leading-relaxed" style={{ color: "#78716c" }}>
+            <p className="text-lg leading-relaxed" style={{ color: "#757575" }}>
               {t.howItWorks.description}
             </p>
           </div>
@@ -59,7 +59,7 @@ export default function HowItWorks() {
             className="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-px"
             style={{
               background:
-                "linear-gradient(90deg, transparent, rgb(40 192 142 / 0.3) 15%, rgb(40 192 142 / 0.3) 85%, transparent)",
+                "linear-gradient(90deg, transparent, rgb(18 199 122 / 0.3) 15%, rgb(18 199 122 / 0.3) 85%, transparent)",
             }}
           />
 
@@ -93,7 +93,7 @@ export default function HowItWorks() {
                     <div
                       className="absolute -top-1 -right-1 w-5 h-5 rounded-full border-2 flex items-center justify-center text-[8px] font-bold"
                       style={{
-                        backgroundColor: "#1c1917",
+                        backgroundColor: "#111111",
                         borderColor: step.color,
                         color: step.color,
                       }}
@@ -104,11 +104,11 @@ export default function HowItWorks() {
 
                   <h3
                     className="font-display font-bold text-lg mb-3"
-                    style={{ color: "#e7e5e4" }}
+                    style={{ color: "#e5e5e5" }}
                   >
                     {stepText.title}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "#57534e" }}>
+                  <p className="text-sm leading-relaxed" style={{ color: "#5c5c5c" }}>
                     {stepText.description}
                   </p>
                 </div>

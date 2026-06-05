@@ -10,15 +10,17 @@ export const en: Translations = {
 
   hero: {
     available: "Available on iOS",
+    hook: "Where did the money go this month?",
     headlinePrefix: "The 50/30/20",
     headlineColored: "budget rule,",
     headlineSuffix: "automated.",
     subCopy:
-      "FI-532 applies the world's most effective budgeting strategy automatically — built for couples, families, and roommates. See exactly where your money goes, split shared costs, and watch your savings grow every month.",
+      "The world's most effective budget rule, automated for your household. See where money goes, split shared costs, and grow your savings — every month.",
     statNeeds: "Needs",
     statWants: "Wants",
     statSavings: "Savings",
-    socialProof: "Built for couples, families & roommates managing money together",
+    ratingValue: "4.8",
+    socialProof: "Loved by couples, families & roommates managing money together",
     scrollCue: "How it works",
     badgeNeeds: "Needs",
     badgeSavings: "Savings",
@@ -62,6 +64,34 @@ export const en: Translations = {
     calloutStrong: "50/30/20 breakdown in real time",
     calloutAfter:
       " — so you always know where you stand, without spreadsheets or manual math.",
+  },
+
+  valueProps: {
+    sectionLabel: "Why FI-532",
+    headingNormal: "Managing money together is hard.",
+    headingColored: "We make it simple.",
+    description:
+      "Three reasons households lose track of their money — and exactly how FI-532 fixes each one.",
+    problemTag: "The problem",
+    solutionTag: "How we fix it",
+    items: [
+      {
+        problem: "Money disappears every month and you can't explain where it went.",
+        solution:
+          "FI-532 sorts every transaction into your 50/30/20 split automatically — see exactly where each dollar goes, in real time. No spreadsheets, no guessing.",
+      },
+      {
+        problem: "Splitting costs with your partner or roommates turns into a guessing game.",
+        solution:
+          "Share one household, split expenses, and settle up in seconds. Everyone sees the same numbers — no more awkward 'who paid for what' math.",
+      },
+      {
+        problem: "Forgotten bills and creeping subscriptions quietly drain your savings.",
+        solution:
+          "Track every recurring bill, get smart reminders before due dates, and protect your 20% savings goal — nothing slips through the cracks.",
+      },
+    ],
+    ctaNote: "Start free — no credit card needed.",
   },
 
   appShowcase: {
@@ -162,6 +192,7 @@ export const en: Translations = {
 
   testimonials: {
     sectionLabel: "Real users",
+    ratingSummary: "4.8 average rating from households on the App Store",
     headingNormal: "Households saving more.",
     headingColored: "Every month.",
     items: [

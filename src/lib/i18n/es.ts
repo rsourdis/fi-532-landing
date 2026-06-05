@@ -10,15 +10,17 @@ export const es: Translations = {
 
   hero: {
     available: "Disponible en iOS",
+    hook: "¿A dónde se fue el dinero este mes?",
     headlinePrefix: "La regla 50/30/20",
     headlineColored: "de presupuesto,",
     headlineSuffix: "automatizada.",
     subCopy:
-      "FI-532 aplica automáticamente la estrategia de presupuesto más efectiva del mundo — hecha para parejas, familias y compañeros de piso. Mira a dónde va tu dinero, divide los gastos compartidos y haz crecer tus ahorros cada mes.",
+      "La regla de presupuesto más efectiva del mundo, automatizada para tu hogar. Mira a dónde va el dinero, divide los gastos compartidos y haz crecer tus ahorros — cada mes.",
     statNeeds: "Necesidades",
     statWants: "Deseos",
     statSavings: "Ahorros",
-    socialProof: "Para parejas, familias y compañeros que gestionan el dinero juntos",
+    ratingValue: "4.8",
+    socialProof: "La adoran parejas, familias y compañeros que gestionan el dinero juntos",
     scrollCue: "Cómo funciona",
     badgeNeeds: "Necesidades",
     badgeSavings: "Ahorros",
@@ -62,6 +64,34 @@ export const es: Translations = {
     calloutStrong: "desglose 50/30/20 en tiempo real",
     calloutAfter:
       " — para que siempre sepas cómo estás, sin hojas de cálculo ni cálculos manuales.",
+  },
+
+  valueProps: {
+    sectionLabel: "Por qué FI-532",
+    headingNormal: "Gestionar el dinero en pareja es difícil.",
+    headingColored: "Nosotros lo hacemos simple.",
+    description:
+      "Tres razones por las que los hogares pierden el control de su dinero — y cómo FI-532 resuelve cada una.",
+    problemTag: "El problema",
+    solutionTag: "Cómo lo resolvemos",
+    items: [
+      {
+        problem: "El dinero desaparece cada mes y no sabes a dónde se fue.",
+        solution:
+          "FI-532 clasifica cada transacción en tu desglose 50/30/20 automáticamente — mira exactamente a dónde va cada peso, en tiempo real. Sin hojas de cálculo, sin adivinar.",
+      },
+      {
+        problem: "Dividir los gastos con tu pareja o compañeros se vuelve un juego de adivinanzas.",
+        solution:
+          "Comparte un solo hogar, divide los gastos y salda cuentas en segundos. Todos ven los mismos números — se acabó el incómodo '¿quién pagó qué?'.",
+      },
+      {
+        problem: "Las facturas olvidadas y las suscripciones que se acumulan drenan tus ahorros.",
+        solution:
+          "Controla cada gasto recurrente, recibe recordatorios antes del vencimiento y protege tu meta de 20% de ahorro — nada se escapa.",
+      },
+    ],
+    ctaNote: "Empieza gratis — sin tarjeta de crédito.",
   },
 
   appShowcase: {
@@ -162,6 +192,7 @@ export const es: Translations = {
 
   testimonials: {
     sectionLabel: "Usuarios reales",
+    ratingSummary: "4.8 de calificación promedio de hogares en el App Store",
     headingNormal: "Hogares ahorrando más.",
     headingColored: "Cada mes.",
     items: [

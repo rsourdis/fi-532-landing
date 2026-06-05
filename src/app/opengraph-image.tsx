@@ -32,7 +32,7 @@ export default function OpengraphImage() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              background: "linear-gradient(135deg, #28c08e 0%, #0a6f4d 100%)",
+              background: "linear-gradient(135deg, #12c77a 0%, #0c8a53 100%)",
               fontSize: 30,
               fontWeight: 800,
             }}
@@ -58,9 +58,9 @@ export default function OpengraphImage() {
             }}
           >
             <span>The 50/30/20 budget rule,&nbsp;</span>
-            <span style={{ color: "#28c08e" }}>automated.</span>
+            <span style={{ color: "#12c77a" }}>automated.</span>
           </div>
-          <div style={{ fontSize: 30, color: "#a8a29e", maxWidth: 820 }}>
+          <div style={{ fontSize: 30, color: "#999999", maxWidth: 820 }}>
             Household budgeting for couples, families & roommates — track shared
             expenses, split costs, and save more every month.
           </div>
@@ -73,15 +73,15 @@ export default function OpengraphImage() {
             alignItems: "center",
             gap: 28,
             fontSize: 26,
-            color: "#d6d3d1",
+            color: "#bfbfbf",
           }}
         >
           <div style={{ display: "flex", gap: 14 }}>
-            <span style={{ color: "#28c08e", fontWeight: 700 }}>50% Needs</span>
-            <span style={{ color: "#facc15", fontWeight: 700 }}>30% Wants</span>
-            <span style={{ color: "#10b981", fontWeight: 700 }}>20% Savings</span>
+            <span style={{ color: "#12c77a", fontWeight: 700 }}>50% Needs</span>
+            <span style={{ color: "#111111", fontWeight: 700 }}>30% Wants</span>
+            <span style={{ color: "#0fa866", fontWeight: 700 }}>20% Savings</span>
           </div>
-          <div style={{ color: "#78716c" }}>•</div>
+          <div style={{ color: "#757575" }}>•</div>
           <div>Free on iOS</div>
         </div>
       </div>

@@ -6,9 +6,9 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 // Visual/name config only — role and quote text come from translations
 const TESTIMONIAL_STYLES = [
-  { name: "Sarah M.", rating: 5, accent: "#28c08e", initial: "S", bg: "rgb(40 192 142 / 0.12)" },
-  { name: "James K.", rating: 5, accent: "#facc15", initial: "J", bg: "rgb(250 204 21 / 0.12)" },
-  { name: "Maria L.", rating: 5, accent: "#10b981", initial: "M", bg: "rgb(16 185 129 / 0.12)" },
+  { name: "Sarah M.", rating: 5, accent: "#12c77a", initial: "S", bg: "rgb(18 199 122 / 0.12)" },
+  { name: "James K.", rating: 5, accent: "#111111", initial: "J", bg: "rgb(17 17 17 / 0.12)" },
+  { name: "Maria L.", rating: 5, accent: "#0fa866", initial: "M", bg: "rgb(15 168 102 / 0.12)" },
 ];
 
 export default function Testimonials() {
@@ -23,8 +23,8 @@ export default function Testimonials() {
             <div
               className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-6"
               style={{
-                borderColor: "rgb(40 192 142 / 0.3)",
-                backgroundColor: "rgb(40 192 142 / 0.07)",
+                borderColor: "rgb(18 199 122 / 0.3)",
+                backgroundColor: "rgb(18 199 122 / 0.07)",
               }}
             >
               <div className="flex gap-0.5">
@@ -38,15 +38,25 @@ export default function Testimonials() {
               </div>
               <span
                 className="text-xs font-semibold uppercase tracking-widest"
-                style={{ color: "#0a6f4d" }}
+                style={{ color: "#0c8a53" }}
               >
                 {t.testimonials.sectionLabel}
               </span>
             </div>
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-stone-900 tracking-tight leading-tight">
               {t.testimonials.headingNormal}{" "}
-              <span style={{ color: "#28c08e" }}>{t.testimonials.headingColored}</span>
+              <span style={{ color: "#12c77a" }}>{t.testimonials.headingColored}</span>
             </h2>
+            <div className="flex items-center justify-center gap-2 mt-5">
+              <div className="flex gap-0.5">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Star key={i} size={16} style={{ color: "#facc15", fill: "#facc15" }} />
+                ))}
+              </div>
+              <span className="text-sm font-medium text-stone-500">
+                {t.testimonials.ratingSummary}
+              </span>
+            </div>
           </div>
         </AnimateInView>
 

@@ -16,22 +16,22 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 90% 55% at 20% 0%, rgb(40 192 142 / 0.09) 0%, transparent 65%)",
+            "radial-gradient(ellipse 90% 55% at 20% 0%, rgb(18 199 122 / 0.09) 0%, transparent 65%)",
         }}
       />
 
       {/* ── Ambient gradient orbs ── */}
       <div
         className="absolute top-0 left-0 w-[700px] h-[700px] -translate-x-1/3 -translate-y-1/3 rounded-full blur-[130px] animate-pulse-glow pointer-events-none"
-        style={{ backgroundColor: "rgb(40 192 142 / 0.10)" }}
+        style={{ backgroundColor: "rgb(18 199 122 / 0.10)" }}
       />
       <div
         className="absolute bottom-0 right-0 w-[500px] h-[500px] translate-x-1/3 translate-y-1/3 rounded-full blur-[110px] pointer-events-none"
-        style={{ backgroundColor: "rgb(40 192 142 / 0.07)" }}
+        style={{ backgroundColor: "rgb(18 199 122 / 0.07)" }}
       />
       <div
         className="absolute top-1/2 left-1/2 w-[300px] h-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[80px] pointer-events-none"
-        style={{ backgroundColor: "rgb(250 204 21 / 0.05)" }}
+        style={{ backgroundColor: "rgb(17 17 17 / 0.05)" }}
       />
 
       {/* ── Fine dot grid texture ── */}
@@ -39,7 +39,7 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none opacity-[0.55]"
         style={{
           backgroundImage:
-            "radial-gradient(circle, #d6d3d1 1px, transparent 1px)",
+            "radial-gradient(circle, #bfbfbf 1px, transparent 1px)",
           backgroundSize: "32px 32px",
         }}
       />
@@ -70,23 +70,36 @@ export default function Hero() {
             <div
               className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-8 animate-fade-in"
               style={{
-                borderColor: "rgb(40 192 142 / 0.30)",
-                backgroundColor: "rgb(40 192 142 / 0.07)",
+                borderColor: "rgb(18 199 122 / 0.30)",
+                backgroundColor: "rgb(18 199 122 / 0.07)",
               }}
             >
               <span
                 className="w-1.5 h-1.5 rounded-full animate-pulse"
-                style={{ backgroundColor: "#28c08e" }}
+                style={{ backgroundColor: "#12c77a" }}
               />
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0a6f4d" }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0c8a53" }}>
                 {t.hero.available}
               </span>
             </div>
 
+            {/* Frustration hook */}
+            <p
+              className="font-display font-bold mb-3 animate-fade-in-up flex items-center gap-2.5"
+              style={{ fontSize: "clamp(1rem, 2.2vw, 1.375rem)", color: "#dc2626", animationDelay: "40ms" }}
+            >
+              <span
+                className="inline-block w-6 h-[2px] rounded-full shrink-0"
+                style={{ backgroundColor: "#dc2626" }}
+                aria-hidden="true"
+              />
+              {t.hero.hook}
+            </p>
+
             {/* Headline */}
             <h1
               className="font-display font-extrabold leading-[0.92] tracking-tight mb-6 animate-fade-in-up"
-              style={{ fontSize: "clamp(2.6rem, 6vw, 5rem)", color: "#1c1917", animationDelay: "80ms" }}
+              style={{ fontSize: "clamp(2.6rem, 6vw, 5rem)", color: "#111111", animationDelay: "80ms" }}
             >
               {t.hero.headlinePrefix}
               <br />
@@ -100,7 +113,7 @@ export default function Hero() {
             {/* Sub-copy */}
             <p
               className="text-lg leading-relaxed mb-8 max-w-md animate-fade-in-up"
-              style={{ color: "#57534e", animationDelay: "160ms" }}
+              style={{ color: "#5c5c5c", animationDelay: "160ms" }}
             >
               {t.hero.subCopy}
             </p>
@@ -115,39 +128,39 @@ export default function Hero() {
               }}
             >
               <div className="text-center">
-                <div className="font-display font-extrabold text-2xl sm:text-3xl" style={{ color: "#28c08e" }}>
+                <div className="font-display font-extrabold text-2xl sm:text-3xl" style={{ color: "#12c77a" }}>
                   50%
                 </div>
-                <div className="text-[10px] uppercase tracking-widest mt-0.5" style={{ color: "#78716c" }}>
+                <div className="text-[10px] uppercase tracking-widest mt-0.5" style={{ color: "#757575" }}>
                   {t.hero.statNeeds}
                 </div>
               </div>
               <div className="w-px h-10 self-center" style={{ backgroundColor: "rgb(0 0 0 / 0.08)" }} />
               <div className="text-center">
-                <div className="font-display font-extrabold text-2xl sm:text-3xl" style={{ color: "#eab308" }}>
+                <div className="font-display font-extrabold text-2xl sm:text-3xl" style={{ color: "#111111" }}>
                   30%
                 </div>
-                <div className="text-[10px] uppercase tracking-widest mt-0.5" style={{ color: "#78716c" }}>
+                <div className="text-[10px] uppercase tracking-widest mt-0.5" style={{ color: "#757575" }}>
                   {t.hero.statWants}
                 </div>
               </div>
               <div className="w-px h-10 self-center" style={{ backgroundColor: "rgb(0 0 0 / 0.08)" }} />
               <div className="text-center">
-                <div className="font-display font-extrabold text-2xl sm:text-3xl" style={{ color: "#0d9467" }}>
+                <div className="font-display font-extrabold text-2xl sm:text-3xl" style={{ color: "#0fa866" }}>
                   20%
                 </div>
-                <div className="text-[10px] uppercase tracking-widest mt-0.5" style={{ color: "#78716c" }}>
+                <div className="text-[10px] uppercase tracking-widest mt-0.5" style={{ color: "#757575" }}>
                   {t.hero.statSavings}
                 </div>
               </div>
               <div className="flex-1 hidden sm:block">
                 {/* Combined progress bar */}
                 <div className="flex h-2 rounded-full overflow-hidden" style={{ backgroundColor: "rgb(0 0 0 / 0.06)" }}>
-                  <div className="h-full rounded-l-full" style={{ width: "50%", backgroundColor: "#28c08e" }} />
-                  <div className="h-full" style={{ width: "30%", backgroundColor: "#facc15" }} />
-                  <div className="h-full rounded-r-full" style={{ width: "20%", backgroundColor: "#10b981" }} />
+                  <div className="h-full rounded-l-full" style={{ width: "50%", backgroundColor: "#12c77a" }} />
+                  <div className="h-full" style={{ width: "30%", backgroundColor: "#111111" }} />
+                  <div className="h-full rounded-r-full" style={{ width: "20%", backgroundColor: "#0fa866" }} />
                 </div>
-                <div className="flex justify-between mt-1.5 text-[9px]" style={{ color: "#a8a29e" }}>
+                <div className="flex justify-between mt-1.5 text-[9px]" style={{ color: "#999999" }}>
                   <span>{t.hero.statNeeds}</span>
                   <span>{t.hero.statWants}</span>
                   <span>{t.hero.statSavings}</span>
@@ -162,12 +175,18 @@ export default function Hero() {
 
             {/* Social proof */}
             <div className="flex items-center gap-3 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
-              <div className="flex gap-0.5">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} size={13} style={{ color: "#facc15", fill: "#facc15" }} />
-                ))}
+              <div className="flex items-center gap-1.5">
+                <div className="flex gap-0.5">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} size={15} style={{ color: "#facc15", fill: "#facc15" }} />
+                  ))}
+                </div>
+                <span className="font-display font-extrabold text-base" style={{ color: "#111111" }}>
+                  {t.hero.ratingValue}
+                </span>
               </div>
-              <span className="text-sm" style={{ color: "#78716c" }}>
+              <span className="w-px h-4 self-center" style={{ backgroundColor: "rgb(0 0 0 / 0.12)" }} />
+              <span className="text-sm max-w-[16rem]" style={{ color: "#757575" }}>
                 {t.hero.socialProof}
               </span>
             </div>
@@ -184,7 +203,7 @@ export default function Hero() {
           <a
             href="#strategy"
             className="inline-flex flex-col items-center gap-2 transition-colors group"
-            style={{ color: "#a8a29e" }}
+            style={{ color: "#999999" }}
           >
             <span className="text-[10px] uppercase tracking-widest group-hover:text-teal-500 transition-colors">
               {t.hero.scrollCue}
@@ -211,19 +230,19 @@ function PhoneFrame({
       {/* Glow behind phone */}
       <div
         className="absolute -inset-8 rounded-[4rem] blur-3xl"
-        style={{ backgroundColor: "rgb(40 192 142 / 0.14)" }}
+        style={{ backgroundColor: "rgb(18 199 122 / 0.14)" }}
       />
       {/* Decorative ring */}
       <div
         className="absolute -inset-3 rounded-[3.5rem] border opacity-40"
-        style={{ borderColor: "rgb(40 192 142 / 0.4)" }}
+        style={{ borderColor: "rgb(18 199 122 / 0.4)" }}
       />
 
       {/* Phone chassis */}
       <div
         className="relative rounded-[3rem] shadow-2xl border"
         style={{
-          backgroundColor: "#1b1b1b",
+          backgroundColor: "#111111",
           borderColor: "rgb(255 255 255 / 0.08)",
           padding: "10px",
           width: "clamp(240px, 28vw, 310px)",
@@ -236,7 +255,7 @@ function PhoneFrame({
             top: "18px",
             width: "88px",
             height: "28px",
-            backgroundColor: "#1b1b1b",
+            backgroundColor: "#111111",
           }}
         />
 
@@ -256,12 +275,12 @@ function PhoneFrame({
         className="absolute -left-12 top-1/4 rounded-xl px-3 py-2 shadow-lg border"
         style={{
           backgroundColor: "rgb(255 255 255 / 0.85)",
-          borderColor: "rgb(40 192 142 / 0.25)",
+          borderColor: "rgb(18 199 122 / 0.25)",
           backdropFilter: "blur(12px)",
         }}
       >
-        <div className="text-[10px] uppercase tracking-wide mb-0.5" style={{ color: "#0a6f4d" }}>{badgeNeeds}</div>
-        <div className="font-display font-bold text-sm" style={{ color: "#1c1917" }}>50%</div>
+        <div className="text-[10px] uppercase tracking-wide mb-0.5" style={{ color: "#0c8a53" }}>{badgeNeeds}</div>
+        <div className="font-display font-bold text-sm" style={{ color: "#111111" }}>50%</div>
       </div>
 
       {/* Floating badge — Savings */}
@@ -270,12 +289,12 @@ function PhoneFrame({
         style={{
           animationDelay: "2s",
           backgroundColor: "rgb(255 255 255 / 0.85)",
-          borderColor: "rgb(16 185 129 / 0.25)",
+          borderColor: "rgb(15 168 102 / 0.25)",
           backdropFilter: "blur(12px)",
         }}
       >
-        <div className="text-[10px] uppercase tracking-wide mb-0.5" style={{ color: "#0d9467" }}>{badgeSavings}</div>
-        <div className="font-display font-bold text-sm" style={{ color: "#1c1917" }}>20%</div>
+        <div className="text-[10px] uppercase tracking-wide mb-0.5" style={{ color: "#0fa866" }}>{badgeSavings}</div>
+        <div className="font-display font-bold text-sm" style={{ color: "#111111" }}>20%</div>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ export default function Footer() {
     <footer
       className="border-t py-14"
       style={{
-        backgroundColor: "#fafaf9",
+        backgroundColor: "#fafafa",
         borderColor: "rgb(0 0 0 / 0.07)",
       }}
     >
@@ -20,7 +20,7 @@ export default function Footer() {
           <AppLogo textClassName="text-base" />
 
           {/* Links */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm" style={{ color: "#57534e" }}>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm" style={{ color: "#5c5c5c" }}>
             <a href="#strategy" className="transition-colors hover:text-teal-400">{t.footer.strategy}</a>
             <a href="#features" className="transition-colors hover:text-teal-400">{t.footer.features}</a>
             <a href="#pricing" className="transition-colors hover:text-teal-400">{t.footer.pricing}</a>
@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
 
           {/* Copyright */}
-          <p className="text-xs" style={{ color: "#44403c" }}>
+          <p className="text-xs" style={{ color: "#3d3d3d" }}>
             {t.footer.copyright(new Date().getFullYear())}
           </p>
         </div>

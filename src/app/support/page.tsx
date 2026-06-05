@@ -64,7 +64,7 @@ const faqJsonLd = {
 
 export default function SupportPage() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#fafaf9" }}>
+    <div className="min-h-screen" style={{ backgroundColor: "#fafafa" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -81,20 +81,20 @@ export default function SupportPage() {
           <Link
             href="/"
             className="inline-flex items-center gap-2 text-sm transition-colors"
-            style={{ color: "#78716c" }}
+            style={{ color: "#757575" }}
           >
             <ArrowLeft size={16} />
             <span>Back</span>
           </Link>
-          <div className="w-px h-5" style={{ backgroundColor: "#d6d3d1" }} />
+          <div className="w-px h-5" style={{ backgroundColor: "#bfbfbf" }} />
           <Link href="/" className="flex items-center gap-2">
             <div
               className="w-6 h-6 rounded-md flex items-center justify-center"
-              style={{ backgroundColor: "#28c08e" }}
+              style={{ backgroundColor: "#12c77a" }}
             >
               <span className="text-white font-display font-bold text-[10px]">FI</span>
             </div>
-            <span className="font-display font-bold text-sm tracking-tight" style={{ color: "#1c1917" }}>
+            <span className="font-display font-bold text-sm tracking-tight" style={{ color: "#111111" }}>
               FI-532
             </span>
           </Link>
@@ -105,10 +105,10 @@ export default function SupportPage() {
       <main className="mx-auto max-w-3xl px-6 py-12 md:py-16">
         {/* Page title */}
         <div className="mb-12">
-          <h1 className="font-display font-extrabold text-3xl sm:text-4xl tracking-tight mb-3" style={{ color: "#1c1917" }}>
+          <h1 className="font-display font-extrabold text-3xl sm:text-4xl tracking-tight mb-3" style={{ color: "#111111" }}>
             Support
           </h1>
-          <p className="text-sm leading-relaxed" style={{ color: "#78716c" }}>
+          <p className="text-sm leading-relaxed" style={{ color: "#757575" }}>
             We&apos;re here to help. Browse the FAQ below or reach out directly.
           </p>
         </div>
@@ -116,19 +116,19 @@ export default function SupportPage() {
         {/* Contact card */}
         <div
           className="rounded-2xl border p-6 md:p-8 mb-14"
-          style={{ backgroundColor: "#f5f5f4", borderColor: "rgba(0,0,0,0.06)" }}
+          style={{ backgroundColor: "#f2f2f2", borderColor: "rgba(0,0,0,0.06)" }}
         >
-          <h2 className="font-display font-bold text-lg mb-1" style={{ color: "#1c1917" }}>
+          <h2 className="font-display font-bold text-lg mb-1" style={{ color: "#111111" }}>
             Contact Support
           </h2>
-          <p className="text-sm mb-5" style={{ color: "#78716c" }}>
+          <p className="text-sm mb-5" style={{ color: "#757575" }}>
             Have a question, report a bug, or need help with your account? Send us an email and
             we&apos;ll get back to you as soon as possible.
           </p>
           <a
             href="mailto:info@fi-532.app"
             className="inline-flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-medium transition-opacity hover:opacity-80"
-            style={{ backgroundColor: "#28c08e", color: "#fff" }}
+            style={{ backgroundColor: "#12c77a", color: "#fff" }}
           >
             <Mail size={16} />
             info@fi-532.app
@@ -137,7 +137,7 @@ export default function SupportPage() {
 
         {/* FAQ section */}
         <div>
-          <h2 className="font-display font-bold text-xl mb-6" style={{ color: "#1c1917" }}>
+          <h2 className="font-display font-bold text-xl mb-6" style={{ color: "#111111" }}>
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">
@@ -147,10 +147,10 @@ export default function SupportPage() {
                 className="rounded-xl border p-5 md:p-6"
                 style={{ backgroundColor: "#fff", borderColor: "rgba(0,0,0,0.06)" }}
               >
-                <h3 className="font-display font-semibold text-sm mb-2" style={{ color: "#1c1917" }}>
+                <h3 className="font-display font-semibold text-sm mb-2" style={{ color: "#111111" }}>
                   {faq.question}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "#57534e" }}>
+                <p className="text-sm leading-relaxed" style={{ color: "#5c5c5c" }}>
                   {faq.answer}
                 </p>
               </div>
@@ -160,12 +160,12 @@ export default function SupportPage() {
 
         {/* Still need help */}
         <div className="mt-14 pt-8 border-t" style={{ borderColor: "rgba(0,0,0,0.07)" }}>
-          <p className="text-sm" style={{ color: "#a8a29e" }}>
+          <p className="text-sm" style={{ color: "#999999" }}>
             Still have questions? Email us at{" "}
             <a
               href="mailto:info@fi-532.app"
               className="transition-colors"
-              style={{ color: "#0a6f4d" }}
+              style={{ color: "#0c8a53" }}
             >
               info@fi-532.app
             </a>{" "}
@@ -177,10 +177,10 @@ export default function SupportPage() {
       {/* Minimal footer */}
       <footer className="border-t py-8" style={{ borderColor: "rgba(0,0,0,0.07)" }}>
         <div className="mx-auto max-w-3xl px-6 flex flex-wrap items-center justify-between gap-4">
-          <p className="text-xs" style={{ color: "#a8a29e" }}>
+          <p className="text-xs" style={{ color: "#999999" }}>
             &copy; {new Date().getFullYear()} FI-532. All rights reserved.
           </p>
-          <div className="flex items-center gap-5 text-xs" style={{ color: "#a8a29e" }}>
+          <div className="flex items-center gap-5 text-xs" style={{ color: "#999999" }}>
             <Link href="/privacy" className="transition-colors hover:text-stone-700">
               Privacy Policy
             </Link>

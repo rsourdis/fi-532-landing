@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ValueProps from "@/components/ValueProps";
 import Strategy from "@/components/Strategy";
 import AppShowcase from "@/components/AppShowcase";
 import Features from "@/components/Features";
@@ -14,10 +15,13 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        {/* 1. Hook — Dark hero with 50/30/20 anchor + real app screenshot */}
+        {/* 1. Hook — Hero with frustration hook + 50/30/20 anchor + real app screenshot */}
         <Hero />
 
-        {/* 2. Educate — The 50/30/20 method, explained visually */}
+        {/* 2. Agitate → Resolve — 3 key problems we solve */}
+        <ValueProps />
+
+        {/* 3. Educate — The 50/30/20 method, explained visually */}
         <Strategy />
 
         {/* 3. Demonstrate — Real app screens showing the method in action */}

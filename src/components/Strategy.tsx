@@ -9,29 +9,29 @@ const PILLAR_STYLES = [
   {
     pct: "50",
     icon: Home,
-    color: "#28c08e",
-    lightColor: "rgb(40 192 142 / 0.12)",
-    borderColor: "rgb(40 192 142 / 0.25)",
-    badgeColor: "rgb(40 192 142 / 0.15)",
-    labelColor: "#70d5b3",
+    color: "#12c77a",
+    lightColor: "rgb(18 199 122 / 0.12)",
+    borderColor: "rgb(18 199 122 / 0.25)",
+    badgeColor: "rgb(18 199 122 / 0.15)",
+    labelColor: "#5dd7a8",
   },
   {
     pct: "30",
     icon: Smile,
-    color: "#facc15",
-    lightColor: "rgb(250 204 21 / 0.10)",
-    borderColor: "rgb(250 204 21 / 0.25)",
-    badgeColor: "rgb(250 204 21 / 0.12)",
-    labelColor: "#fde047",
+    color: "#111111",
+    lightColor: "rgb(17 17 17 / 0.10)",
+    borderColor: "rgb(17 17 17 / 0.25)",
+    badgeColor: "rgb(17 17 17 / 0.12)",
+    labelColor: "#3d3d3d",
   },
   {
     pct: "20",
     icon: TrendingUp,
-    color: "#10b981",
-    lightColor: "rgb(16 185 129 / 0.10)",
-    borderColor: "rgb(16 185 129 / 0.25)",
-    badgeColor: "rgb(16 185 129 / 0.12)",
-    labelColor: "#40c79a",
+    color: "#0fa866",
+    lightColor: "rgb(15 168 102 / 0.10)",
+    borderColor: "rgb(15 168 102 / 0.25)",
+    badgeColor: "rgb(15 168 102 / 0.12)",
+    labelColor: "#5dd7a8",
   },
 ];
 
@@ -47,18 +47,18 @@ export default function Strategy() {
             <div
               className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-6"
               style={{
-                borderColor: "rgb(40 192 142 / 0.3)",
-                backgroundColor: "rgb(40 192 142 / 0.08)",
+                borderColor: "rgb(18 199 122 / 0.3)",
+                backgroundColor: "rgb(18 199 122 / 0.08)",
               }}
             >
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0a6f4d" }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0c8a53" }}>
                 {t.strategy.sectionLabel}
               </span>
             </div>
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-stone-900 tracking-tight leading-tight mb-4">
               {t.strategy.headingPart1}{" "}
               <br className="hidden sm:block" />
-              <span style={{ color: "#28c08e" }}>{t.strategy.headingColored}</span>
+              <span style={{ color: "#12c77a" }}>{t.strategy.headingColored}</span>
             </h2>
             <p className="text-lg text-stone-500 leading-relaxed">
               {t.strategy.description}
@@ -72,18 +72,18 @@ export default function Strategy() {
             <div className="flex h-4 rounded-full overflow-hidden shadow-inner" style={{ backgroundColor: "rgb(0 0 0 / 0.06)" }}>
               <div
                 className="h-full rounded-l-full transition-all"
-                style={{ width: "50%", backgroundColor: "#28c08e" }}
+                style={{ width: "50%", backgroundColor: "#12c77a" }}
               />
               <div
                 className="h-full"
-                style={{ width: "30%", backgroundColor: "#facc15" }}
+                style={{ width: "30%", backgroundColor: "#111111" }}
               />
               <div
                 className="h-full rounded-r-full"
-                style={{ width: "20%", backgroundColor: "#10b981" }}
+                style={{ width: "20%", backgroundColor: "#0fa866" }}
               />
             </div>
-            <div className="flex mt-3 text-xs font-semibold" style={{ color: "#78716c" }}>
+            <div className="flex mt-3 text-xs font-semibold" style={{ color: "#757575" }}>
               <span style={{ width: "50%", paddingLeft: "4px" }}>50% {t.strategy.barNeeds}</span>
               <span style={{ width: "30%", textAlign: "center" }}>30% {t.strategy.barWants}</span>
               <span style={{ width: "20%", textAlign: "right", paddingRight: "4px" }}>20% {t.strategy.barSavings}</span>
@@ -175,8 +175,8 @@ export default function Strategy() {
           <div
             className="rounded-2xl p-6 md:p-8 text-center border"
             style={{
-              backgroundColor: "rgb(40 192 142 / 0.06)",
-              borderColor: "rgb(40 192 142 / 0.2)",
+              backgroundColor: "rgb(18 199 122 / 0.06)",
+              borderColor: "rgb(18 199 122 / 0.2)",
             }}
           >
             <p className="text-base md:text-lg font-medium text-stone-700 leading-relaxed max-w-2xl mx-auto">
