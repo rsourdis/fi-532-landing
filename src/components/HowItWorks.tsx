@@ -57,10 +57,7 @@ export default function HowItWorks() {
           {/* Connector line — desktop only */}
           <div
             className="hidden lg:block absolute top-8 left-[12.5%] right-[12.5%] h-px"
-            style={{
-              background:
-                "linear-gradient(90deg, transparent, rgb(18 199 122 / 0.3) 15%, rgb(18 199 122 / 0.3) 85%, transparent)",
-            }}
+            style={{ backgroundColor: "rgb(18 199 122 / 0.25)" }}
           />
 
           {STEP_STYLES.map((step, i) => {

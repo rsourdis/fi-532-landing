@@ -24,7 +24,7 @@ export const es: Translations = {
     scrollCue: "Cómo funciona",
     badgeNeeds: "Necesidades",
     badgeSavings: "Ahorros",
-    phoneAlt: "FI-532 — Panel de presupuesto mensual",
+    phoneAlt: "FI-532 — cada transacción registrada y categorizada",
   },
 
   strategy: {

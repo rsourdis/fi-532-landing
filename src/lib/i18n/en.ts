@@ -24,7 +24,7 @@ export const en: Translations = {
     scrollCue: "How it works",
     badgeNeeds: "Needs",
     badgeSavings: "Savings",
-    phoneAlt: "FI-532 app — Monthly budget dashboard",
+    phoneAlt: "FI-532 app — every transaction tracked and categorized",
   },
 
   strategy: {

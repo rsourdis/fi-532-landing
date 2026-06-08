@@ -13,11 +13,6 @@
   --color-teal-800: #096b41;
   --color-teal-900: #054d2e;
 
-  /* Citrus — reserved for review stars only (accent.pop), never a bucket */
-  --color-citrus-300: #fde047;
-  --color-citrus-400: #facc15;
-  --color-citrus-500: #eab308;
-
   /* Neutral mono gray ramp (matches app's neto grays) */
   --color-stone-50: #fafafa;
   --color-stone-100: #f2f2f2;
@@ -145,9 +140,6 @@
     animation-delay: 0.4s;
   }
   .text-gradient-teal {
-    background: linear-gradient(135deg, var(--color-teal-500), var(--color-teal-600));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-teal-500);
   }
 }

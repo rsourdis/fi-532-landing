@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Star, ArrowDown } from "lucide-react";
 import AppStoreBadge from "./AppStoreBadge";
-import HomeScreen from "@/assets/app-screens/Home.png";
+import HomeScreen from "@/assets/app-screens/en/transactions-en.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Hero() {
@@ -11,16 +11,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-20 overflow-hidden bg-stone-50">
-      {/* ── Subtle top teal wash ── */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 90% 55% at 20% 0%, rgb(18 199 122 / 0.09) 0%, transparent 65%)",
-        }}
-      />
-
-      {/* ── Ambient gradient orbs ── */}
+      {/* ── Ambient glow orbs ── */}
       <div
         className="absolute top-0 left-0 w-[700px] h-[700px] -translate-x-1/3 -translate-y-1/3 rounded-full blur-[130px] animate-pulse-glow pointer-events-none"
         style={{ backgroundColor: "rgb(18 199 122 / 0.10)" }}

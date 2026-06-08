@@ -17,20 +17,9 @@ export default function CTA() {
             borderColor: "rgb(0 0 0 / 0.06)",
           }}
         >
-          {/* Background mesh */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "radial-gradient(ellipse 80% 60% at 50% 0%, rgb(18 199 122 / 0.08) 0%, transparent 70%)",
-            }}
-          />
           <div
             className="absolute bottom-0 left-0 right-0 h-px"
-            style={{
-              background:
-                "linear-gradient(90deg, transparent, rgb(18 199 122 / 0.25) 50%, transparent)",
-            }}
+            style={{ backgroundColor: "rgb(18 199 122 / 0.2)" }}
           />
 
           {/* Decorative orbs */}

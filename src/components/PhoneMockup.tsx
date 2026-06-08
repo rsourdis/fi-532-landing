@@ -2,7 +2,7 @@ export default function PhoneMockup() {
   return (
     <div className="relative w-[280px] sm:w-[300px] md:w-[320px]">
       {/* Glow behind phone */}
-      <div className="absolute inset-0 bg-gradient-to-br from-teal-300/30 via-teal-200/20 to-citrus-300/20 rounded-[3rem] blur-2xl scale-105" />
+      <div className="absolute inset-0 bg-teal-300/25 rounded-[3rem] blur-2xl scale-105" />
 
       {/* Phone frame */}
       <div className="relative bg-stone-900 rounded-[2.5rem] p-3 shadow-2xl shadow-stone-900/20">
@@ -30,7 +30,7 @@ export default function PhoneMockup() {
             </h3>
 
             {/* Balance card */}
-            <div className="bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl p-4 mb-4 text-white">
+            <div className="bg-teal-500 rounded-2xl p-4 mb-4 text-white">
               <p className="text-[10px] uppercase tracking-wider text-teal-100/80 mb-1">
                 Monthly Budget
               </p>
@@ -52,7 +52,7 @@ export default function PhoneMockup() {
             {/* Budget breakdown */}
             <div className="space-y-2.5 mb-4">
               <BudgetRow label="Needs" amount="$1,200" pct={56} color="bg-teal-500" />
-              <BudgetRow label="Wants" amount="$680" pct={34} color="bg-citrus-400" />
+              <BudgetRow label="Wants" amount="$680" pct={34} color="bg-stone-900" />
               <BudgetRow label="Savings" amount="$300" pct={15} color="bg-emerald-500" />
             </div>
 
