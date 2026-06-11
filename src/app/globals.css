@@ -140,10 +140,7 @@
     animation-delay: 0.4s;
   }
   .text-gradient-teal {
-    background-image: linear-gradient(120deg, #0c8a53 0%, #12c77a 55%, #2ecf94 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--color-teal-500);
   }
   /* Hollow display numerals — ghost watermarks, decorative figures */
   .text-outline-dark {
