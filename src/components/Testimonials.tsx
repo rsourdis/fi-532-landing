@@ -45,7 +45,7 @@ export default function Testimonials() {
             </div>
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-stone-900 tracking-tight leading-tight">
               {t.testimonials.headingNormal}{" "}
-              <span style={{ color: "#12c77a" }}>{t.testimonials.headingColored}</span>
+              <span className="text-gradient-teal">{t.testimonials.headingColored}</span>
             </h2>
             <div className="flex items-center justify-center gap-2 mt-5">
               <div className="flex gap-0.5">

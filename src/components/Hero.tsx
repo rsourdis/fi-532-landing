@@ -11,40 +11,40 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-20 overflow-hidden bg-stone-50">
-      {/* ── Ambient glow orbs ── */}
+      {/* ── Atmosphere: teal wash + grain ── */}
       <div
-        className="absolute top-0 left-0 w-[700px] h-[700px] -translate-x-1/3 -translate-y-1/3 rounded-full blur-[130px] animate-pulse-glow pointer-events-none"
-        style={{ backgroundColor: "rgb(18 199 122 / 0.10)" }}
+        className="absolute top-0 left-0 w-[820px] h-[820px] -translate-x-1/4 -translate-y-1/3 rounded-full blur-[140px] animate-pulse-glow pointer-events-none"
+        style={{ backgroundColor: "rgb(18 199 122 / 0.13)" }}
       />
       <div
-        className="absolute bottom-0 right-0 w-[500px] h-[500px] translate-x-1/3 translate-y-1/3 rounded-full blur-[110px] pointer-events-none"
-        style={{ backgroundColor: "rgb(18 199 122 / 0.07)" }}
+        className="absolute bottom-0 right-0 w-[560px] h-[560px] translate-x-1/4 translate-y-1/4 rounded-full blur-[120px] pointer-events-none"
+        style={{ backgroundColor: "rgb(18 199 122 / 0.09)" }}
       />
-      <div
-        className="absolute top-1/2 left-1/2 w-[300px] h-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[80px] pointer-events-none"
-        style={{ backgroundColor: "rgb(17 17 17 / 0.05)" }}
-      />
+      <div className="absolute inset-0 bg-noise opacity-[0.35] pointer-events-none" />
 
-      {/* ── Fine dot grid texture ── */}
+      {/* ── Fine dot grid, fading downward ── */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-[0.55]"
+        className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
             "radial-gradient(circle, #bfbfbf 1px, transparent 1px)",
-          backgroundSize: "32px 32px",
+          backgroundSize: "30px 30px",
+          maskImage: "linear-gradient(to bottom, black 0%, transparent 75%)",
+          WebkitMaskImage: "linear-gradient(to bottom, black 0%, transparent 75%)",
+          opacity: 0.5,
         }}
       />
 
-      {/* ── Ghost 50·30·20 watermark ── */}
-      <div className="absolute inset-0 flex flex-col justify-center items-end pr-[5vw] overflow-hidden select-none pointer-events-none">
+      {/* ── Hollow 50·30·20 watermark column ── */}
+      <div className="absolute inset-y-0 right-0 hidden lg:flex flex-col justify-center items-end pr-[3vw] overflow-hidden select-none pointer-events-none">
         {["50", "30", "20"].map((n, i) => (
           <div
             key={n}
-            className="font-display font-extrabold leading-none tracking-tighter"
+            className="font-display font-extrabold leading-none tracking-tighter text-outline-dark"
             style={{
-              fontSize: "clamp(100px, 20vw, 280px)",
-              color: `rgba(0,0,0,${i === 0 ? 0.04 : i === 1 ? 0.03 : 0.024})`,
-              marginTop: i > 0 ? "-0.05em" : undefined,
+              fontSize: "clamp(110px, 19vw, 270px)",
+              marginTop: i > 0 ? "-0.08em" : undefined,
+              opacity: 1 - i * 0.28,
             }}
           >
             {n}
@@ -89,8 +89,8 @@ export default function Hero() {
 
             {/* Headline */}
             <h1
-              className="font-display font-extrabold leading-[0.92] tracking-tight mb-6 animate-fade-in-up"
-              style={{ fontSize: "clamp(2.6rem, 6vw, 5rem)", color: "#111111", animationDelay: "80ms" }}
+              className="font-display font-extrabold leading-[0.95] tracking-tight mb-6 animate-fade-in-up"
+              style={{ fontSize: "clamp(2.7rem, 6.2vw, 5.25rem)", color: "#111111", animationDelay: "80ms" }}
             >
               {t.hero.headlinePrefix}
               <br />
@@ -98,7 +98,26 @@ export default function Hero() {
                 {t.hero.headlineColored}
               </span>
               <br />
-              {t.hero.headlineSuffix}
+              <span className="relative inline-block">
+                {t.hero.headlineSuffix}
+                {/* Hand-drawn underline flourish */}
+                <svg
+                  className="absolute left-0 -bottom-2 w-full"
+                  height="10"
+                  viewBox="0 0 200 10"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M2 7 Q 50 1 100 5 T 198 4"
+                    fill="none"
+                    stroke="#12c77a"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    opacity="0.65"
+                  />
+                </svg>
+              </span>
             </h1>
 
             {/* Sub-copy */}
@@ -111,10 +130,11 @@ export default function Hero() {
 
             {/* 50 / 30 / 20 stat strip */}
             <div
-              className="flex items-center gap-5 sm:gap-8 mb-9 p-4 rounded-2xl border animate-fade-in-up"
+              className="flex items-center gap-5 sm:gap-8 mb-9 p-4 rounded-2xl border shadow-sm animate-fade-in-up"
               style={{
                 borderColor: "rgb(0 0 0 / 0.07)",
-                backgroundColor: "rgb(255 255 255 / 0.70)",
+                backgroundColor: "rgb(255 255 255 / 0.78)",
+                backdropFilter: "blur(8px)",
                 animationDelay: "240ms",
               }}
             >
@@ -145,11 +165,11 @@ export default function Hero() {
                 </div>
               </div>
               <div className="flex-1 hidden sm:block">
-                {/* Combined progress bar */}
+                {/* Combined progress bar — fills on load */}
                 <div className="flex h-2 rounded-full overflow-hidden" style={{ backgroundColor: "rgb(0 0 0 / 0.06)" }}>
-                  <div className="h-full rounded-l-full" style={{ width: "50%", backgroundColor: "#12c77a" }} />
-                  <div className="h-full" style={{ width: "30%", backgroundColor: "#111111" }} />
-                  <div className="h-full rounded-r-full" style={{ width: "20%", backgroundColor: "#0fa866" }} />
+                  <div className="h-full rounded-l-full animate-fill-bar" style={{ width: "50%", backgroundColor: "#12c77a" }} />
+                  <div className="h-full animate-fill-bar" style={{ width: "30%", backgroundColor: "#111111", animationDelay: "0.7s" }} />
+                  <div className="h-full rounded-r-full animate-fill-bar" style={{ width: "20%", backgroundColor: "#0fa866", animationDelay: "1s" }} />
                 </div>
                 <div className="flex justify-between mt-1.5 text-[9px]" style={{ color: "#999999" }}>
                   <span>{t.hero.statNeeds}</span>
@@ -217,11 +237,11 @@ function PhoneFrame({
   badgeSavings: string;
 }) {
   return (
-    <div className="relative animate-float">
+    <div className="relative animate-float group">
       {/* Glow behind phone */}
       <div
         className="absolute -inset-8 rounded-[4rem] blur-3xl"
-        style={{ backgroundColor: "rgb(18 199 122 / 0.14)" }}
+        style={{ backgroundColor: "rgb(18 199 122 / 0.16)" }}
       />
       {/* Decorative ring */}
       <div
@@ -229,14 +249,16 @@ function PhoneFrame({
         style={{ borderColor: "rgb(18 199 122 / 0.4)" }}
       />
 
-      {/* Phone chassis */}
+      {/* Phone chassis — slight tilt, straightens on hover */}
       <div
-        className="relative rounded-[3rem] shadow-2xl border"
+        className="relative rounded-[3rem] shadow-2xl border transition-transform duration-500 group-hover:rotate-0"
         style={{
           backgroundColor: "#111111",
           borderColor: "rgb(255 255 255 / 0.08)",
           padding: "10px",
           width: "clamp(240px, 28vw, 310px)",
+          transform: "rotate(-4deg)",
+          boxShadow: "0 40px 90px -20px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.05)",
         }}
       >
         {/* Dynamic Island */}
@@ -263,9 +285,9 @@ function PhoneFrame({
 
       {/* Floating badge — Needs */}
       <div
-        className="absolute -left-12 top-1/4 rounded-xl px-3 py-2 shadow-lg border"
+        className="absolute -left-12 top-1/4 rounded-xl px-3 py-2 shadow-lg border animate-float-b"
         style={{
-          backgroundColor: "rgb(255 255 255 / 0.85)",
+          backgroundColor: "rgb(255 255 255 / 0.88)",
           borderColor: "rgb(18 199 122 / 0.25)",
           backdropFilter: "blur(12px)",
         }}
@@ -276,10 +298,10 @@ function PhoneFrame({
 
       {/* Floating badge — Savings */}
       <div
-        className="absolute -right-10 bottom-1/3 rounded-xl px-3 py-2 shadow-lg border"
+        className="absolute -right-10 bottom-1/3 rounded-xl px-3 py-2 shadow-lg border animate-float-b"
         style={{
           animationDelay: "2s",
-          backgroundColor: "rgb(255 255 255 / 0.85)",
+          backgroundColor: "rgb(255 255 255 / 0.88)",
           borderColor: "rgb(15 168 102 / 0.25)",
           backdropFilter: "blur(12px)",
         }}

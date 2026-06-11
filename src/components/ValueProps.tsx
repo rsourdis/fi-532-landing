@@ -31,7 +31,7 @@ export default function ValueProps() {
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-stone-900 tracking-tight leading-tight mb-4">
               {t.valueProps.headingNormal}{" "}
               <br className="hidden sm:block" />
-              <span style={{ color: "#12c77a" }}>{t.valueProps.headingColored}</span>
+              <span className="text-gradient-teal">{t.valueProps.headingColored}</span>
             </h2>
             <p className="text-lg text-stone-500 leading-relaxed">
               {t.valueProps.description}

@@ -13,23 +13,22 @@ export default function CTA() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="relative rounded-3xl overflow-hidden px-8 py-20 md:px-16 md:py-28 text-center border"
           style={{
-            backgroundColor: "#fafafa",
-            borderColor: "rgb(0 0 0 / 0.06)",
+            backgroundColor: "#111111",
+            borderColor: "rgb(255 255 255 / 0.07)",
+            boxShadow: "0 32px 80px -24px rgb(18 199 122 / 0.25)",
           }}
         >
-          <div
-            className="absolute bottom-0 left-0 right-0 h-px"
-            style={{ backgroundColor: "rgb(18 199 122 / 0.2)" }}
-          />
+          {/* Grain texture */}
+          <div className="absolute inset-0 bg-noise opacity-[0.25] pointer-events-none" />
 
           {/* Decorative orbs */}
           <div
-            className="absolute -top-20 -left-20 w-64 h-64 rounded-full blur-3xl animate-pulse-glow"
-            style={{ backgroundColor: "rgb(18 199 122 / 0.08)" }}
+            className="absolute -top-20 -left-20 w-80 h-80 rounded-full blur-3xl animate-pulse-glow"
+            style={{ backgroundColor: "rgb(18 199 122 / 0.18)" }}
           />
           <div
-            className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full blur-3xl animate-pulse-glow"
-            style={{ backgroundColor: "rgb(17 17 17 / 0.06)", animationDelay: "2s" }}
+            className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full blur-3xl animate-pulse-glow"
+            style={{ backgroundColor: "rgb(15 168 102 / 0.14)", animationDelay: "2s" }}
           />
 
           {/* Content */}
@@ -38,8 +37,8 @@ export default function CTA() {
               <div
                 className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 mb-8"
                 style={{
-                  borderColor: "rgb(18 199 122 / 0.30)",
-                  backgroundColor: "rgb(18 199 122 / 0.07)",
+                  borderColor: "rgb(18 199 122 / 0.35)",
+                  backgroundColor: "rgb(18 199 122 / 0.10)",
                 }}
               >
                 <span
@@ -48,7 +47,7 @@ export default function CTA() {
                 />
                 <span
                   className="text-xs font-semibold uppercase tracking-widest"
-                  style={{ color: "#0c8a53" }}
+                  style={{ color: "#2ecf94" }}
                 >
                   {t.cta.badge}
                 </span>
@@ -60,7 +59,7 @@ export default function CTA() {
                 className="font-display font-extrabold tracking-tight leading-tight mb-5"
                 style={{
                   fontSize: "clamp(2.2rem, 5vw, 4rem)",
-                  color: "#111111",
+                  color: "#fafafa",
                 }}
               >
                 {t.cta.headingNormal}
@@ -72,7 +71,7 @@ export default function CTA() {
             <AnimateInView type="up" delay={160}>
               <p
                 className="text-lg max-w-lg mx-auto mb-4 leading-relaxed"
-                style={{ color: "#5c5c5c" }}
+                style={{ color: "#999999" }}
               >
                 {t.cta.description}
               </p>
@@ -80,10 +79,10 @@ export default function CTA() {
 
             <AnimateInView type="up" delay={220}>
               {/* Trust line */}
-              <div className="flex items-center justify-center gap-6 mb-10 text-sm" style={{ color: "#999999" }}>
+              <div className="flex items-center justify-center gap-6 mb-10 text-sm" style={{ color: "#757575" }}>
                 {t.cta.trustItems.map((item, i) => (
                   <span key={item} className="flex items-center gap-1.5">
-                    {i > 0 && <span className="w-1 h-1 rounded-full" style={{ backgroundColor: "#bfbfbf" }} />}
+                    {i > 0 && <span className="w-1 h-1 rounded-full" style={{ backgroundColor: "#3d3d3d" }} />}
                     {item}
                   </span>
                 ))}
@@ -95,8 +94,8 @@ export default function CTA() {
                 <AppStoreBadge />
                 <a
                   href="#strategy"
-                  className="inline-flex items-center gap-2 text-sm font-medium transition-colors"
-                  style={{ color: "#757575" }}
+                  className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-teal-400"
+                  style={{ color: "#999999" }}
                 >
                   {t.cta.learnHow}
                   <ArrowRight size={14} />

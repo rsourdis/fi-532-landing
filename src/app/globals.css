@@ -31,7 +31,7 @@
   --color-emerald-400: #5dd7a8;
   --color-emerald-500: #0fa866;
 
-  --font-display: var(--font-nunito), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: var(--font-bricolage), var(--font-nunito), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-body: var(--font-nunito), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -140,6 +140,18 @@
     animation-delay: 0.4s;
   }
   .text-gradient-teal {
-    color: var(--color-teal-500);
+    background-image: linear-gradient(120deg, #0c8a53 0%, #12c77a 55%, #2ecf94 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  /* Hollow display numerals — ghost watermarks, decorative figures */
+  .text-outline-dark {
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgb(17 17 17 / 0.14);
+  }
+  /* Film-grain overlay for atmospheric depth */
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
   }
 }

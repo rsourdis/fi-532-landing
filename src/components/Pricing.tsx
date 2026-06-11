@@ -39,7 +39,7 @@ export default function Pricing() {
             </div>
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-stone-900 tracking-tight leading-tight mb-4">
               {t.pricing.headingNormal}{" "}
-              <span style={{ color: "#12c77a" }}>
+              <span className="text-gradient-teal">
                 {t.pricing.headingColored}
               </span>
             </h2>
@@ -163,10 +163,10 @@ export default function Pricing() {
               {/* Most Popular badge */}
               <div
                 className="absolute -top-3.5 left-8 inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 shadow-lg"
-                style={{ backgroundColor: "#111111" }}
+                style={{ backgroundColor: "#12c77a" }}
               >
-                <Sparkles size={11} style={{ color: "#111111" }} />
-                <span className="text-xs font-bold uppercase tracking-wide" style={{ color: "#111111" }}>
+                <Sparkles size={11} style={{ color: "#ffffff" }} />
+                <span className="text-xs font-bold uppercase tracking-wide" style={{ color: "#ffffff" }}>
                   {t.pricing.mostPopular}
                 </span>
               </div>

@@ -18,10 +18,11 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="py-24 md:py-32 overflow-hidden"
+      className="relative py-24 md:py-32 overflow-hidden"
       style={{ backgroundColor: "#111111" }}
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="absolute inset-0 bg-noise opacity-[0.2] pointer-events-none" />
+      <div className="relative mx-auto max-w-6xl px-6">
         {/* Section header */}
         <AnimateInView type="up" delay={0}>
           <div className="text-center max-w-2xl mx-auto mb-20">

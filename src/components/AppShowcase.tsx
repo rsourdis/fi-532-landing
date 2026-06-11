@@ -18,8 +18,13 @@ export default function AppShowcase() {
   const { t, locale } = useLanguage();
 
   return (
-    <section className="py-24 md:py-32 overflow-hidden" style={{ backgroundColor: "#111111" }}>
-      <div className="mx-auto max-w-6xl px-6">
+    <section className="relative py-24 md:py-32 overflow-hidden" style={{ backgroundColor: "#111111" }}>
+      <div className="absolute inset-0 bg-noise opacity-[0.2] pointer-events-none" />
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full blur-[140px] pointer-events-none"
+        style={{ backgroundColor: "rgb(18 199 122 / 0.07)" }}
+      />
+      <div className="relative mx-auto max-w-6xl px-6">
         {/* Section header */}
         <AnimateInView type="up" delay={0}>
           <div className="text-center max-w-2xl mx-auto mb-20">

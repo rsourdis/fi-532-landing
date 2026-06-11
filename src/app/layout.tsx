@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Nunito } from "next/font/google";
+import { Nunito, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import StructuredData from "@/components/StructuredData";
@@ -9,6 +9,13 @@ const nunito = Nunito({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-nunito",
+  display: "swap",
+});
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-bricolage",
   display: "swap",
 });
 
@@ -100,7 +107,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${nunito.variable} antialiased`}>
+      <body className={`${nunito.variable} ${bricolage.variable} antialiased`}>
         <StructuredData />
         <Providers>{children}</Providers>
       </body>

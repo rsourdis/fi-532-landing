@@ -58,7 +58,7 @@ export default function Strategy() {
             <h2 className="font-display font-extrabold text-4xl sm:text-5xl text-stone-900 tracking-tight leading-tight mb-4">
               {t.strategy.headingPart1}{" "}
               <br className="hidden sm:block" />
-              <span style={{ color: "#12c77a" }}>{t.strategy.headingColored}</span>
+              <span className="text-gradient-teal">{t.strategy.headingColored}</span>
             </h2>
             <p className="text-lg text-stone-500 leading-relaxed">
               {t.strategy.description}
