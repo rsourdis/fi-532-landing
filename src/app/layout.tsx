@@ -21,7 +21,7 @@ const bricolage = Bricolage_Grotesque({
 
 const TITLE = "FI-532 — Household Budget for Couples & Families";
 const DESCRIPTION =
-  "FI-532 is the household budgeting app for couples, families, and roommates. Automate the 50/30/20 rule, track shared expenses, manage recurring bills, split costs, and get AI-powered spending reports — in real time. Free on iOS.";
+  "FI-532 is the household budgeting app for couples, families, and roommates. Automate the 50/30/20 rule (or any custom split), scan receipts, add expenses by voice, track shared bills and subscriptions, plan savings goals, and get AI-powered spending reports — in real time. Free on iOS.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -36,12 +36,18 @@ export const metadata: Metadata = {
     "household budgeting app",
     "budget app for couples",
     "50/30/20 budget",
+    "customizable budget rule",
     "shared expense tracker",
     "split expenses app",
     "family budget app",
     "expense tracker",
+    "receipt scanner app",
+    "voice expense tracker",
     "bill reminder app",
     "recurring bills tracker",
+    "subscription tracker",
+    "savings goals app",
+    "shopping list budget app",
     "couples finance app",
     "roommate expense splitting",
     "AI budget reports",

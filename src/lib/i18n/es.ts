@@ -15,7 +15,7 @@ export const es: Translations = {
     headlineColored: "de presupuesto,",
     headlineSuffix: "automatizada.",
     subCopy:
-      "La regla de presupuesto más efectiva del mundo, automatizada para tu hogar. Mira a dónde va el dinero, divide los gastos compartidos y haz crecer tus ahorros — cada mes.",
+      "Basada en la probada regla 50/30/20 — y totalmente personalizable a la distribución que tu hogar necesite. Controla el gasto compartido, escanea recibos, añade gastos por voz y haz crecer tus ahorros automáticamente.",
     statNeeds: "Necesidades",
     statWants: "Deseos",
     statSavings: "Ahorros",
@@ -24,7 +24,7 @@ export const es: Translations = {
     scrollCue: "Cómo funciona",
     badgeNeeds: "Necesidades",
     badgeSavings: "Ahorros",
-    phoneAlt: "FI-532 — cada transacción registrada y categorizada",
+    phoneAlt: "Panel de presupuesto FI-532 — balance neto, ingresos vs gastos y progreso por categoría del mes",
   },
 
   strategy: {
@@ -32,7 +32,7 @@ export const es: Translations = {
     headingPart1: "La regla 50/30/20.",
     headingColored: "El camino más simple a la libertad financiera.",
     description:
-      "Demostrada por expertos financieros en todo el mundo. Usada por millones. Y ahora automatizada para tu hogar con FI-532.",
+      "Demostrada por expertos financieros en todo el mundo. Usada por millones. FI-532 la automatiza para tu hogar — y te deja ajustar la distribución a la proporción que se adapte a tu vida.",
     pillars: [
       {
         label: "Necesidades",
@@ -103,19 +103,19 @@ export const es: Translations = {
       "FI-532 reúne toda tu imagen financiera en un solo espacio, diseñado con elegancia.",
     screens: [
       {
-        alt: "FI-532 — Pantalla de transacciones",
+        alt: "Pantalla de transacciones de FI-532 con búsqueda y filtros Ingresos, Gastos y Transferencias",
         title: "Cada transacción, registrada",
-        desc: "Registra ingresos, gastos y transferencias al instante. Filtra por fecha, categoría o tipo. Tu historia financiera narrada con claridad.",
+        desc: "Registra ingresos, gastos y transferencias al instante. Busca cualquier comercio y filtra por tipo — tu historia financiera, con total claridad.",
       },
       {
-        alt: "FI-532 — Panel principal",
-        title: "Tu panel 50/30/20",
-        desc: "Mira tus necesidades, deseos y ahorros de un vistazo. Observa el medidor de presupuesto moverse al gastar — en tiempo real.",
+        alt: "Panel de presupuesto de FI-532 con balance neto y progreso por categoría",
+        title: "Tu panel de presupuesto",
+        desc: "Necesidades, deseos y ahorros de un vistazo, con la regla 50/30/20 o tu propia distribución. El presupuesto sin gastar pasa al siguiente ciclo.",
       },
       {
-        alt: "FI-532 — Facturas y suscripciones recurrentes",
+        alt: "Planificador de facturas y suscripciones recurrentes de FI-532 con fechas de vencimiento",
         title: "Nunca olvides un pago",
-        desc: "Todos los gastos recurrentes en un lugar — renta, suscripciones, servicios. Marca como pagado, crea transacciones automáticamente.",
+        desc: "Facturas y suscripciones en un planificador — renta, servicios, Netflix, Spotify. Mira el total mensual y cada próximo vencimiento.",
       },
     ],
   },
@@ -128,19 +128,19 @@ export const es: Translations = {
       "Una suite completa de herramientas de presupuesto diseñada para la forma en que los hogares reales piensan sobre el dinero — simple, colaborativa y siempre sincronizada.",
     items: [
       {
-        title: "Panel de Presupuesto",
+        title: "Panel de Presupuesto Personalizable",
         description:
-          "Tu desglose 50/30/20 visualizado. Navega por meses, compara períodos y ajusta tu regla de presupuesto cuando quieras.",
+          "Tu desglose 50/30/20 visualizado — o la distribución que elijas. Navega por ciclos, compara períodos y traslada el presupuesto sin gastar.",
       },
       {
         title: "Seguimiento de Transacciones",
         description:
-          "Registra cada peso — ingresos, gastos, transferencias. Filtra por categoría, fecha o tipo al instante.",
+          "Registra cada peso — ingresos, gastos, transferencias. Busca comercios y filtra por categoría, fecha o tipo al instante.",
       },
       {
-        title: "Facturas Recurrentes",
+        title: "Recurrentes y Suscripciones",
         description:
-          "Nunca te pierdas un pago. Sigue las fechas de vencimiento, marca facturas como pagadas y genera transacciones automáticamente.",
+          "Facturas y suscripciones en un solo planificador. Sigue vencimientos, mira tu total mensual y nunca te pierdas un pago.",
       },
       {
         title: "Colaboración del Hogar",
@@ -150,12 +150,80 @@ export const es: Translations = {
       {
         title: "Informes Financieros con IA",
         description:
-          "Análisis al estilo chat sobre tus patrones de gasto. Entiende tu dinero en lenguaje sencillo, potenciado por IA.",
+          "Pregunta por tu dinero en lenguaje sencillo. Resúmenes diarios de un vistazo e informes de gasto al estilo chat.",
       },
       {
-        title: "Recordatorios Inteligentes",
+        title: "Escaneo de Recibos",
         description:
-          "Recordatorios automáticos de facturas para que nada se escape. Prueba las notificaciones para confirmar que todo funciona.",
+          "Toma una foto del recibo y FI-532 lee los artículos, convirtiendo compras y facturas en transacciones en segundos.",
+      },
+      {
+        title: "Entrada por Voz",
+        description:
+          "Solo dilo — \"herramientas en Walmart por $40.99\" — y el gasto queda registrado, categorizado y listo.",
+      },
+      {
+        title: "Plan de Ahorro",
+        description:
+          "Divide tu ahorro mensual en metas — fondo de emergencia, inversiones, vacaciones — y mira crecer cada una en cada ciclo.",
+      },
+      {
+        title: "Listas de Compras",
+        description:
+          "Crea una lista compartida, marca lo que compraste y conviértela directamente en una transacción categorizada.",
+      },
+    ],
+  },
+
+  featureShowcase: {
+    sectionLabel: "Hecho para la vida real",
+    headingNormal: "Más formas de mantener",
+    headingColored: "el control de tu dinero.",
+    description:
+      "FI-532 va más allá de un panel. Captura el gasto en el momento, planifica con anticipación y deja que la app haga las cuentas.",
+    ctaLabel: "Descarga gratis en iOS",
+    rows: [
+      {
+        tag: "Informes con IA",
+        title: "Pregúntale lo que sea a tu dinero",
+        desc: "Obtén una lectura clara de tus gastos en lenguaje sencillo. FI-532 muestra un resumen diario de un vistazo y responde preguntas como \"¿cuánto gastamos en vivienda este ciclo?\" — sin hojas de cálculo.",
+        bullets: ["Resúmenes diarios de un vistazo", "Informes de gasto al estilo chat", "Detecta excesos a tiempo"],
+        alt: "Pantalla de Informes con IA de FI-532 con un resumen diario de gastos y temas sugeridos",
+      },
+      {
+        tag: "Escaneo de Recibos",
+        title: "Escanea un recibo, regístralo en segundos",
+        desc: "Apunta la cámara a cualquier recibo y FI-532 lee el total y los artículos por ti. Compras, facturas y gastos compartidos se vuelven transacciones precisas sin escribir nada.",
+        bullets: ["Lee totales y artículos", "Recibos en varios idiomas", "Captura o elige de Fotos"],
+        alt: "Pantalla de escaneo de recibos de FI-532 leyendo un recibo de supermercado con la cámara",
+      },
+      {
+        tag: "Entrada por Voz",
+        title: "Añade un gasto con solo decirlo",
+        desc: "¿Manos ocupadas? Di el gasto en voz alta — \"compré herramientas en Walmart por $40.99\" — y FI-532 lo convierte en una transacción categorizada. La forma más rápida de registrar gastos sobre la marcha.",
+        bullets: ["Lenguaje natural", "Categorizado automáticamente", "Funciona en tu idioma"],
+        alt: "Pantalla de transacción por voz de FI-532 transcribiendo un gasto hablado",
+      },
+      {
+        tag: "Plan de Ahorro",
+        title: "Pon tus ahorros en piloto automático",
+        desc: "Convierte tu meta de ahorro mensual en objetivos reales — fondo de emergencia, inversiones, vacaciones. FI-532 asigna cada ciclo automáticamente y traslada los saldos para que tu futuro se siga financiando solo.",
+        bullets: ["Metas de ahorro por objetivo", "Asignación automática por ciclo", "Los saldos se trasladan"],
+        alt: "Pantalla de plan de ahorro de FI-532 dividiendo el ahorro en metas como inversiones y vacaciones",
+      },
+      {
+        tag: "Analíticas",
+        title: "Ve cada tendencia de un vistazo",
+        desc: "Una tendencia mensual clara de ingresos frente a gastos, más un resumen que clasifica tus principales categorías. Sabe exactamente a dónde va tu dinero — y dónde recortar.",
+        bullets: ["Tendencia ingresos vs gastos", "Principales categorías de gasto", "Compara ciclo a ciclo"],
+        alt: "Pantalla de analíticas de FI-532 con gráfico de tendencia mensual y resumen de gasto por categoría",
+      },
+      {
+        tag: "Listas de Compras",
+        title: "De la lista de compras a la transacción",
+        desc: "Planifica la compra como una lista compartida del hogar. Marca lo que realmente compraste y FI-532 convierte esos artículos en una transacción categorizada — sin doble registro.",
+        bullets: ["Listas compartidas del hogar", "Marca lo que compraste", "Un toque para crear la transacción"],
+        alt: "Pantalla de listas de compras de FI-532 con listas activas y archivadas del hogar",
       },
     ],
   },
@@ -245,6 +313,8 @@ export const es: Translations = {
         "Divide gastos y salda saldos",
         "Recordatorios de facturas y notificaciones",
         "Informes financieros con IA",
+        "Listas de compras compartidas",
+        "Calculadora de distribución",
         "Exportación de datos CSV",
         "Soporte prioritario",
       ],

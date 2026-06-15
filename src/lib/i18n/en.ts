@@ -15,7 +15,7 @@ export const en: Translations = {
     headlineColored: "budget rule,",
     headlineSuffix: "automated.",
     subCopy:
-      "The world's most effective budget rule, automated for your household. See where money goes, split shared costs, and grow your savings — every month.",
+      "Built on the proven 50/30/20 rule — and fully customizable to any split your household needs. Track shared spending, scan receipts, add expenses by voice, and grow your savings automatically.",
     statNeeds: "Needs",
     statWants: "Wants",
     statSavings: "Savings",
@@ -24,7 +24,7 @@ export const en: Translations = {
     scrollCue: "How it works",
     badgeNeeds: "Needs",
     badgeSavings: "Savings",
-    phoneAlt: "FI-532 app — every transaction tracked and categorized",
+    phoneAlt: "FI-532 budget dashboard — net balance, income vs expenses, and category budget progress for the month",
   },
 
   strategy: {
@@ -32,7 +32,7 @@ export const en: Translations = {
     headingPart1: "The 50/30/20 rule.",
     headingColored: "The simplest path to financial freedom.",
     description:
-      "Proven by financial experts worldwide. Used by millions. And now automated for your household by FI-532.",
+      "Proven by financial experts worldwide. Used by millions. FI-532 automates it for your household — and lets you reshape the split to any ratio that fits your life.",
     pillars: [
       {
         label: "Needs",
@@ -103,19 +103,19 @@ export const en: Translations = {
       "FI-532 brings your entire financial picture into a single, beautifully designed workspace.",
     screens: [
       {
-        alt: "FI-532 Transactions screen",
+        alt: "FI-532 transactions screen with search and Income, Expenses, Transfers filters",
         title: "Every transaction, accounted for",
-        desc: "Log income, expenses, and transfers instantly. Filter by date, category, or type. Your spending story told clearly.",
+        desc: "Log income, expenses, and transfers instantly. Search any merchant and filter by type — your spending story, told clearly.",
       },
       {
-        alt: "FI-532 Home dashboard",
-        title: "Your 50/30/20 dashboard",
-        desc: "See your needs, wants, and savings at a glance. Watch the budget meter move as you spend — in real time.",
+        alt: "FI-532 budget dashboard showing net balance and category budget progress",
+        title: "Your budget dashboard",
+        desc: "Needs, wants, and savings at a glance, on the 50/30/20 rule or your own split. Unspent budget rolls over to the next cycle.",
       },
       {
-        alt: "FI-532 Recurring bills & subscriptions",
+        alt: "FI-532 recurring bills and subscriptions planner with due dates",
         title: "Never miss a bill again",
-        desc: "All recurring expenses in one place — rent, subscriptions, utilities. Mark as paid, auto-create transactions.",
+        desc: "Bills and subscriptions in one planner — rent, utilities, Netflix, Spotify. See the monthly total and every upcoming due date.",
       },
     ],
   },
@@ -128,34 +128,102 @@ export const en: Translations = {
       "A full suite of budgeting tools designed around how real households think about money — simple, collaborative, and always in sync.",
     items: [
       {
-        title: "Budget Dashboard",
+        title: "Customizable Budget Dashboard",
         description:
-          "Your 50/30/20 breakdown visualized. Navigate months, compare periods, and adjust your budget rule at any time.",
+          "Your 50/30/20 breakdown visualized — or any split you choose. Navigate cycles, compare periods, and roll unspent budget forward.",
       },
       {
         title: "Transaction Tracking",
         description:
-          "Log every dollar — income, expenses, transfers. Filter by category, date, or type instantly.",
+          "Log every dollar — income, expenses, transfers. Search merchants and filter by category, date, or type instantly.",
       },
       {
-        title: "Recurring Bills",
+        title: "Recurring & Subscriptions",
         description:
-          "Never miss a payment. Track due dates, mark bills paid, and auto-generate transactions from templates.",
+          "Bills and subscriptions in one planner. Track due dates, see your monthly total, and never miss a payment.",
       },
       {
         title: "Household Collaboration",
         description:
-          "Invite family members, split expenses, and settle up balances. Real-time shared visibility for the whole household.",
+          "Invite family members, split expenses, and settle balances. Real-time shared visibility for the whole household.",
       },
       {
         title: "AI Financial Reports",
         description:
-          "Chat-style insights about your spending patterns. Understand your money in plain language, powered by AI.",
+          "Ask about your money in plain language. Daily at-a-glance insights and chat-style reports on your spending.",
       },
       {
-        title: "Smart Reminders",
+        title: "Receipt Scanning",
         description:
-          "Automated bill reminders so nothing slips through the cracks. Test notifications to confirm everything works.",
+          "Snap a receipt and FI-532 reads the line items, so groceries and bills become transactions in seconds.",
+      },
+      {
+        title: "Voice Entry",
+        description:
+          "Just say it — \"tools at Walmart for $40.99\" — and the expense is logged, categorized, and ready.",
+      },
+      {
+        title: "Savings Plan",
+        description:
+          "Split your monthly savings into goals — emergency fund, investments, vacations — and watch each one grow every cycle.",
+      },
+      {
+        title: "Shopping Lists",
+        description:
+          "Build a shared list, check off what you bought, and turn it straight into a categorized transaction.",
+      },
+    ],
+  },
+
+  featureShowcase: {
+    sectionLabel: "Built for real life",
+    headingNormal: "More ways to stay",
+    headingColored: "on top of your money.",
+    description:
+      "FI-532 goes beyond a dashboard. Capture spending the moment it happens, plan ahead, and let the app do the math.",
+    ctaLabel: "Download free on iOS",
+    rows: [
+      {
+        tag: "AI Reports",
+        title: "Ask your money anything",
+        desc: "Get a plain-language read on your spending. FI-532 surfaces a daily at-a-glance summary and answers questions like \"how much did we spend on housing this cycle?\" — no spreadsheets, no digging.",
+        bullets: ["Daily at-a-glance insights", "Chat-style spending reports", "Spot overspending early"],
+        alt: "FI-532 AI Reports screen with a daily spending summary and suggested topics",
+      },
+      {
+        tag: "Receipt Scan",
+        title: "Scan a receipt, log it in seconds",
+        desc: "Point your camera at any receipt and FI-532 reads the total and line items for you. Groceries, bills, and shared costs become accurate transactions without typing a thing.",
+        bullets: ["Auto-reads totals & items", "Multi-language receipts", "Capture or pick from Photos"],
+        alt: "FI-532 receipt scanning screen reading a grocery receipt with the camera",
+      },
+      {
+        tag: "Voice Entry",
+        title: "Add an expense just by saying it",
+        desc: "Hands full? Speak the expense out loud — \"I bought tools at Walmart for $40.99\" — and FI-532 turns it into a categorized transaction. The fastest way to log spending on the go.",
+        bullets: ["Natural-language input", "Auto-categorized", "Works in your language"],
+        alt: "FI-532 voice transaction screen transcribing a spoken expense",
+      },
+      {
+        tag: "Savings Plan",
+        title: "Put your savings on autopilot",
+        desc: "Turn your monthly savings target into real goals — emergency fund, investments, vacations. FI-532 allocates each cycle automatically and carries balances forward so your future keeps funding itself.",
+        bullets: ["Goal-based savings buckets", "Auto-allocated every cycle", "Balances roll forward"],
+        alt: "FI-532 savings plan screen splitting savings across goals like investments and vacations",
+      },
+      {
+        tag: "Analytics",
+        title: "See every trend at a glance",
+        desc: "A clear monthly trend of income versus expenses, plus a spending overview that ranks your top categories. Know exactly where your money goes — and where to cut.",
+        bullets: ["Income vs expense trends", "Top spending categories", "Compare cycle to cycle"],
+        alt: "FI-532 analytics screen with a monthly trend chart and spending overview by category",
+      },
+      {
+        tag: "Shopping Lists",
+        title: "From shopping list to transaction",
+        desc: "Plan the grocery run as a shared household list. Check off what you actually bought, and FI-532 turns those items into one categorized transaction — no double entry.",
+        bullets: ["Shared household lists", "Check off bought items", "One tap to a transaction"],
+        alt: "FI-532 shopping lists screen with active and archived household lists",
       },
     ],
   },
@@ -245,6 +313,8 @@ export const en: Translations = {
         "Split expenses & settle up",
         "Bill reminders & notifications",
         "AI-powered financial reports",
+        "Shared shopping lists",
+        "Distribution calculator",
         "CSV data export",
         "Priority support",
       ],

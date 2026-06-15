@@ -2,23 +2,30 @@
 
 import {
   BarChart3,
-  CalendarClock,
   CreditCard,
   Users,
   PieChart,
-  Bell,
+  Sparkles,
+  ScanLine,
+  Mic,
+  PiggyBank,
+  ListChecks,
 } from "lucide-react";
 import AnimateInView from "./AnimateInView";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-// Visual/icon config only — text comes from translations
+// Visual/icon config only — text comes from translations.
+// `premium` flags features available on the Premium plan only.
 const FEATURE_STYLES = [
-  { icon: PieChart,      color: "#12c77a", bg: "rgb(18 199 122 / 0.08)", border: "rgb(18 199 122 / 0.2)",  iconBg: "rgb(18 199 122 / 0.15)" },
-  { icon: CreditCard,    color: "#111111", bg: "rgb(17 17 17 / 0.06)", border: "rgb(17 17 17 / 0.2)",  iconBg: "rgb(17 17 17 / 0.12)" },
-  { icon: CalendarClock, color: "#0fa866", bg: "rgb(15 168 102 / 0.06)", border: "rgb(15 168 102 / 0.2)",  iconBg: "rgb(15 168 102 / 0.12)" },
-  { icon: Users,         color: "#2ecf94", bg: "rgb(88 206 167 / 0.06)", border: "rgb(88 206 167 / 0.2)",  iconBg: "rgb(88 206 167 / 0.12)" },
-  { icon: BarChart3,     color: "#12c77a", bg: "rgb(18 199 122 / 0.08)", border: "rgb(18 199 122 / 0.2)",  iconBg: "rgb(18 199 122 / 0.15)" },
-  { icon: Bell,          color: "#111111", bg: "rgb(17 17 17 / 0.06)", border: "rgb(17 17 17 / 0.2)",  iconBg: "rgb(17 17 17 / 0.12)" },
+  { icon: PieChart,    color: "#12c77a", bg: "rgb(18 199 122 / 0.08)", border: "rgb(18 199 122 / 0.2)",  iconBg: "rgb(18 199 122 / 0.15)" },
+  { icon: CreditCard,  color: "#111111", bg: "rgb(17 17 17 / 0.06)",   border: "rgb(17 17 17 / 0.2)",    iconBg: "rgb(17 17 17 / 0.12)" },
+  { icon: BarChart3,   color: "#0fa866", bg: "rgb(15 168 102 / 0.06)", border: "rgb(15 168 102 / 0.2)",  iconBg: "rgb(15 168 102 / 0.12)" },
+  { icon: Users,       color: "#2ecf94", bg: "rgb(88 206 167 / 0.06)", border: "rgb(88 206 167 / 0.2)",  iconBg: "rgb(88 206 167 / 0.12)" },
+  { icon: Sparkles,    color: "#12c77a", bg: "rgb(18 199 122 / 0.08)", border: "rgb(18 199 122 / 0.2)",  iconBg: "rgb(18 199 122 / 0.15)", premium: true },
+  { icon: ScanLine,    color: "#111111", bg: "rgb(17 17 17 / 0.06)",   border: "rgb(17 17 17 / 0.2)",    iconBg: "rgb(17 17 17 / 0.12)" },
+  { icon: Mic,         color: "#0fa866", bg: "rgb(15 168 102 / 0.06)", border: "rgb(15 168 102 / 0.2)",  iconBg: "rgb(15 168 102 / 0.12)" },
+  { icon: PiggyBank,   color: "#2ecf94", bg: "rgb(88 206 167 / 0.06)", border: "rgb(88 206 167 / 0.2)",  iconBg: "rgb(88 206 167 / 0.12)" },
+  { icon: ListChecks,  color: "#12c77a", bg: "rgb(18 199 122 / 0.08)", border: "rgb(18 199 122 / 0.2)",  iconBg: "rgb(18 199 122 / 0.15)", premium: true },
 ];
 
 export default function Features() {
@@ -68,6 +75,16 @@ export default function Features() {
                     borderColor: f.border,
                   }}
                 >
+                  {/* Premium badge */}
+                  {f.premium && (
+                    <span
+                      className="absolute top-5 right-5 inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider"
+                      style={{ backgroundColor: "#111111", color: "#fafafa" }}
+                    >
+                      {t.pricing.proPlan.name}
+                    </span>
+                  )}
+
                   {/* Icon */}
                   <div
                     className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"

@@ -4,6 +4,7 @@ import ValueProps from "@/components/ValueProps";
 import Strategy from "@/components/Strategy";
 import AppShowcase from "@/components/AppShowcase";
 import Features from "@/components/Features";
+import FeatureShowcase from "@/components/FeatureShowcase";
 import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
@@ -29,6 +30,9 @@ export default function Home() {
 
         {/* 4. Inform — Full feature breakdown */}
         <Features />
+
+        {/* 4b. Prove — New capabilities shown in real screens */}
+        <FeatureShowcase />
 
         {/* 5. Guide — How to get started in 4 steps */}
         <HowItWorks />

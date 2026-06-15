@@ -23,6 +23,14 @@ export interface FeatureItemTranslation {
   description: string;
 }
 
+export interface FeatureShowcaseRow {
+  tag: string;
+  title: string;
+  desc: string;
+  bullets: readonly [string, string, string];
+  alt: string;
+}
+
 export interface StepTranslation {
   title: string;
   description: string;
@@ -104,6 +112,24 @@ export interface Translations {
       FeatureItemTranslation,
       FeatureItemTranslation,
       FeatureItemTranslation,
+      FeatureItemTranslation,
+      FeatureItemTranslation,
+      FeatureItemTranslation,
+    ];
+  };
+  featureShowcase: {
+    sectionLabel: string;
+    headingNormal: string;
+    headingColored: string;
+    description: string;
+    ctaLabel: string;
+    rows: readonly [
+      FeatureShowcaseRow,
+      FeatureShowcaseRow,
+      FeatureShowcaseRow,
+      FeatureShowcaseRow,
+      FeatureShowcaseRow,
+      FeatureShowcaseRow,
     ];
   };
   howItWorks: {
@@ -139,7 +165,7 @@ export interface Translations {
     proPlan: {
       name: string;
       description: string;
-      features: readonly [string, string, string, string, string, string, string, string];
+      features: readonly [string, string, string, string, string, string, string, string, string, string];
       perYear: string;
       perMonth: string;
       billedAnnually: (price: string) => string;

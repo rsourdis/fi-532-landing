@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Star, ArrowDown } from "lucide-react";
 import AppStoreBadge from "./AppStoreBadge";
-import HomeScreen from "@/assets/app-screens/en/transactions-en.png";
+import HomeScreen from "@/assets/app-screens/new/home.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Hero() {
