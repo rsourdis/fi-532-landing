@@ -219,6 +219,13 @@ export const es: Translations = {
         alt: "Pantalla de analíticas de FI-532 con gráfico de tendencia mensual y resumen de gasto por categoría",
       },
       {
+        tag: "Calendario de Pagos",
+        title: "Ve todo el mes de un vistazo",
+        desc: "Cada factura, gasto y suscripción en un calendario del ciclo actual. Sabe exactamente qué se debe y cuándo — sin pagos sorpresa ni carreras a fin de mes.",
+        bullets: ["Facturas, gastos y suscripciones", "Vencimientos en vista mensual", "Planifica según tu ciclo"],
+        alt: "Calendario de pagos de FI-532 mostrando recurrentes, facturas y suscripciones a lo largo del mes",
+      },
+      {
         tag: "Listas de Compras",
         title: "De la lista de compras a la transacción",
         desc: "Planifica la compra como una lista compartida del hogar. Marca lo que realmente compraste y FI-532 convierte esos artículos en una transacción categorizada — sin doble registro.",

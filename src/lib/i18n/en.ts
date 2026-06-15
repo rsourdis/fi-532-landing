@@ -219,6 +219,13 @@ export const en: Translations = {
         alt: "FI-532 analytics screen with a monthly trend chart and spending overview by category",
       },
       {
+        tag: "Bill Calendar",
+        title: "See the whole month at a glance",
+        desc: "Every bill, expense, and subscription mapped onto a calendar for the current cycle. Know exactly what's due and when — no surprise payments, no scramble at month-end.",
+        bullets: ["Bills, expenses & subscriptions", "Due dates on a monthly view", "Plan around your cycle"],
+        alt: "FI-532 bill calendar showing recurring payments, bills and subscriptions mapped across the month",
+      },
+      {
         tag: "Shopping Lists",
         title: "From shopping list to transaction",
         desc: "Plan the grocery run as a shared household list. Check off what you actually bought, and FI-532 turns those items into one categorized transaction — no double entry.",

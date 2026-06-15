@@ -15,7 +15,8 @@ const ROW_CONFIG: { key: AssetKey; color: string; premium?: boolean }[] = [
   { key: "voice", color: "#12c77a" },
   { key: "savingsPlan", color: "#0fa866" },
   { key: "analytics", color: "#12c77a" },
-  { key: "shoppingLists", color: "#0fa866", premium: true },
+  { key: "calendar", color: "#0fa866" },
+  { key: "shoppingLists", color: "#12c77a", premium: true },
 ];
 
 export default function FeatureShowcase() {

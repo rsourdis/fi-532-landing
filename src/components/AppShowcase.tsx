@@ -1,6 +1,7 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
+import type { CSSProperties } from "react";
 import AnimateInView from "./AnimateInView";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getAsset } from "@/lib/i18n/assets";
@@ -54,8 +55,8 @@ export default function AppShowcase() {
           </div>
         </AnimateInView>
 
-        {/* Phone screens — staggered layout */}
-        <div className="flex flex-col md:flex-row items-end justify-center gap-6 md:gap-4 lg:gap-8 mb-16">
+        {/* Phone screens — stacked with captions on mobile, staggered on desktop */}
+        <div className="flex flex-col items-center gap-14 md:flex-row md:items-end md:justify-center md:gap-4 lg:gap-8 mb-16">
           {SCREEN_STYLES.map((style, i) => {
             const screen = t.appShowcase.screens[i];
             return (
@@ -63,23 +64,38 @@ export default function AppShowcase() {
                 key={i}
                 type={i === 0 ? "left" : i === 2 ? "right" : "up"}
                 delay={i * 120}
-                className={i === 1 ? "z-10 md:-mx-2" : ""}
+                className={i === 1 ? "md:z-10 md:-mx-2" : ""}
               >
-                <PhoneCard
-                  image={getAsset(ASSET_KEYS[i], locale)}
-                  alt={screen.alt}
-                  color={style.color}
-                  rotate={style.rotate}
-                  yOffset={style.yOffset}
-                  featured={i === 1}
-                />
+                <div className="flex flex-col items-center">
+                  <PhoneCard
+                    image={getAsset(ASSET_KEYS[i], locale)}
+                    alt={screen.alt}
+                    color={style.color}
+                    rotate={style.rotate}
+                    yOffset={style.yOffset}
+                    featured={i === 1}
+                  />
+                  {/* Caption — paired under each phone on mobile only */}
+                  <div className="md:hidden text-center px-4 mt-7 max-w-[18rem]">
+                    <div
+                      className="w-2 h-2 rounded-full mx-auto mb-3"
+                      style={{ backgroundColor: style.color }}
+                    />
+                    <h3 className="font-display font-bold text-base mb-2" style={{ color: "#e5e5e5" }}>
+                      {screen.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed" style={{ color: "#8a8a8a" }}>
+                      {screen.desc}
+                    </p>
+                  </div>
+                </div>
               </AnimateInView>
             );
           })}
         </div>
 
-        {/* Captions row */}
-        <div className="grid md:grid-cols-3 gap-6">
+        {/* Captions row — desktop only */}
+        <div className="hidden md:grid md:grid-cols-3 gap-6">
           {SCREEN_STYLES.map((style, i) => {
             const screen = t.appShowcase.screens[i];
             return (
@@ -123,7 +139,8 @@ function PhoneCard({
   yOffset: string;
   featured?: boolean;
 }) {
-  const width = featured ? "clamp(200px, 24vw, 280px)" : "clamp(165px, 20vw, 240px)";
+  // Uniform width on mobile; featured/non-featured stagger only on desktop.
+  const mdWidth = featured ? "clamp(200px, 24vw, 280px)" : "clamp(165px, 20vw, 240px)";
 
   return (
     <div
@@ -141,14 +158,14 @@ function PhoneCard({
 
       {/* Phone chassis */}
       <div
-        className="relative rounded-[2.8rem] border shadow-2xl"
+        className="relative rounded-[2.8rem] border shadow-2xl w-[clamp(230px,72vw,260px)] md:w-[var(--md-w)]"
         style={{
           backgroundColor: "#111111",
           borderColor: "rgb(255 255 255 / 0.09)",
           padding: "9px",
-          width,
+          "--md-w": mdWidth,
           boxShadow: `0 32px 80px -16px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.06)`,
-        }}
+        } as CSSProperties}
       >
         {/* Dynamic Island */}
         <div

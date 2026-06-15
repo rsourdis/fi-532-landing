@@ -130,6 +130,7 @@ export interface Translations {
       FeatureShowcaseRow,
       FeatureShowcaseRow,
       FeatureShowcaseRow,
+      FeatureShowcaseRow,
     ];
   };
   howItWorks: {
