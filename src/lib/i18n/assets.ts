@@ -12,7 +12,6 @@ import ReceiptScanShot from "@/assets/app-screens/new/receipt-scan.png";
 import VoiceShot from "@/assets/app-screens/new/voice.png";
 import SavingsPlanShot from "@/assets/app-screens/new/savings-plan.png";
 import ShoppingListsShot from "@/assets/app-screens/new/shopping-lists.png";
-import DistributionShot from "@/assets/app-screens/new/distribution-calculator.png";
 
 export type AssetKey =
   | "home"
@@ -24,8 +23,7 @@ export type AssetKey =
   | "receiptScan"
   | "voice"
   | "savingsPlan"
-  | "shoppingLists"
-  | "distribution";
+  | "shoppingLists";
 
 // English assets — always available as fallback
 const enAssets: Record<AssetKey, StaticImageData> = {
@@ -39,7 +37,6 @@ const enAssets: Record<AssetKey, StaticImageData> = {
   voice: VoiceShot,
   savingsPlan: SavingsPlanShot,
   shoppingLists: ShoppingListsShot,
-  distribution: DistributionShot,
 };
 
 // Spanish-specific assets — add locale versions here when available.
