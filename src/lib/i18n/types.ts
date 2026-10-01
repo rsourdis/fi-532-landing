@@ -1,39 +1,35 @@
 export type Locale = "en" | "es";
 
+// Headline split so one fragment can take the verde accent.
+// Rendered as `${pre}<em>${em}</em>${post}` — include spaces in the strings.
+export interface Headline {
+  pre?: string;
+  em: string;
+  post?: string;
+}
+
+// White "callout" card floating over a phone (label / value / sub-line)
+export interface StatCallout {
+  k: string;
+  v: string;
+  s?: string;
+}
+
+export interface FeatureCardTranslation {
+  headline: Headline;
+  desc: string;
+  alt: string;
+}
+
+export interface TitledTranslation {
+  title: string;
+  description: string;
+}
+
 export interface PillarTranslation {
   label: string;
   tagline: string;
-  description: string;
-  examples: readonly [string, string, string, string];
-}
-
-export interface ScreenTranslation {
-  alt: string;
-  title: string;
-  desc: string;
-}
-
-export interface ValuePropTranslation {
-  problem: string;
-  solution: string;
-}
-
-export interface FeatureItemTranslation {
-  title: string;
-  description: string;
-}
-
-export interface FeatureShowcaseRow {
-  tag: string;
-  title: string;
-  desc: string;
-  bullets: readonly [string, string, string];
-  alt: string;
-}
-
-export interface StepTranslation {
-  title: string;
-  description: string;
+  examples: string;
 }
 
 export interface TestimonialTranslation {
@@ -43,109 +39,99 @@ export interface TestimonialTranslation {
 
 export interface Translations {
   nav: {
-    strategy: string;
+    method: string;
     features: string;
     pricing: string;
+    faq: string;
     downloadApp: string;
   };
   hero: {
-    available: string;
-    hook: string;
-    headlinePrefix: string;
-    headlineColored: string;
-    headlineSuffix: string;
+    headline: Headline;
     subCopy: string;
-    statNeeds: string;
-    statWants: string;
-    statSavings: string;
-    ratingValue: string;
-    socialProof: string;
-    scrollCue: string;
-    badgeNeeds: string;
-    badgeSavings: string;
+    trust: readonly [string, string, string];
     phoneAlt: string;
+    sideLeftAlt: string;
+    sideRightAlt: string;
+    cardLeft: StatCallout;
+    cardOwes: StatCallout;
   };
-  strategy: {
-    sectionLabel: string;
-    headingPart1: string;
-    headingColored: string;
-    description: string;
-    pillars: readonly [PillarTranslation, PillarTranslation, PillarTranslation];
-    barNeeds: string;
-    barWants: string;
-    barSavings: string;
-    calloutBefore: string;
-    calloutStrong: string;
-    calloutAfter: string;
+  proof: {
+    items: readonly [TitledTranslation, TitledTranslation, TitledTranslation, TitledTranslation];
   };
-  valueProps: {
+  problems: {
     sectionLabel: string;
-    headingNormal: string;
-    headingColored: string;
-    description: string;
-    problemTag: string;
+    headline: Headline;
     solutionTag: string;
     items: readonly [
-      ValuePropTranslation,
-      ValuePropTranslation,
-      ValuePropTranslation,
+      { problem: string; solution: string },
+      { problem: string; solution: string },
+      { problem: string; solution: string },
     ];
-    ctaNote: string;
   };
-  appShowcase: {
+  method: {
     sectionLabel: string;
-    headingLine1: string;
-    headingColored: string;
-    headingLine3: string;
+    equation: string;
+    tagline: string;
     description: string;
-    screens: readonly [ScreenTranslation, ScreenTranslation, ScreenTranslation];
+    incomeLabel: string;
+    cardLabel: string;
+    perMonth: string;
+    pillars: readonly [PillarTranslation, PillarTranslation, PillarTranslation];
+    customNote: string;
+    // Calculator defaults — match the currency shown in the localized screenshots
+    currency: "USD" | "EUR";
+    numberLocale: string;
+    defaultIncome: number;
+    maxIncome: number;
   };
   features: {
     sectionLabel: string;
-    headingNormal: string;
-    headingColored: string;
+    headline: Headline;
     description: string;
-    items: readonly [
-      FeatureItemTranslation,
-      FeatureItemTranslation,
-      FeatureItemTranslation,
-      FeatureItemTranslation,
-      FeatureItemTranslation,
-      FeatureItemTranslation,
-      FeatureItemTranslation,
-      FeatureItemTranslation,
-      FeatureItemTranslation,
-    ];
-  };
-  featureShowcase: {
-    sectionLabel: string;
-    headingNormal: string;
-    headingColored: string;
-    description: string;
-    ctaLabel: string;
-    rows: readonly [
-      FeatureShowcaseRow,
-      FeatureShowcaseRow,
-      FeatureShowcaseRow,
-      FeatureShowcaseRow,
-      FeatureShowcaseRow,
-      FeatureShowcaseRow,
-      FeatureShowcaseRow,
+    cards: {
+      buckets: FeatureCardTranslation;
+      together: FeatureCardTranslation;
+      bills: FeatureCardTranslation;
+      applepay: FeatureCardTranslation;
+      voice: FeatureCardTranslation;
+      assistant: FeatureCardTranslation;
+      insights: FeatureCardTranslation;
+    };
+    callouts: {
+      bucketsLabel: string;
+      bucketsSegs: readonly [string, string, string];
+      together: StatCallout;
+      bills: StatCallout;
+      applepayTitle: string;
+      applepayBody: string;
+      applepayNow: string;
+      voiceQuote: string;
+      assistantQuote: string;
+      insights: StatCallout;
+    };
+    moreLabel: string;
+    more: readonly [
+      TitledTranslation,
+      TitledTranslation,
+      TitledTranslation,
+      TitledTranslation,
+      TitledTranslation,
+      TitledTranslation,
     ];
   };
   howItWorks: {
     sectionLabel: string;
-    headingNormal: string;
-    headingColored: string;
-    description: string;
-    steps: readonly [StepTranslation, StepTranslation, StepTranslation, StepTranslation];
+    headline: Headline;
+    steps: readonly [TitledTranslation, TitledTranslation, TitledTranslation];
   };
   testimonials: {
     sectionLabel: string;
-    ratingSummary: string;
-    headingNormal: string;
-    headingColored: string;
-    items: readonly [TestimonialTranslation, TestimonialTranslation, TestimonialTranslation];
+    headline: Headline;
+    items: readonly [
+      TestimonialTranslation,
+      TestimonialTranslation,
+      TestimonialTranslation,
+    ];
   };
   pricing: {
     sectionLabel: string;
@@ -180,18 +166,28 @@ export interface Translations {
       ctaMonthly: string;
     };
   };
+  faq: {
+    sectionLabel: string;
+    headline: Headline;
+    items: readonly { q: string; a: string }[];
+    moreHelp: string;
+  };
   cta: {
-    badge: string;
-    headingNormal: string;
-    headingColored: string;
+    headline: Headline;
     description: string;
     trustItems: readonly [string, string, string];
-    learnHow: string;
+    qrLabel: string;
+    qrAlt: string;
+  };
+  stickyCta: {
+    text: string;
+    button: string;
   };
   footer: {
-    strategy: string;
+    method: string;
     features: string;
     pricing: string;
+    faq: string;
     contact: string;
     support: string;
     privacy: string;

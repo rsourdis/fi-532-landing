@@ -2,274 +2,166 @@ import type { Translations } from "./types";
 
 export const es: Translations = {
   nav: {
-    strategy: "Estrategia",
+    method: "El método",
     features: "Funciones",
     pricing: "Precios",
-    downloadApp: "Descargar App",
+    faq: "Preguntas",
+    downloadApp: "Descargar",
   },
 
   hero: {
-    available: "Disponible en iOS",
-    hook: "¿A dónde se fue el dinero este mes?",
-    headlinePrefix: "La regla 50/30/20",
-    headlineColored: "de presupuesto,",
-    headlineSuffix: "automatizada.",
+    headline: { pre: "Mira cuánto ", em: "te queda." },
     subCopy:
-      "Basada en la probada regla 50/30/20 — y totalmente personalizable a la distribución que tu hogar necesite. Controla el gasto compartido, escanea recibos, añade gastos por voz y haz crecer tus ahorros automáticamente.",
-    statNeeds: "Necesidades",
-    statWants: "Deseos",
-    statSavings: "Ahorros",
-    ratingValue: "4.8",
-    socialProof: "La adoran parejas, familias y compañeros que gestionan el dinero juntos",
-    scrollCue: "Cómo funciona",
-    badgeNeeds: "Necesidades",
-    badgeSavings: "Ahorros",
-    phoneAlt: "Panel de presupuesto FI-532 — balance neto, ingresos vs gastos y progreso por categoría del mes",
+      "Un presupuesto compartido para parejas, familias y pisos compartidos. Cada sueldo se reparte 50/30/20 automáticamente, y todo el hogar ve un único número claro.",
+    trust: ["Sin conectar tu banco", "Invita a tu pareja en segundos", "Gratis para empezar"],
+    phoneAlt:
+      "Panel de FI-532 con 2357 € disponibles para gastar, ingresos, gastos y el presupuesto 50/30/20 del ciclo",
+    sideLeftAlt: "Categorías de básicos, lujos y ahorros en FI-532 con lo gastado y lo disponible",
+    sideRightAlt: "Balance del hogar en FI-532 con la parte de cada miembro y quién debe a quién",
+    cardLeft: { k: "Disponible", v: "2357 €", s: "▲ 294 € por debajo del ritmo" },
+    cardOwes: { k: "Javier te debe", v: "38,40 €", s: "Súper · Fibra · Cena" },
   },
 
-  strategy: {
-    sectionLabel: "El Método",
-    headingPart1: "La regla 50/30/20.",
-    headingColored: "El camino más simple a la libertad financiera.",
-    description:
-      "Demostrada por expertos financieros en todo el mundo. Usada por millones. FI-532 la automatiza para tu hogar — y te deja ajustar la distribución a la proporción que se adapte a tu vida.",
-    pillars: [
-      {
-        label: "Necesidades",
-        tagline: "Cubre lo que mantiene la vida en marcha.",
-        description:
-          "Gastos esenciales que no puedes omitir — vivienda, servicios, alimentos, transporte, salud. La mitad de tus ingresos, protegida y controlada.",
-        examples: ["Renta / hipoteca", "Alimentos", "Servicios", "Transporte"],
-      },
-      {
-        label: "Deseos",
-        tagline: "Disfruta la vida sin culpa.",
-        description:
-          "Las cosas que hacen la vida agradable — salir a comer, suscripciones, pasatiempos, compras. Gasta libremente dentro del 30%, nunca más.",
-        examples: ["Restaurantes y cafés", "Streaming", "Pasatiempos", "Compras"],
-      },
-      {
-        label: "Ahorros",
-        tagline: "Construye el futuro que mereces.",
-        description:
-          "Tu futuro financiero, financiado automáticamente. Fondo de emergencia, inversiones, pago de deudas — cada peso aquí trabaja más que lo que gastas.",
-        examples: ["Fondo de emergencia", "Inversiones", "Pago de deudas", "Jubilación"],
-      },
+  proof: {
+    items: [
+      { title: "Sin conectar tu banco", description: "Tus claves nunca salen de tu banco." },
+      { title: "Pensada para dos o más", description: "Parejas, familias y compañeros de piso." },
+      { title: "Sincroniza al instante", description: "Todos ven los mismos números." },
+      { title: "Español e inglés", description: "Y con tu propia moneda." },
     ],
-    barNeeds: "Necesidades",
-    barWants: "Deseos",
-    barSavings: "Ahorros",
-    calloutBefore:
-      "FI-532 registra cada transacción, categoriza tus gastos y muestra tu ",
-    calloutStrong: "desglose 50/30/20 en tiempo real",
-    calloutAfter:
-      " — para que siempre sepas cómo estás, sin hojas de cálculo ni cálculos manuales.",
   },
 
-  valueProps: {
+  problems: {
     sectionLabel: "Por qué FI-532",
-    headingNormal: "Gestionar el dinero en pareja es difícil.",
-    headingColored: "Nosotros lo hacemos simple.",
-    description:
-      "Tres razones por las que los hogares pierden el control de su dinero — y cómo FI-532 resuelve cada una.",
-    problemTag: "El problema",
-    solutionTag: "Cómo lo resolvemos",
+    headline: { pre: "El dinero en común es difícil. ", em: "Lo hacemos simple." },
+    solutionTag: "Con FI-532",
     items: [
       {
-        problem: "El dinero desaparece cada mes y no sabes a dónde se fue.",
+        problem: "«¿A dónde se fue el dinero este mes?»",
         solution:
-          "FI-532 clasifica cada transacción en tu desglose 50/30/20 automáticamente — mira exactamente a dónde va cada peso, en tiempo real. Sin hojas de cálculo, sin adivinar.",
+          "Cada gasto cae solo en básicos, lujos o ahorro. Ves exactamente a dónde fue cada euro, en el momento.",
       },
       {
-        problem: "Dividir los gastos con tu pareja o compañeros se vuelve un juego de adivinanzas.",
+        problem: "«A ver, ¿quién pagó qué?»",
         solution:
-          "Comparte un solo hogar, divide los gastos y salda cuentas en segundos. Todos ven los mismos números — se acabó el incómodo '¿quién pagó qué?'.",
+          "Comparte un hogar, divide gastos y salda cuentas en segundos. Se acabaron las cuentas incómodas a fin de mes.",
       },
       {
-        problem: "Las facturas olvidadas y las suscripciones que se acumulan drenan tus ahorros.",
+        problem: "«Se nos pasó otra vez ese recibo.»",
         solution:
-          "Controla cada gasto recurrente, recibe recordatorios antes del vencimiento y protege tu meta de 20% de ahorro — nada se escapa.",
+          "Todos los recibos y suscripciones en un planificador, con recordatorios antes del vencimiento y “pagado” en un toque.",
       },
     ],
-    ctaNote: "Empieza gratis — sin tarjeta de crédito.",
   },
 
-  appShowcase: {
-    sectionLabel: "La App",
-    headingLine1: "Cada peso.",
-    headingColored: "Cada decisión.",
-    headingLine3: "En un solo lugar.",
+  method: {
+    sectionLabel: "El método",
+    equation: "50/30/20",
+    tagline: "La regla de presupuesto está en nuestro nombre.",
     description:
-      "FI-532 reúne toda tu imagen financiera en un solo espacio, diseñado con elegancia.",
-    screens: [
-      {
-        alt: "Pantalla de transacciones de FI-532 con búsqueda y filtros Ingresos, Gastos y Transferencias",
-        title: "Cada transacción, registrada",
-        desc: "Registra ingresos, gastos y transferencias al instante. Busca cualquier comercio y filtra por tipo — tu historia financiera, con total claridad.",
-      },
-      {
-        alt: "Panel de presupuesto de FI-532 con balance neto y progreso por categoría",
-        title: "Tu panel de presupuesto",
-        desc: "Necesidades, deseos y ahorros de un vistazo, con la regla 50/30/20 o tu propia distribución. El presupuesto sin gastar pasa al siguiente ciclo.",
-      },
-      {
-        alt: "Planificador de facturas y suscripciones recurrentes de FI-532 con fechas de vencimiento",
-        title: "Nunca olvides un pago",
-        desc: "Facturas y suscripciones en un planificador — renta, servicios, Netflix, Spotify. Mira el total mensual y cada próximo vencimiento.",
-      },
+      "La mitad para lo que necesitas, el 30% para lo que disfrutas y el 20% para tu futuro. FI-532 hace el reparto con cada sueldo, sin que nadie abra una hoja de cálculo.",
+    incomeLabel: "Ingresos mensuales del hogar",
+    cardLabel: "Tu reparto",
+    perMonth: "/ mes",
+    pillars: [
+      { label: "Básicos", tagline: "Lo que mantiene la vida en marcha", examples: "Alquiler, súper, suministros, transporte" },
+      { label: "Lujos", tagline: "Disfruta sin culpa", examples: "Comer fuera, streaming, aficiones" },
+      { label: "Ahorros", tagline: "Tu futuro, lo primero", examples: "Fondo de emergencia, inversiones, deudas" },
     ],
+    customNote: "¿Prefieres 60/20/20 o 40/30/30? Cambia el reparto cuando quieras.",
+    currency: "EUR",
+    numberLocale: "es-ES",
+    defaultIncome: 3900,
+    maxIncome: 12000,
   },
 
   features: {
     sectionLabel: "Funciones",
-    headingNormal: "Todo lo que necesitas.",
-    headingColored: "Nada más.",
+    headline: { pre: "Menos apuntar. ", em: "Más saber." },
     description:
-      "Una suite completa de herramientas de presupuesto diseñada para la forma en que los hogares reales piensan sobre el dinero — simple, colaborativa y siempre sincronizada.",
-    items: [
-      {
-        title: "Panel de Presupuesto Personalizable",
-        description:
-          "Tu desglose 50/30/20 visualizado — o la distribución que elijas. Navega por ciclos, compara períodos y traslada el presupuesto sin gastar.",
+      "Registrar un gasto lleva segundos, y muchas veces nada. El resto de la app lo convierte en respuestas.",
+    cards: {
+      buckets: {
+        headline: { pre: "Cada sueldo, ", em: "con su plan." },
+        desc: "Básicos, lujos y ahorro: 50/30/20 automático. Lo que no gastas pasa al siguiente ciclo.",
+        alt: "Categorías de presupuesto de FI-532 con el progreso de básicos, lujos y ahorros",
       },
-      {
-        title: "Seguimiento de Transacciones",
-        description:
-          "Registra cada peso — ingresos, gastos, transferencias. Busca comercios y filtra por categoría, fecha o tipo al instante.",
+      together: {
+        headline: { pre: "En pareja, ", em: "cuentas claras." },
+        desc: "Gastos compartidos o privados, partes justas según ingresos y cuentas saldadas en un toque.",
+        alt: "Balance del hogar en FI-532 con la parte de cada miembro y un ajuste de cuentas",
       },
-      {
-        title: "Recurrentes y Suscripciones",
-        description:
-          "Facturas y suscripciones en un solo planificador. Sigue vencimientos, mira tu total mensual y nunca te pierdas un pago.",
+      bills: {
+        headline: { pre: "Que no se te pase ", em: "ningún recibo." },
+        desc: "Vencimientos, recordatorios y “pagado” en un toque.",
+        alt: "Planificador de recibos recurrentes de FI-532 con vencimientos y botón de marcar como pagado",
       },
-      {
-        title: "Colaboración del Hogar",
-        description:
-          "Invita a miembros de la familia, divide gastos y salda saldos. Visibilidad compartida en tiempo real para todo el hogar.",
+      applepay: {
+        headline: { pre: "Apple Pay, ", em: "apuntado solo." },
+        desc: "Pagas con el móvil y el gasto llega a FI-532.",
+        alt: "Ajustes del registro automático de Apple Pay en FI-532 con tarjetas y categoría por defecto",
       },
-      {
-        title: "Informes Financieros con IA",
-        description:
-          "Pregunta por tu dinero en lenguaje sencillo. Resúmenes diarios de un vistazo e informes de gasto al estilo chat.",
+      voice: {
+        headline: { em: "Dilo", post: " y listo." },
+        desc: "O haz foto al ticket. Nosotros rellenamos el resto.",
+        alt: "Pantalla de transacción por voz de FI-532 escuchando un gasto dictado",
       },
-      {
-        title: "Escaneo de Recibos",
-        description:
-          "Toma una foto del recibo y FI-532 lee los artículos, convirtiendo compras y facturas en transacciones en segundos.",
+      assistant: {
+        headline: { pre: "Pregúntale ", em: "a tu presupuesto." },
+        desc: "Respuestas claras sobre tu dinero, cuando quieras.",
+        alt: "Asistente de FI-532 con el resumen de gastos de hoy y preguntas sugeridas",
       },
-      {
-        title: "Entrada por Voz",
-        description:
-          "Solo dilo — \"herramientas en Walmart por $40.99\" — y el gasto queda registrado, categorizado y listo.",
+      insights: {
+        headline: { pre: "Descubre ", em: "a dónde va." },
+        desc: "Cada ciclo comparado con el anterior, categoría por categoría, para saber qué recortar y qué está funcionando.",
+        alt: "Análisis de FI-532 con la tendencia mensual de ingresos y gastos y el desglose por categoría",
       },
-      {
-        title: "Plan de Ahorro",
-        description:
-          "Divide tu ahorro mensual en metas — fondo de emergencia, inversiones, vacaciones — y mira crecer cada una en cada ciclo.",
-      },
-      {
-        title: "Listas de Compras",
-        description:
-          "Crea una lista compartida, marca lo que compraste y conviértela directamente en una transacción categorizada.",
-      },
-    ],
-  },
-
-  featureShowcase: {
-    sectionLabel: "Hecho para la vida real",
-    headingNormal: "Más formas de mantener",
-    headingColored: "el control de tu dinero.",
-    description:
-      "FI-532 va más allá de un panel. Captura el gasto en el momento, planifica con anticipación y deja que la app haga las cuentas.",
-    ctaLabel: "Descarga gratis en iOS",
-    rows: [
-      {
-        tag: "Informes con IA",
-        title: "Pregúntale lo que sea a tu dinero",
-        desc: "Obtén una lectura clara de tus gastos en lenguaje sencillo. FI-532 muestra un resumen diario de un vistazo y responde preguntas como \"¿cuánto gastamos en vivienda este ciclo?\" — sin hojas de cálculo.",
-        bullets: ["Resúmenes diarios de un vistazo", "Informes de gasto al estilo chat", "Detecta excesos a tiempo"],
-        alt: "Pantalla de Informes con IA de FI-532 con un resumen diario de gastos y temas sugeridos",
-      },
-      {
-        tag: "Escaneo de Recibos",
-        title: "Escanea un recibo, regístralo en segundos",
-        desc: "Apunta la cámara a cualquier recibo y FI-532 lee el total y los artículos por ti. Compras, facturas y gastos compartidos se vuelven transacciones precisas sin escribir nada.",
-        bullets: ["Lee totales y artículos", "Recibos en varios idiomas", "Captura o elige de Fotos"],
-        alt: "Pantalla de escaneo de recibos de FI-532 leyendo un recibo de supermercado con la cámara",
-      },
-      {
-        tag: "Entrada por Voz",
-        title: "Añade un gasto con solo decirlo",
-        desc: "¿Manos ocupadas? Di el gasto en voz alta — \"compré herramientas en Walmart por $40.99\" — y FI-532 lo convierte en una transacción categorizada. La forma más rápida de registrar gastos sobre la marcha.",
-        bullets: ["Lenguaje natural", "Categorizado automáticamente", "Funciona en tu idioma"],
-        alt: "Pantalla de transacción por voz de FI-532 transcribiendo un gasto hablado",
-      },
-      {
-        tag: "Plan de Ahorro",
-        title: "Pon tus ahorros en piloto automático",
-        desc: "Convierte tu meta de ahorro mensual en objetivos reales — fondo de emergencia, inversiones, vacaciones. FI-532 asigna cada ciclo automáticamente y traslada los saldos para que tu futuro se siga financiando solo.",
-        bullets: ["Metas de ahorro por objetivo", "Asignación automática por ciclo", "Los saldos se trasladan"],
-        alt: "Pantalla de plan de ahorro de FI-532 dividiendo el ahorro en metas como inversiones y vacaciones",
-      },
-      {
-        tag: "Analíticas",
-        title: "Ve cada tendencia de un vistazo",
-        desc: "Una tendencia mensual clara de ingresos frente a gastos, más un resumen que clasifica tus principales categorías. Sabe exactamente a dónde va tu dinero — y dónde recortar.",
-        bullets: ["Tendencia ingresos vs gastos", "Principales categorías de gasto", "Compara ciclo a ciclo"],
-        alt: "Pantalla de analíticas de FI-532 con gráfico de tendencia mensual y resumen de gasto por categoría",
-      },
-      {
-        tag: "Calendario de Pagos",
-        title: "Ve todo el mes de un vistazo",
-        desc: "Cada factura, gasto y suscripción en un calendario del ciclo actual. Sabe exactamente qué se debe y cuándo — sin pagos sorpresa ni carreras a fin de mes.",
-        bullets: ["Facturas, gastos y suscripciones", "Vencimientos en vista mensual", "Planifica según tu ciclo"],
-        alt: "Calendario de pagos de FI-532 mostrando recurrentes, facturas y suscripciones a lo largo del mes",
-      },
-      {
-        tag: "Listas de Compras",
-        title: "De la lista de compras a la transacción",
-        desc: "Planifica la compra como una lista compartida del hogar. Marca lo que realmente compraste y FI-532 convierte esos artículos en una transacción categorizada — sin doble registro.",
-        bullets: ["Listas compartidas del hogar", "Marca lo que compraste", "Un toque para crear la transacción"],
-        alt: "Pantalla de listas de compras de FI-532 con listas activas y archivadas del hogar",
-      },
+    },
+    callouts: {
+      bucketsLabel: "Este ciclo",
+      bucketsSegs: ["Básicos 50", "Lujos 30", "Ahorros 20"],
+      together: { k: "Javier te debe", v: "38,40 €", s: "Súper · Fibra · Cena" },
+      bills: { k: "Vence mañana", v: "Alquiler · 950 €", s: "🔔 Recordatorio activado" },
+      applepayTitle: "Registrado desde Apple Pay",
+      applepayBody: "Mercadona · −53,83 € · Supermercado",
+      applepayNow: "ahora",
+      voiceQuote: "“Gasté 25 euros en el súper”",
+      assistantQuote: "“¿Qué podemos recortar?”",
+      insights: { k: "Comer fuera", v: "−48%", s: "vs. ciclo anterior" },
+    },
+    moreLabel: "Y todo lo demás que necesita un hogar",
+    more: [
+      { title: "Escaneo de tickets", description: "Apunta con la cámara y el total y los artículos se rellenan solos." },
+      { title: "Plan de ahorro", description: "Reparte tu 20% entre metas como un fondo de emergencia o unas vacaciones." },
+      { title: "Listas de la compra compartidas", description: "Marca lo que compraste y conviértelo en una sola transacción." },
+      { title: "Calendario de recibos", description: "Cada recibo y suscripción, situado en el mes." },
+      { title: "Búsqueda y filtros", description: "Encuentra cualquier gasto por persona, categoría o importe en segundos." },
+      { title: "Exportación CSV", description: "Tus datos son tuyos. Llévatelos cuando quieras." },
     ],
   },
 
   howItWorks: {
-    sectionLabel: "Cómo Funciona",
-    headingNormal: "Listo y funcionando",
-    headingColored: "en minutos.",
-    description:
-      "Sin hojas de cálculo. Sin configuración complicada. Solo un espacio de trabajo limpio que funciona como tú piensas sobre el dinero.",
+    sectionLabel: "Cómo funciona",
+    headline: { pre: "Listo en ", em: "minutos." },
     steps: [
       {
-        title: "Crea Tu Cuenta",
-        description:
-          "Regístrate de forma segura con tu correo. Tus datos están protegidos con autenticación de nivel empresarial a través de Clerk.",
+        title: "Crea tu hogar",
+        description: "Elige tu moneda y tu reparto: 50/30/20 o la proporción que encaje con tu vida.",
       },
       {
-        title: "Configura Tu Hogar",
-        description:
-          "Configura tu moneda, zona horaria y regla de presupuesto. Elige tu distribución 50/30/20 — o personalízala según tus metas.",
+        title: "Invita a los tuyos",
+        description: "Añade a tu pareja, familia o compañeros por email. Todos comparten el mismo presupuesto en vivo.",
       },
       {
-        title: "Registra Todo",
-        description:
-          "Registra transacciones, configura facturas recurrentes y categoriza tus gastos. Tu panel se actualiza en tiempo real.",
-      },
-      {
-        title: "Mantente en Control",
-        description:
-          "Revisa perspectivas mensuales, obtén informes con IA, exporta tus datos y colabora con los miembros del hogar.",
+        title: "Gasta con un plan",
+        description: "Registra por voz, ticket o Apple Pay, y ten siempre claro cuánto te queda.",
       },
     ],
   },
 
   testimonials: {
-    sectionLabel: "Usuarios reales",
-    ratingSummary: "4.8 de calificación promedio de hogares en el App Store",
-    headingNormal: "Hogares ahorrando más.",
-    headingColored: "Cada mes.",
+    sectionLabel: "De hogares que usan FI-532",
+    headline: { pre: "Hogares ahorrando más. ", em: "Cada mes." },
     items: [
       {
         role: "Casada, 2 hijos",
@@ -339,20 +231,57 @@ export const es: Translations = {
     },
   },
 
+  faq: {
+    sectionLabel: "Preguntas frecuentes",
+    headline: { pre: "Preguntas, ", em: "resueltas." },
+    items: [
+      {
+        q: "¿Tengo que conectar mi cuenta bancaria?",
+        a: "No. FI-532 nunca te pide las claves de tu banco. Añades los gastos por voz, escaneando un ticket, escribiéndolos o automáticamente al pagar con Apple Pay.",
+      },
+      {
+        q: "¿Qué es la regla 50/30/20?",
+        a: "Divide tus ingresos netos en un 50% para básicos (alquiler, súper, suministros), un 30% para lujos (comer fuera, suscripciones, aficiones) y un 20% para ahorro. FI-532 automatiza el reparto para que siempre sepas cómo vas.",
+      },
+      {
+        q: "¿Puedo usar otro reparto?",
+        a: "Sí. 50/30/20 es el valor por defecto, pero puedes cambiar los porcentajes en los ajustes del hogar; por ejemplo, 60/20/20 o 40/30/30.",
+      },
+      {
+        q: "¿Cómo llevo el presupuesto con mi pareja?",
+        a: "Configura tu hogar e invita a los miembros por email desde los ajustes del hogar. Cuando acepten, compartiréis en tiempo real el presupuesto, las transacciones y los saldos.",
+      },
+      {
+        q: "¿FI-532 es gratis?",
+        a: "La descarga es gratuita y el plan gratuito no caduca. Premium desbloquea transacciones ilimitadas, colaboración entre varios miembros, informes con IA y más. Las suscripciones se gestionan en el App Store y puedes cancelar cuando quieras.",
+      },
+      {
+        q: "¿Hay versión para Android?",
+        a: "Todavía no. FI-532 está disponible para iPhone en el App Store. Android está en la hoja de ruta.",
+      },
+    ],
+    moreHelp: "¿Más preguntas? Visita soporte",
+  },
+
   cta: {
-    badge: "Descarga gratuita",
-    headingNormal: "Toma el control de tus",
-    headingColored: "finanzas del hogar.",
+    headline: { pre: "Empezad a presupuestar ", em: "juntos." },
     description:
-      "Comienza con el plan gratuito hoy. Configura tu presupuesto 50/30/20, registra cada peso y actualiza cuando estés listo.",
-    trustItems: ["Sin tarjeta de crédito", "Plan gratuito para siempre", "iOS App Store"],
-    learnHow: "Aprende cómo funciona",
+      "Descarga FI-532, configura tu hogar y descubre cuánto te queda antes de que llegue el próximo sueldo.",
+    trustItems: ["Sin conectar tu banco", "Gratis para empezar", "Sin tarjeta de crédito"],
+    qrLabel: "Escanea para descargar",
+    qrAlt: "Código QR que lleva a FI-532 en el App Store",
+  },
+
+  stickyCta: {
+    text: "Gratis en el App Store",
+    button: "Descargar FI-532",
   },
 
   footer: {
-    strategy: "Estrategia",
+    method: "El método",
     features: "Funciones",
     pricing: "Precios",
+    faq: "Preguntas",
     contact: "Contacto",
     support: "Soporte",
     privacy: "Privacidad",

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Nunito, Bricolage_Grotesque } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import StructuredData from "@/components/StructuredData";
@@ -9,13 +9,6 @@ const nunito = Nunito({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-nunito",
-  display: "swap",
-});
-
-const bricolage = Bricolage_Grotesque({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-bricolage",
   display: "swap",
 });
 
@@ -112,8 +105,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${nunito.variable} ${bricolage.variable} antialiased`}>
+    // Font variable lives on <html> so the @theme font tokens (resolved at :root) can see it
+    <html lang="en" className={nunito.variable} suppressHydrationWarning>
+      <body className="antialiased">
         <StructuredData />
         <Providers>{children}</Providers>
       </body>

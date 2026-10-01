@@ -2,37 +2,39 @@
 
 import AppLogo from "./AppLogo";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SUPPORT_EMAIL } from "@/lib/site";
 
 export default function Footer() {
   const { t } = useLanguage();
 
-  return (
-    <footer
-      className="border-t py-14"
-      style={{
-        backgroundColor: "#fafafa",
-        borderColor: "rgb(0 0 0 / 0.07)",
-      }}
-    >
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Logo */}
-          <AppLogo textClassName="text-base" />
+  const links = [
+    { label: t.footer.method, href: "#method" },
+    { label: t.footer.features, href: "#features" },
+    { label: t.footer.pricing, href: "#pricing" },
+    { label: t.footer.faq, href: "#faq" },
+    { label: t.footer.contact, href: `mailto:${SUPPORT_EMAIL}` },
+    { label: t.footer.support, href: "/support" },
+    { label: t.footer.privacy, href: "/privacy" },
+    { label: t.footer.terms, href: "/terms" },
+    { label: t.footer.eula, href: "/eula" },
+  ];
 
-          {/* Links */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm" style={{ color: "#5c5c5c" }}>
-            <a href="#strategy" className="transition-colors hover:text-teal-400">{t.footer.strategy}</a>
-            <a href="#features" className="transition-colors hover:text-teal-400">{t.footer.features}</a>
-            <a href="#pricing" className="transition-colors hover:text-teal-400">{t.footer.pricing}</a>
-            <a href="mailto:info@fi-532.app" className="transition-colors hover:text-teal-400">{t.footer.contact}</a>
-            <a href="/support" className="transition-colors hover:text-teal-400">{t.footer.support}</a>
-            <a href="/privacy" className="transition-colors hover:text-teal-400">{t.footer.privacy}</a>
-            <a href="/terms" className="transition-colors hover:text-teal-400">{t.footer.terms}</a>
-            <a href="/eula" className="transition-colors hover:text-teal-400">{t.footer.eula}</a>
+  return (
+    // Extra bottom padding on mobile leaves room for the sticky download bar
+    <footer className="border-t border-white/10 pt-14 pb-28 md:pb-14">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
+          <AppLogo textClassName="text-base text-white" iconClassName="size-9" />
+
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-stone-400">
+            {links.map((link) => (
+              <a key={link.href} href={link.href} className="transition-colors hover:text-teal-400">
+                {link.label}
+              </a>
+            ))}
           </div>
 
-          {/* Copyright */}
-          <p className="text-xs" style={{ color: "#3d3d3d" }}>
+          <p className="text-xs text-stone-500">
             {t.footer.copyright(new Date().getFullYear())}
           </p>
         </div>

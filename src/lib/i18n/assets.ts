@@ -1,53 +1,64 @@
 import { StaticImageData } from "next/image";
 import type { Locale } from "./types";
 
-// Latest in-app screenshots (1179×2556, iPhone). English-first source of truth.
-import HomeShot from "@/assets/app-screens/new/home.png";
-import TransactionsShot from "@/assets/app-screens/new/transactions.png";
-import RecurringShot from "@/assets/app-screens/new/recurring.png";
-import AnalyticsShot from "@/assets/app-screens/new/analytics.png";
-import CalendarShot from "@/assets/app-screens/new/calendar.png";
-import AiReportsShot from "@/assets/app-screens/new/ai-reports.png";
-import ReceiptScanShot from "@/assets/app-screens/new/receipt-scan.png";
-import VoiceShot from "@/assets/app-screens/new/voice.png";
-import SavingsPlanShot from "@/assets/app-screens/new/savings-plan.png";
-import ShoppingListsShot from "@/assets/app-screens/new/shopping-lists.png";
+// Latest in-app captures (1206×2622, dark theme) — the same sources used for
+// the App Store screenshots in fi_532/metadata/app-store/screenshots-src.
+import HomeEn from "@/assets/app-screens/v3/en/home.png";
+import BucketsEn from "@/assets/app-screens/v3/en/buckets.png";
+import TogetherEn from "@/assets/app-screens/v3/en/together.png";
+import BillsEn from "@/assets/app-screens/v3/en/bills.png";
+import ApplePayEn from "@/assets/app-screens/v3/en/applepay.png";
+import VoiceEn from "@/assets/app-screens/v3/en/voice.png";
+import AssistantEn from "@/assets/app-screens/v3/en/assistant.png";
+import InsightsEn from "@/assets/app-screens/v3/en/insights.png";
+import TransactionsEn from "@/assets/app-screens/v3/en/transactions.png";
+
+import HomeEs from "@/assets/app-screens/v3/es/home.png";
+import BucketsEs from "@/assets/app-screens/v3/es/buckets.png";
+import TogetherEs from "@/assets/app-screens/v3/es/together.png";
+import BillsEs from "@/assets/app-screens/v3/es/bills.png";
+import ApplePayEs from "@/assets/app-screens/v3/es/applepay.png";
+import VoiceEs from "@/assets/app-screens/v3/es/voice.png";
+import AssistantEs from "@/assets/app-screens/v3/es/assistant.png";
+import InsightsEs from "@/assets/app-screens/v3/es/insights.png";
+import TransactionsEs from "@/assets/app-screens/v3/es/transactions.png";
 
 export type AssetKey =
   | "home"
-  | "transactions"
-  | "recurring"
-  | "analytics"
-  | "calendar"
-  | "aiReports"
-  | "receiptScan"
+  | "buckets"
+  | "together"
+  | "bills"
+  | "applepay"
   | "voice"
-  | "savingsPlan"
-  | "shoppingLists";
+  | "assistant"
+  | "insights"
+  | "transactions";
 
-// English assets — always available as fallback
-const enAssets: Record<AssetKey, StaticImageData> = {
-  home: HomeShot,
-  transactions: TransactionsShot,
-  recurring: RecurringShot,
-  analytics: AnalyticsShot,
-  calendar: CalendarShot,
-  aiReports: AiReportsShot,
-  receiptScan: ReceiptScanShot,
-  voice: VoiceShot,
-  savingsPlan: SavingsPlanShot,
-  shoppingLists: ShoppingListsShot,
-};
-
-// Spanish-specific assets — add locale versions here when available.
-// Anything not listed falls back to the English version above.
-const esAssets: Partial<Record<AssetKey, StaticImageData>> = {
-  // Spanish screenshots will be added here as they become available.
+const assets: Record<Locale, Record<AssetKey, StaticImageData>> = {
+  en: {
+    home: HomeEn,
+    buckets: BucketsEn,
+    together: TogetherEn,
+    bills: BillsEn,
+    applepay: ApplePayEn,
+    voice: VoiceEn,
+    assistant: AssistantEn,
+    insights: InsightsEn,
+    transactions: TransactionsEn,
+  },
+  es: {
+    home: HomeEs,
+    buckets: BucketsEs,
+    together: TogetherEs,
+    bills: BillsEs,
+    applepay: ApplePayEs,
+    voice: VoiceEs,
+    assistant: AssistantEs,
+    insights: InsightsEs,
+    transactions: TransactionsEs,
+  },
 };
 
 export function getAsset(key: AssetKey, locale: Locale): StaticImageData {
-  if (locale === "es") {
-    return esAssets[key] ?? enAssets[key];
-  }
-  return enAssets[key];
+  return assets[locale][key];
 }
