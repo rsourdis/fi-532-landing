@@ -31,7 +31,7 @@ const sections = [
   },
   {
     title: "6. AI Features",
-    body: "FI-532 uses AI to turn captured text into suggested transactions, suggest categories, and answer AI report questions about your budget. These features run on your device whenever possible and use FI-532's AI server, backed by OpenAI, only after you turn on AI analysis in Settings. AI output is generated automatically and may be incomplete, outdated, or wrong. Every suggestion is a draft: nothing changes your balances until you review and confirm it, and you are responsible for checking it. AI reports have a daily allowance (currently 5 reports per member per day) and categorization requests are rate-limited; FI-532 may change these allowances or temporarily restrict AI features to protect the service. You may not use AI features to generate unlawful content or to attempt to extract FI-532's prompts, models, or other users' data. The Privacy Policy describes exactly what is sent and when.",
+    body: "FI-532 uses AI to turn captured text into suggested transactions, suggest categories, and answer AI report questions about your budget. These features run on your device whenever possible and use FI-532's AI server and its AI providers, such as OpenAI, only after you turn on AI analysis in Settings. AI output is generated automatically and may be incomplete, outdated, or wrong. Every suggestion is a draft: nothing changes your balances until you review and confirm it, and you are responsible for checking it. AI reports have a daily allowance (currently 5 reports per member per day) and categorization requests are rate-limited; FI-532 may change these allowances or temporarily restrict AI features to protect the service. You may not use AI features to generate unlawful content or to attempt to extract FI-532's prompts, models, or other users' data. The Privacy Policy describes exactly what is sent and when.",
   },
   {
     title: "7. Transaction Capture, Shortcuts, and Bank Notifications",
@@ -67,7 +67,7 @@ const sections = [
   },
   {
     title: "15. Third-Party Services",
-    body: "FI-532 relies on third-party providers to operate: Apple and Google for distribution and payments, Clerk for sign-in, Convex for backend hosting and synchronization, RevenueCat for subscription management, OpenAI for AI analysis when you allow it, Expo and Apple for push notifications, Sentry for crash diagnostics, and PostHog for optional product analytics. Your use of the App Store, Google Play, Apple Shortcuts, Sign in with Apple, and Google sign-in is also subject to those companies' terms. FI-532 is not responsible for outages, data loss, or changes caused by these providers.",
+    body: "FI-532 relies on third-party providers to operate: Apple and Google for distribution and payments, Clerk for sign-in, Convex for backend hosting and synchronization, RevenueCat for subscription management, AI providers such as AI providers such as OpenAI for AI analysis when you allow it, Expo and Apple for push notifications, Sentry for crash diagnostics, and PostHog for optional product analytics. Your use of the App Store, Google Play, Apple Shortcuts, Sign in with Apple, and Google sign-in is also subject to those companies' terms. FI-532 is not responsible for outages, data loss, or changes caused by these providers.",
   },
   {
     title: "16. Disclaimer and Limitation of Liability",

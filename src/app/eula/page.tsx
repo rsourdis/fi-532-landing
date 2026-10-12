@@ -27,7 +27,7 @@ const sections = [
   },
   {
     title: "5. Third-Party Services and Store Terms",
-    body: "FI-532 interoperates with third-party services, including Apple, Google, Clerk, Convex, RevenueCat, OpenAI, Expo, Sentry, and PostHog, and is distributed through the Apple App Store and Google Play. Your use of those platforms and services is subject to their terms, policies, and technical limitations, and FI-532 is not responsible for their outages or changes.",
+    body: "FI-532 interoperates with third-party services, including Apple, Google, Clerk, Convex, RevenueCat, AI providers such as OpenAI, Expo, Sentry, and PostHog, and is distributed through the Apple App Store and Google Play. Your use of those platforms and services is subject to their terms, policies, and technical limitations, and FI-532 is not responsible for their outages or changes.",
   },
   {
     title: "6. Apple App Store Terms",
