@@ -31,7 +31,7 @@ const sections = [
   },
   {
     title: "6. Service Providers and Transfers",
-    body: "FI-532 relies on service providers for authentication, backend hosting and synchronization, notifications, subscriptions, diagnostics, AI analysis through OpenAI when you allow it, and, when chosen, PostHog analytics. The feedback board is stored with FI-532's existing Convex backend rather than a separate feedback provider. Providers process data under their own security and privacy terms and may process data in countries other than yours. FI-532 configures PostHog's European Union service endpoint for product analytics.",
+    body: "FI-532 relies on service providers for sign-in (Clerk), backend hosting and synchronization (Convex), push notifications (Expo and Apple), subscriptions (RevenueCat, together with the Apple App Store or Google Play), crash diagnostics (Sentry, with personal identifiers disabled), AI analysis through OpenAI when you allow it, and, when chosen, PostHog analytics. FI-532 uses OpenAI through its API, where submitted content is not used to train OpenAI's models under OpenAI's API terms. The feedback board is stored with FI-532's existing Convex backend rather than a separate feedback provider. Providers process data under their own security and privacy terms and may process data in countries other than yours. FI-532 configures PostHog's European Union service endpoint for product analytics.",
   },
   {
     title: "7. Data Retention and Security",
@@ -39,7 +39,7 @@ const sections = [
   },
   {
     title: "8. Your Rights and Choices",
-    body: "You can update profile and preference data in the app and turn off product analytics or AI analysis at any time. You may request access, correction, portability, restriction, objection, or deletion where applicable by contacting support. Deleting your account removes core account data and associated feedback activity and clears the on-device analytics preference; contact support if you also want historical PostHog events located and deleted. Subscription renewals, cancellations, and refunds are managed by the Apple App Store or Google Play under their policies.",
+    body: "You can update profile and preference data in the app and turn off product analytics or AI analysis at any time. You can delete your account yourself in Settings, and you may request access, correction, portability, restriction, or objection where applicable by contacting support. Premium members can export their household transactions as CSV or PDF from Settings. Deleting your account removes core account data and associated feedback activity and clears the on-device analytics preference; contact support if you also want historical PostHog events located and deleted. Subscription renewals, cancellations, and refunds are managed by the Apple App Store or Google Play under their policies.",
   },
   {
     title: "9. Children's Privacy",
@@ -59,7 +59,7 @@ export default function PrivacyPage() {
   return (
     <LegalPage
       title="Privacy Policy"
-      lastUpdated="October 11, 2026"
+      lastUpdated="October 12, 2026"
       sections={sections}
     />
   );

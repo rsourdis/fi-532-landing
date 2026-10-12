@@ -284,9 +284,7 @@ export const en: Translations = {
     faq: "FAQ",
     contact: "Contact",
     support: "Support",
-    privacy: "Privacy",
-    terms: "Terms",
-    eula: "EULA",
+    legal: "Legal",
     copyright: (year) => `© ${year} FI-532. All rights reserved.`,
   },
 };

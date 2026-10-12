@@ -89,6 +89,12 @@ export default function LegalPage({
           </p>
           <div className="flex items-center gap-5 text-xs text-stone-400">
             <Link
+              href="/legal"
+              className="hover:text-stone-700 transition-colors"
+            >
+              All legal documents
+            </Link>
+            <Link
               href="/privacy"
               className="hover:text-stone-700 transition-colors"
             >
