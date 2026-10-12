@@ -190,9 +190,7 @@ export interface Translations {
     faq: string;
     contact: string;
     support: string;
-    privacy: string;
-    terms: string;
-    eula: string;
+    legal: string;
     copyright: (year: number) => string;
   };
 }

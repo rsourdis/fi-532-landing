@@ -14,9 +14,7 @@ export default function Footer() {
     { label: t.footer.faq, href: "#faq" },
     { label: t.footer.contact, href: `mailto:${SUPPORT_EMAIL}` },
     { label: t.footer.support, href: "/support" },
-    { label: t.footer.privacy, href: "/privacy" },
-    { label: t.footer.terms, href: "/terms" },
-    { label: t.footer.eula, href: "/eula" },
+    { label: t.footer.legal, href: "/legal" },
   ];
 
   return (
