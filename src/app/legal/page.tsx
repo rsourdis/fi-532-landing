@@ -16,7 +16,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/legal" },
 };
 
-const LAST_UPDATED = "October 12, 2026";
+// The most recent update of any document; each card shows its own date.
+const LAST_UPDATED = "October 29, 2026";
 
 const documents = [
   {
@@ -26,6 +27,7 @@ const documents = [
     description:
       "What FI-532 collects, how AI analysis and optional analytics work, who our providers are, how long data is kept, and how to export or delete your account.",
     meta: "11 sections · 6 min read",
+    updated: "October 29, 2026",
   },
   {
     href: "/terms",
@@ -34,6 +36,7 @@ const documents = [
     description:
       "Free and Premium plans, auto-renewing subscriptions and cancellation, households and shared data, AI features, Shortcuts and bank notifications, the feedback board, liability, and governing law.",
     meta: "20 sections · 9 min read",
+    updated: "October 12, 2026",
   },
   {
     href: "/eula",
@@ -42,6 +45,7 @@ const documents = [
     description:
       "Your license to install and use the app, restrictions, ownership, and the Apple App Store terms that apply when you download FI-532 from the App Store.",
     meta: "10 sections · 4 min read",
+    updated: "October 12, 2026",
   },
 ];
 
@@ -93,7 +97,7 @@ export default function LegalPage() {
             EULA covers the app software itself.
           </p>
           <p className="text-sm text-stone-400">
-            All documents last updated {LAST_UPDATED} · Operated by Roberto
+            Last updated {LAST_UPDATED} · Operated by Roberto
             Sourdis, Spain
           </p>
         </div>
@@ -118,7 +122,7 @@ export default function LegalPage() {
                     {doc.description}
                   </span>
                   <span className="block text-xs text-stone-400">
-                    Updated {LAST_UPDATED} · {doc.meta}
+                    Updated {doc.updated} · {doc.meta}
                   </span>
                 </span>
                 <ChevronRight
