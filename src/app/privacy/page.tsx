@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const sections = [
   {
     title: "1. Information We Collect",
-    body: "FI-532 collects the information needed to operate the app, including account profile details, household settings, transaction and recurring-payment data, text you choose to capture as a transaction (typed or pasted notes, dictated text, shared screenshots read as text, and bank messages or payment notifications you send to FI-532 through Shortcuts), selected preferences such as currency and timezone, and technical diagnostics from your device. If you use the in-app feedback board, FI-532 also stores the idea or bug-report type, title, description, status, votes, content reports, hidden-author choices, and internal links to the accounts performing those actions. Subscription status is processed through app store and billing infrastructure providers. FI-532 does not directly collect full payment card numbers.",
+    body: "FI-532 collects the information needed to operate the app, including account profile details, household settings, transaction and recurring-payment data, text you choose to capture as a transaction (typed or pasted notes, dictated text, shared screenshots read as text, and bank messages or payment notifications you send to FI-532 through Shortcuts), rows read from bank statement files you import (the files themselves stay on your device), selected preferences such as currency and timezone, and technical diagnostics from your device. If you use the in-app feedback board, FI-532 also stores the idea or bug-report type, title, description, status, votes, content reports, hidden-author choices, and internal links to the accounts performing those actions. Subscription status is processed through app store and billing infrastructure providers. FI-532 does not directly collect full payment card numbers.",
   },
   {
     title: "2. How We Use Information",
@@ -26,31 +26,35 @@ const sections = [
     body: "FI-532 turns captured text into suggested transactions, suggests categories, and answers AI report questions. Whenever possible this runs on your device: voice is transcribed on your device, receipts and shared screenshots are read on your device, and on supported iPhones captured text is analyzed with Apple's on-device models. When on-device analysis is unavailable or does not finish, FI-532 can send the needed data to its own AI server, which uses third-party AI providers (currently OpenAI) as service providers: the captured text with your account's currency, language, and recurring-payment names; a merchant name for a category suggestion; or an AI report question together with a summary of your household budget, such as totals, category spending, account names and balances, and upcoming recurring payments. This happens only after you allow AI analysis. You can turn it off in Settings under Privacy at any time; capture then stays on your device and anything that cannot be analyzed there waits for you to retry or enter it yourself. AI reports are not available while it is off. Analysis results are suggestions: nothing changes your balances until you review and confirm it. Captured text is stored in FI-532's backend until it is analyzed or dismissed. After analysis, only the part each suggested transaction was read from is kept with that suggestion, until you review it, and is then removed; shared images are not kept. FI-532 does not send this content to PostHog.",
   },
   {
-    title: "5. Feedback",
+    title: "5. Bank Statement Import",
+    body: "Premium members can import a bank statement file (CSV, Excel, or PDF) into one of their accounts. The file is read on your iPhone; it is not uploaded to FI-532's servers and is not kept. On supported iPhones, PDF lines that cannot be read directly may be read with Apple's on-device model; they are never sent to FI-532's AI server or its AI providers. Statements can include account numbers, balances, and the names of people and businesses you paid or were paid by. FI-532 keeps only what is needed for the rows: each row's date, amount, currency, description, and merchant, and its bank reference and running balance when the statement shows them, together with the bank name, file name, statement period, opening and closing balances, and a fingerprint of the file so the same statement is not imported twice. Nothing is saved to your transactions until you review the rows and confirm them; saved rows become transactions in your household, like any other transaction. The rows of an import you discard are deleted right away. The original row descriptions of a saved or undone import are deleted from FI-532's servers 30 days after the import is closed, and an import left in review for 30 days is discarded with its rows. You can undo an import for 24 hours after saving it and delete any imported transaction at any time. FI-532 does not send statement contents to PostHog.",
+  },
+  {
+    title: "6. Feedback",
     body: "Signed-in users can view published feedback and vote once on each submission. Only users in a household with an active Premium subscription can submit an idea or bug report. New submissions are visible only to their author until FI-532 reviews and publishes them. Published titles, descriptions, types, statuses, and vote totals are visible to other signed-in FI-532 users; account names and email addresses are not displayed on the board. Users can report objectionable content and hide all posts from an anonymous author. FI-532 stores this information in its Convex backend and does not send feedback text to PostHog. Do not include balances, financial account or transaction details, passwords, authentication codes, or other sensitive information in feedback.",
   },
   {
-    title: "6. Service Providers and Transfers",
+    title: "7. Service Providers and Transfers",
     body: "FI-532 relies on service providers for sign-in (Clerk), backend hosting and synchronization (Convex), push notifications (Expo and Apple), subscriptions (RevenueCat, together with the Apple App Store or Google Play), crash diagnostics (Sentry, with personal identifiers disabled), AI analysis through third-party AI providers when you allow it, and, when chosen, PostHog analytics. FI-532 currently uses OpenAI through its API, where submitted content is not used to train OpenAI's models under OpenAI's API terms. FI-532 may add or replace AI providers and will update this policy and name the provider here when that happens; FI-532 only uses providers whose terms do not allow training on your content. The feedback board is stored with FI-532's existing Convex backend rather than a separate feedback provider. Providers process data under their own security and privacy terms and may process data in countries other than yours. FI-532 configures PostHog's European Union service endpoint for product analytics.",
   },
   {
-    title: "7. Data Retention and Security",
+    title: "8. Data Retention and Security",
     body: "FI-532 retains personal data while your account is active and for limited periods afterward when needed for security, fraud prevention, legal obligations, or dispute resolution. Product analytics and feedback activity are retained only as long as reasonably necessary for product improvement, support, safety, or legal obligations. The original text of a capture (typed or pasted notes, dictated text, text read from shared screenshots, and bank messages or payment notifications) is kept with the suggested transaction made from it only while that suggestion waits for your review, so you can see where it came from. It is deleted from FI-532's servers as soon as you save, match or ignore that suggestion, or dismiss the capture. Captured text that is still unresolved after 30 days without activity, and original text kept with a suggestion that is still awaiting review 30 days after it was captured, is deleted automatically; an unresolved capture stays listed as expired so you can enter the details yourself or dismiss it, and a suggestion stays in review without its text. FI-532 keeps a record that the capture was received, without its text, so the same message is not imported twice. Transactions you save are kept until you delete them or your account. Deleting your FI-532 account removes your feedback submissions, votes, content reports, and hidden-author choices from the feedback board. Reasonable administrative, technical, and organizational safeguards are used to protect data, but no system can guarantee absolute security.",
   },
   {
-    title: "8. Your Rights and Choices",
+    title: "9. Your Rights and Choices",
     body: "You can update profile and preference data in the app and turn off product analytics or AI analysis at any time. You can delete your account yourself in Settings, and you may request access, correction, portability, restriction, or objection where applicable by contacting support. Premium members can export their household transactions as CSV or PDF from Settings. Deleting your account removes core account data and associated feedback activity and clears the on-device analytics preference; contact support if you also want historical PostHog events located and deleted. Subscription renewals, cancellations, and refunds are managed by the Apple App Store or Google Play under their policies.",
   },
   {
-    title: "9. Children's Privacy",
+    title: "10. Children's Privacy",
     body: "FI-532 is not directed to children under 13 and does not knowingly collect personal data from children under 13. If you believe a child has provided personal information, contact FI-532 so the data can be reviewed and removed as appropriate.",
   },
   {
-    title: "10. Policy Updates",
+    title: "11. Policy Updates",
     body: "This Privacy Policy may be updated from time to time. Material updates may be communicated through the app or other reasonable channels. Continued use of FI-532 after updates means you accept the revised policy.",
   },
   {
-    title: "11. Contact",
+    title: "12. Contact",
     body: "Support, safety, data, and privacy questions can be sent to Roberto Sourdis at info@fi-532.app.",
   },
 ];
@@ -59,7 +63,7 @@ export default function PrivacyPage() {
   return (
     <LegalPage
       title="Privacy Policy"
-      lastUpdated="October 29, 2026"
+      lastUpdated="October 30, 2026"
       sections={sections}
     />
   );

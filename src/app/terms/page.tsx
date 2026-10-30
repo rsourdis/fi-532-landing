@@ -23,7 +23,7 @@ const sections = [
   },
   {
     title: "4. Free and Premium Plans",
-    body: "The Free plan is for one person and currently includes up to 10 transactions per month and up to 4 recurring payments; on the Free plan only the household owner's accounts and shared accounts are available. Premium removes these limits and unlocks households of up to 4 members, AI reports, CSV and PDF data export, the distribution calculator, shopping lists, bill reminders, and submitting ideas and bug reports on the feedback board. Premium applies to the whole household: one active Premium subscription covers every member. If Premium ends, your data is kept, but you cannot add beyond the Free limits and Premium-only features are unavailable until you upgrade again. FI-532 may change plan limits and the features included in each plan with reasonable notice.",
+    body: "The Free plan is for one person and currently includes up to 10 transactions per month and up to 4 recurring payments; on the Free plan only the household owner's accounts and shared accounts are available. Premium removes these limits and unlocks households of up to 4 members, AI reports, CSV and PDF data export, bank statement import, the distribution calculator, shopping lists, bill reminders, and submitting ideas and bug reports on the feedback board. Premium applies to the whole household: one active Premium subscription covers every member. If Premium ends, your data is kept, but you cannot add beyond the Free limits and Premium-only features are unavailable until you upgrade again. FI-532 may change plan limits and the features included in each plan with reasonable notice.",
   },
   {
     title: "5. Subscriptions, Renewal, and Cancellation",
@@ -34,8 +34,8 @@ const sections = [
     body: "FI-532 uses AI to turn captured text into suggested transactions, suggest categories, and answer AI report questions about your budget. These features run on your device whenever possible and use FI-532's AI server and its AI providers, such as OpenAI, only after you turn on AI analysis in Settings. AI output is generated automatically and may be incomplete, outdated, or wrong. Every suggestion is a draft: nothing changes your balances until you review and confirm it, and you are responsible for checking it. AI reports have a daily allowance (currently 5 reports per member per day) and categorization requests are rate-limited; FI-532 may change these allowances or temporarily restrict AI features to protect the service. You may not use AI features to generate unlawful content or to attempt to extract FI-532's prompts, models, or other users' data. The Privacy Policy describes exactly what is sent and when.",
   },
   {
-    title: "7. Transaction Capture, Shortcuts, and Bank Notifications",
-    body: "You can send typed or pasted text, dictation, screenshots, and bank or payment notifications to FI-532 through the app, the share sheet, and Apple Shortcuts automations. You decide what to forward and confirm that you are entitled to share it. FI-532 is not affiliated with, endorsed by, or connected to any bank, card issuer, or payment provider, and it does not access your bank accounts; it only reads the text you choose to send it. Captured content is parsed on a best-effort basis and may be misread or missed, especially when a bank changes its message format, so always check the resulting transactions. Automations run under Apple's Shortcuts terms and depend on your device settings; FI-532 cannot guarantee they trigger every time.",
+    title: "7. Transaction Capture, Shortcuts, Bank Notifications, and Statement Import",
+    body: "You can send typed or pasted text, dictation, screenshots, and bank or payment notifications to FI-532 through the app, the share sheet, and Apple Shortcuts automations. You decide what to forward and confirm that you are entitled to share it. FI-532 is not affiliated with, endorsed by, or connected to any bank, card issuer, or payment provider, and it does not access your bank accounts; it only reads the text and files you choose to send it. Captured content is parsed on a best-effort basis and may be misread or missed, especially when a bank changes its message format, so always check the resulting transactions. Automations run under Apple's Shortcuts terms and depend on your device settings; FI-532 cannot guarantee they trigger every time. Premium members can also import statement files (CSV, Excel, or PDF) downloaded from their bank. Statement layouts vary, so rows may be misread, skipped, or matched to the wrong transaction, and the balance check only compares FI-532 with the figures in the file. Review every row before you save an import: imported data is your responsibility, just like data you enter yourself. An import can be undone for 24 hours after it is saved; after that, edit or delete its transactions individually.",
   },
   {
     title: "8. Feedback Board and User Content",
@@ -67,7 +67,7 @@ const sections = [
   },
   {
     title: "15. Third-Party Services",
-    body: "FI-532 relies on third-party providers to operate: Apple and Google for distribution and payments, Clerk for sign-in, Convex for backend hosting and synchronization, RevenueCat for subscription management, AI providers such as AI providers such as OpenAI for AI analysis when you allow it, Expo and Apple for push notifications, Sentry for crash diagnostics, and PostHog for optional product analytics. Your use of the App Store, Google Play, Apple Shortcuts, Sign in with Apple, and Google sign-in is also subject to those companies' terms. FI-532 is not responsible for outages, data loss, or changes caused by these providers.",
+    body: "FI-532 relies on third-party providers to operate: Apple and Google for distribution and payments, Clerk for sign-in, Convex for backend hosting and synchronization, RevenueCat for subscription management, AI providers such as OpenAI for AI analysis when you allow it, Expo and Apple for push notifications, Sentry for crash diagnostics, and PostHog for optional product analytics. Your use of the App Store, Google Play, Apple Shortcuts, Sign in with Apple, and Google sign-in is also subject to those companies' terms. FI-532 is not responsible for outages, data loss, or changes caused by these providers.",
   },
   {
     title: "16. Disclaimer and Limitation of Liability",
@@ -95,7 +95,7 @@ export default function TermsPage() {
   return (
     <LegalPage
       title="Terms of Service"
-      lastUpdated="October 12, 2026"
+      lastUpdated="October 30, 2026"
       sections={sections}
     />
   );

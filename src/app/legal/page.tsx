@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 };
 
 // The most recent update of any document; each card shows its own date.
-const LAST_UPDATED = "October 29, 2026";
+const LAST_UPDATED = "October 30, 2026";
 
 const documents = [
   {
@@ -25,18 +25,18 @@ const documents = [
     icon: ShieldCheck,
     title: "Privacy Policy",
     description:
-      "What FI-532 collects, how AI analysis and optional analytics work, who our providers are, how long data is kept, and how to export or delete your account.",
-    meta: "11 sections · 6 min read",
-    updated: "October 29, 2026",
+      "What FI-532 collects, how AI analysis, bank statement import, and optional analytics work, who our providers are, how long data is kept, and how to export or delete your account.",
+    meta: "12 sections · 7 min read",
+    updated: "October 30, 2026",
   },
   {
     href: "/terms",
     icon: FileText,
     title: "Terms of Service",
     description:
-      "Free and Premium plans, auto-renewing subscriptions and cancellation, households and shared data, AI features, Shortcuts and bank notifications, the feedback board, liability, and governing law.",
+      "Free and Premium plans, auto-renewing subscriptions and cancellation, households and shared data, AI features, Shortcuts, bank notifications and statement import, the feedback board, liability, and governing law.",
     meta: "20 sections · 9 min read",
-    updated: "October 12, 2026",
+    updated: "October 30, 2026",
   },
   {
     href: "/eula",
